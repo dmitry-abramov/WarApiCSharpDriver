@@ -3,7 +3,9 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+
 using WoTCSharpDriver.Extensions;
+using WoTCSharpDriver.Attributes;
 
 namespace WoTCSharpDriver
 {
@@ -21,51 +23,45 @@ namespace WoTCSharpDriver
 
         public string MethodName
         {
-            get 
+            get
             {
                 return "MethodName";
             }
         }
 
-        public string AccessToken 
-        { 
-            get
-            {
-                string accessToken;
-                return parameters.TryGetValue("accessToken", out accessToken) ? accessToken : string.Empty;
-            }
-            set
-            {
-                parameters.AddOrUpdate("accessToken", value);
-            }
-        }
-        
-        public string ApplicationId 
-        {
-            get
-            {
-                string applicationId;
-                return parameters.TryGetValue("applicationId", out applicationId) ? applicationId : string.Empty;
-            }
-            set
-            {
-                parameters.AddOrUpdate("applicationId", value);
-            }
-        }
+        [RequestParameter("accessToken", false)]
+        public string AccessToken { get; set; }
+
+        [RequestParameter("applicationId", true)]
+        public string ApplicationId { get; set; }
 
         public IDictionary<string, string> Parameters
         {
-            get 
-            {                
-                return new Dictionary<string, string>(parameters);
+            get
+            {
+                return new Dictionary<string, string>(GetParameters(false));
             }
         }
 
         public RequestBase()
         {
             parameters = new Dictionary<string, string>();
-            parameters.Add("accessToken", string.Empty);
-            parameters.Add("applicationId", string.Empty);
+        }
+
+        public void AddParameter(string key, string value)
+        {
+            parameters.AddOrUpdate(key, value);
+        }
+
+        public string GetParameter(string key)
+        {
+            string value;
+            if (GetParameters(false).TryGetValue(key, out value))
+            {
+                return value;
+            }
+
+            throw new ArgumentException(string.Format("Request does not have parameter '{0}'", key), "key");
         }
 
         public string GetPath()
@@ -73,9 +69,57 @@ namespace WoTCSharpDriver
             return string.Format("{0}/{1}", MethodBlock, MethodName);
         }
 
-        public string GetParameters()
+        public string GetParametersLikeUri()
         {
-            return parameters.GetLikeUriParameters();
+            return GetParameters(true).ToUriParametersString();
+        }
+
+
+        protected IDictionary<string, string> GetParameters(bool isNeedRequeredValidation)
+        {
+            var requestType = this.GetType();
+            var requestFields = requestType.GetProperties();
+
+            foreach (var field in requestFields)
+            {
+                if (Attribute.IsDefined(field, typeof(RequestParameterAttribute)))
+                {
+                    var attribute = Attribute.GetCustomAttribute(field, typeof(RequestParameterAttribute)) as RequestParameterAttribute;
+                    var name = string.IsNullOrEmpty(attribute.Name) ? field.Name : attribute.Name;
+
+                    var value = field.GetValue(this);
+
+                    if (value != null)
+                    {
+                        var stringValue = value.ToString();
+
+                        if (!string.IsNullOrEmpty(stringValue))
+                        {
+                            parameters.AddOrUpdate(name, stringValue);
+                            continue;
+                        }
+
+                        if (!isNeedRequeredValidation)
+                        {
+                            parameters.AddOrUpdate(name, stringValue);
+                            continue;
+                        }
+                    }
+
+                    if (!isNeedRequeredValidation)
+                    {
+                        parameters.AddOrUpdate(name, null);
+                        continue;
+                    }
+
+                    if (attribute.IsRequired && isNeedRequeredValidation)
+                    {
+                        throw new InvalidOperationException(string.Format("Field '{0}' is required but it is null", field.Name));
+                    }
+                }
+            }
+
+            return parameters;
         }
     }
 }

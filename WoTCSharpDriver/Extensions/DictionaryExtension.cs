@@ -21,7 +21,7 @@ namespace WoTCSharpDriver.Extensions
             }
         }
 
-        public static string GetLikeUriParameters<TKey, TValue>(this IDictionary<TKey, TValue> dictionary)
+        public static string ToUriParametersString<TKey, TValue>(this IDictionary<TKey, TValue> dictionary)
         {
             return string.Join("&", dictionary.Select(kv => kv.GetLikeUriParameter())); 
         }

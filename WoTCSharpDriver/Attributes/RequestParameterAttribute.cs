@@ -12,10 +12,11 @@ namespace WoTCSharpDriver.Attributes
         public bool IsRequired { get; set; }
 
         public RequestParameterAttribute()
-        { 
+        {
+            IsRequired = false;
         }
 
-        public RequestParameterAttribute(string name, bool isRequired)
+        public RequestParameterAttribute(string name, bool isRequired = false)
         {
             Name = name;
             IsRequired = isRequired;

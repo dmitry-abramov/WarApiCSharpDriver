@@ -1,7 +1,7 @@
 ﻿using System;
 using Microsoft.VisualStudio.TestTools.UnitTesting;
 
-using WoTCSharpDriver;
+using WoTCSharpDriver.Requests;
 
 namespace UnitTests
 {
@@ -34,7 +34,7 @@ namespace UnitTests
 
             var uriParameters = request.GetParametersLikeUri();
 
-            Assert.AreEqual("accessToken=\"access token\"&applicationId=\"application id\"", uriParameters);
+            Assert.AreEqual("access_token=\"access token\"&application_id=\"application id\"", uriParameters);
         }
 
         [TestMethod]
@@ -47,7 +47,7 @@ namespace UnitTests
 
             var uriParameters = request.GetParametersLikeUri();
 
-            Assert.AreEqual("parameter1=\"value1\"&accessToken=\"access token\"&applicationId=\"application id\"", uriParameters);
+            Assert.AreEqual("parameter1=\"value1\"&access_token=\"access token\"&application_id=\"application id\"", uriParameters);
         }
 
         [TestMethod]
@@ -58,8 +58,8 @@ namespace UnitTests
             request.AddParameter("parameter1", "value1");
 
             var parameter1 = request.GetParameter("parameter1");
-            var accessToken = request.GetParameter("accessToken");
-            var applicationId = request.GetParameter("applicationId");
+            var accessToken = request.GetParameter("access_token");
+            var applicationId = request.GetParameter("application_id");
 
             Assert.IsNull(applicationId);
             Assert.AreEqual("access token", accessToken);

@@ -7,13 +7,13 @@ using System.Threading.Tasks;
 using WoTCSharpDriver.Extensions;
 using WoTCSharpDriver.Attributes;
 
-namespace WoTCSharpDriver
+namespace WoTCSharpDriver.Requests
 {
     public class RequestBase
     {
         private IDictionary<string, string> parameters;
 
-        public string MethodBlock
+        public virtual string MethodBlock
         {
             get
             {
@@ -21,7 +21,7 @@ namespace WoTCSharpDriver
             }
         }
 
-        public string MethodName
+        public virtual string MethodName
         {
             get
             {
@@ -29,10 +29,10 @@ namespace WoTCSharpDriver
             }
         }
 
-        [RequestParameter("accessToken", false)]
+        [RequestParameter("access_token", false)]
         public string AccessToken { get; set; }
 
-        [RequestParameter("applicationId", true)]
+        [RequestParameter("application_id", true)]
         public string ApplicationId { get; set; }
 
         public IDictionary<string, string> Parameters

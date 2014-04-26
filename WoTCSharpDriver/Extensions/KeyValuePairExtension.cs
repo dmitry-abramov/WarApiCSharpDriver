@@ -10,7 +10,7 @@ namespace WoTCSharpDriver.Extensions
     {
         public static string GetLikeUriParameter<TKey, TValue>(this KeyValuePair<TKey, TValue> keyValuePair)
         {
-            return string.Format("{0}=\"{1}\"", keyValuePair.Key.ToString(), keyValuePair.Value.ToString());
+            return string.Format("{0}={1}", keyValuePair.Key.ToString(), keyValuePair.Value.ToString());
         }
     }
 }

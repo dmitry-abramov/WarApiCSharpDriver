@@ -5,6 +5,9 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Net;
 
+using System.IO;
+using System.Runtime.Serialization.Json;
+
 using WoTCSharpDriver.Requests;
 
 namespace WoTCSharpDriver
@@ -41,6 +44,25 @@ namespace WoTCSharpDriver
 
             var webClient = new WebClient();
             var response = webClient.DownloadString(requestString);
+
+            return response;
+        }
+
+        public TResponse GetResponseFor<TResponse>(RequestBase request)
+        {
+            var requestString = string.Format("https://{0}/{1}/{2}/?{3}",
+                server,
+                apiName,
+                request.GetPath(),
+                request.GetParametersLikeUri());
+
+            var webClient = new WebClient();
+            var responseString = webClient.DownloadString(requestString);
+
+            var serializer = new DataContractJsonSerializer(typeof(TResponse));
+            
+            var stream = new MemoryStream(Encoding.Default.GetBytes(responseString));
+            var response = (TResponse)serializer.ReadObject(stream);
 
             return response;
         }

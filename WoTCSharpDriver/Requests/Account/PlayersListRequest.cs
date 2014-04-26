@@ -8,7 +8,7 @@ using WoTCSharpDriver.Attributes;
 
 namespace WoTCSharpDriver.Requests.Account
 {
-    public class PlayersList : AccountRequestBase
+    public class PlayersListRequest : AccountRequestBase
     {
         public override string MethodName
         {
@@ -24,7 +24,7 @@ namespace WoTCSharpDriver.Requests.Account
         [RequestParameter("limit", false)]
         public int Limit { get; set; }
 
-        public PlayersList()
+        public PlayersListRequest()
         {
             Limit = 100;
         }

@@ -8,7 +8,7 @@ using WoTCSharpDriver.Attributes;
 
 namespace WoTCSharpDriver.Requests.Account
 {
-    public class PlayerInfo : AccountRequestBase
+    public class PlayerInfoRequest : AccountRequestBase
     {
         public override string MethodName
         {

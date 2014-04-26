@@ -17,7 +17,7 @@ namespace UnitTests
         {
             var application = new WoTApplication("demo", "api.worldoftanks.ru", "wot");
 
-            var request = application.CreateRequest<PlayersList>();
+            var request = application.CreateRequest<PlayersListRequest>();
 
             request.Search = "gollazio";
 
@@ -32,7 +32,7 @@ namespace UnitTests
         {
             var application = new WoTApplication("demo", "api.worldoftanks.ru", "wot");
 
-            var request = application.CreateRequest<PlayersList>();
+            var request = application.CreateRequest<PlayersListRequest>();
 
             request.Search = "gollazio";
 

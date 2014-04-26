@@ -8,13 +8,13 @@ using WoTCSharpDriver.Attributes;
 
 namespace WoTCSharpDriver.Requests.Account
 {
-    public class PlayerRating : AccountRequestBase
+    public class PlayerAchivementsRequest : AccountRequestBase
     {
         public override string MethodName
         {
             get
             {
-                return "ratings";
+                return "achivements";
             }
         }
 

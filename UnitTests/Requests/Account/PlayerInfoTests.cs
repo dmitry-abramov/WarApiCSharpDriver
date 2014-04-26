@@ -15,7 +15,7 @@ namespace UnitTests.Requests.Account
         [TestMethod]
         public void GetPath()
         {
-            var request = new PlayerInfo();
+            var request = new PlayerInfoRequest();
             var path = request.GetPath();
 
             Assert.AreEqual("account/info", path);

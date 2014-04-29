@@ -38,27 +38,29 @@ namespace UnitTests
 
             var response = application.GetResponseFor<PlayersListResponse>(request);
 
-            var expected = new PlayersListResponse
-            {
-                Count = 1,
-                Status = "ok",
-                Data = new List<PlayersListData>
-                {
-                    new PlayersListData
-                    {
-                        Nickname = "gollazio",
-                        Id = "2989679",
-                        AccountId = "2989679"
-                    }
-                }
-            };
-
             Assert.IsNotNull(response);
             Assert.AreEqual(response.Count, 1);
             Assert.AreEqual(response.Status, "ok");
             Assert.AreEqual(response.Data[0].Nickname, "gollazio");
             Assert.AreEqual(response.Data[0].AccountId, "2989679");
             Assert.AreEqual(response.Data[0].Id, "2989679");
+            Assert.IsNull(response.Error);
+        }
+
+        [TestMethod]
+        public void TestRequestWithSpaces()
+        {
+            var application = new WoTApplication("demo", "api.worldoftanks.ru", "wot");
+
+            var request = application.CreateRequest<PlayersListRequest>();
+            
+            request.Search = "gol lazio";
+
+            var response = application.GetResponseFor<PlayersListResponse>(request);
+
+            Assert.IsNotNull(response);
+            Assert.AreEqual(response.Count, 0);
+            Assert.AreEqual(response.Status, "ok");
             Assert.IsNull(response.Error);
         }
     }

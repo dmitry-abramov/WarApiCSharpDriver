@@ -35,6 +35,9 @@ namespace WoTCSharpDriver.Requests
         [RequestParameter("application_id", true)]
         public string ApplicationId { get; set; }
 
+        [RequestParameter("language", false)]
+        public string Language { get; set; }
+
         public IDictionary<string, string> Parameters
         {
             get

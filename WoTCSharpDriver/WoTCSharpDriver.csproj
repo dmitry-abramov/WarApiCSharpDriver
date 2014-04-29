@@ -49,6 +49,10 @@
     <Compile Include="Requests\Account\PlayersListRequest.cs" />
     <Compile Include="Requests\Account\PlayerInfoRequest.cs" />
     <Compile Include="Requests\Account\PlayerTanksRequest.cs" />
+    <Compile Include="Requests\Auth\AuthRequestBase.cs" />
+    <Compile Include="Requests\Auth\LoginRequest.cs" />
+    <Compile Include="Requests\Auth\Logout.cs" />
+    <Compile Include="Requests\Auth\Prolongate.cs" />
     <Compile Include="Requests\RequestBase.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Responses\Account\PlayersListResponse.cs" />

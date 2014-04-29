@@ -19,9 +19,6 @@ namespace WoTCSharpDriver.Requests.Account
             }
         }
 
-        [RequestParameter("language", false)]
-        public string Language { get; set; }
-
         [RequestParameter("fields", false)]
         public string Fields { get; set; }
     }

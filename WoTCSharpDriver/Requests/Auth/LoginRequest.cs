@@ -26,9 +26,8 @@ namespace WoTCSharpDriver.Requests.Auth
         [RequestParameter("redirect_uri", false)]
         public string RedirectUri { get; set; }
 
-        // todo: make enum: page, popup
         [RequestParameter("display", false)]
-        public string Display { get; set; }
+        public DisplayType Display { get; set; }
 
         [RequestParameter("nofollow", false)]
         public int NoFollow { get; set; }

@@ -41,6 +41,7 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Attributes\RequestParameterAttribute.cs" />
+    <Compile Include="DisplayType.cs" />
     <Compile Include="Extensions\DictionaryExtension.cs" />
     <Compile Include="Extensions\KeyValuePairExtension.cs" />
     <Compile Include="Requests\Account\AccountRequestBase.cs" />

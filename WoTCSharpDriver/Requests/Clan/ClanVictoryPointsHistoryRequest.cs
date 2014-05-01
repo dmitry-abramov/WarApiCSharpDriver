@@ -29,10 +29,6 @@ namespace WoTCSharpDriver.Requests.Clan
         public string Since { get; set; }
 
         // todo: use DateTime
-        [RequestParameter("since", false)]
-        public string Since { get; set; }
-
-        // todo: use DateTime
         [RequestParameter("until", false)]
         public string Until { get; set; }
 

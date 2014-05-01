@@ -44,7 +44,15 @@
     <Compile Include="DisplayType.cs" />
     <Compile Include="Extensions\DictionaryExtension.cs" />
     <Compile Include="Extensions\KeyValuePairExtension.cs" />
+    <Compile Include="Requests\Clan\ClanBattlesRequest.cs" />
+    <Compile Include="Requests\Clan\ClanInfoRequest.cs" />
+    <Compile Include="Requests\Clan\ClanMembersInfo.cs" />
+    <Compile Include="Requests\Clan\ClanProvincesRequest.cs" />
+    <Compile Include="Requests\Clan\ClansListRequest.cs" />
     <Compile Include="Requests\Clan\ClansRequestBase.cs" />
+    <Compile Include="Requests\Clan\ClanVictoryPoints.cs" />
+    <Compile Include="Requests\Clan\ClanVictoryPointsHistoryRequest.cs" />
+    <Compile Include="Requests\Clan\TopClansRequest.cs" />
     <Compile Include="Requests\Encyclopedia\EncyclopediaRequestBase.cs" />
     <Compile Include="Requests\Ratings\DatesWithRatingsRequest.cs" />
     <Compile Include="Requests\Ratings\NeighborsRequest.cs" />

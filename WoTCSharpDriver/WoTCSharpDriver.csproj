@@ -54,6 +54,12 @@
     <Compile Include="Requests\Clan\ClanVictoryPointsHistoryRequest.cs" />
     <Compile Include="Requests\Clan\TopClansRequest.cs" />
     <Compile Include="Requests\Encyclopedia\EncyclopediaRequestBase.cs" />
+    <Compile Include="Requests\GlobalWar\ClansRequest.cs" />
+    <Compile Include="Requests\GlobalWar\FamePointsRequest.cs" />
+    <Compile Include="Requests\GlobalWar\MapsRequest.cs" />
+    <Compile Include="Requests\GlobalWar\ProvincesRequest.cs" />
+    <Compile Include="Requests\GlobalWar\TopClansRequest.cs" />
+    <Compile Include="Requests\GlobalWar\TournamentsReqest.cs" />
     <Compile Include="Requests\Ratings\DatesWithRatingsRequest.cs" />
     <Compile Include="Requests\Ratings\NeighborsRequest.cs" />
     <Compile Include="Requests\Ratings\PlayerRatingsRequest.cs" />

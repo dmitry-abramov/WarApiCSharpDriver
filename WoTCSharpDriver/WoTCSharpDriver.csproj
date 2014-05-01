@@ -60,6 +60,9 @@
     <Compile Include="Responses\Account\PlayersListResponse.cs" />
     <Compile Include="Responses\Error.cs" />
     <Compile Include="Responses\ResponseBase.cs" />
+    <Compile Include="Tanks\TanksAchievementsRequest.cs" />
+    <Compile Include="Tanks\TanksRequestBase.cs" />
+    <Compile Include="Tanks\TanksStatisticsRequest.cs" />
     <Compile Include="WoTApplication.cs" />
   </ItemGroup>
   <ItemGroup />

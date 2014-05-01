@@ -4,7 +4,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace WoTCSharpDriver.Tanks
+namespace WoTCSharpDriver.Requests.Tanks
 {
     public class TanksAchievementsRequest : TanksRequestBase
     {

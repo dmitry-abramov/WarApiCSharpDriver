@@ -4,15 +4,15 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace WoTCSharpDriver.Tanks
+namespace WoTCSharpDriver.Requests.Ratings
 {
-    public class TanksStatisticsRequest : TanksRequestBase
+    public class RatingsTypesRequest : RatingsRequestBase
     {
         public override string MethodName
         {
             get
             {
-                return "stats";
+                return "types";
             }
         }
     }

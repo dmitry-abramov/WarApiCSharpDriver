@@ -44,12 +44,12 @@
     <Compile Include="DisplayType.cs" />
     <Compile Include="Extensions\DictionaryExtension.cs" />
     <Compile Include="Extensions\KeyValuePairExtension.cs" />
-    <Compile Include="Ratings\DatesWithRatingsRequest.cs" />
-    <Compile Include="Ratings\NeighborsRequest.cs" />
-    <Compile Include="Ratings\PlayerRatingsRequest.cs" />
-    <Compile Include="Ratings\RatingsRequestBase.cs" />
-    <Compile Include="Ratings\RatingsTypesRequest.cs" />
-    <Compile Include="Ratings\TopPlayersRequest.cs" />
+    <Compile Include="Requests\Ratings\DatesWithRatingsRequest.cs" />
+    <Compile Include="Requests\Ratings\NeighborsRequest.cs" />
+    <Compile Include="Requests\Ratings\PlayerRatingsRequest.cs" />
+    <Compile Include="Requests\Ratings\RatingsRequestBase.cs" />
+    <Compile Include="Requests\Ratings\RatingsTypesRequest.cs" />
+    <Compile Include="Requests\Ratings\TopPlayersRequest.cs" />
     <Compile Include="Requests\Account\AccountRequestBase.cs" />
     <Compile Include="Requests\Account\PlayerAchivementsRequest.cs" />
     <Compile Include="Requests\Account\PlayerRatingRequest.cs" />
@@ -66,9 +66,9 @@
     <Compile Include="Responses\Account\PlayersListResponse.cs" />
     <Compile Include="Responses\Error.cs" />
     <Compile Include="Responses\ResponseBase.cs" />
-    <Compile Include="Tanks\TanksAchievementsRequest.cs" />
-    <Compile Include="Tanks\TanksRequestBase.cs" />
-    <Compile Include="Tanks\TanksStatisticsRequest.cs" />
+    <Compile Include="Requests\Tanks\TanksAchievementsRequest.cs" />
+    <Compile Include="Requests\Tanks\TanksRequestBase.cs" />
+    <Compile Include="Requests\Tanks\TanksStatisticsRequest.cs" />
     <Compile Include="WoTApplication.cs" />
   </ItemGroup>
   <ItemGroup />

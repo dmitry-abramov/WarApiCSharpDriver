@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 using WoTCSharpDriver.Attributes;
 
-namespace WoTCSharpDriver.Ratings
+namespace WoTCSharpDriver.Requests.Ratings
 {
     public class DatesWithRatingsRequest : RatingsRequestBase
     {

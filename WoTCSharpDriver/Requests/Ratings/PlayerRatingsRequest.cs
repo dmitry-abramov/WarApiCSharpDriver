@@ -6,15 +6,15 @@ using System.Threading.Tasks;
 
 using WoTCSharpDriver.Attributes;
 
-namespace WoTCSharpDriver.Ratings
+namespace WoTCSharpDriver.Requests.Ratings
 {
-    public class NeighborsRequest : RatingsRequestBase
+    public class PlayerRatingsRequest : RatingsRequestBase
     {
         public override string MethodName
         {
             get
             {
-                return "neighbors";
+                return "accounts";
             }
         }
 
@@ -25,14 +25,8 @@ namespace WoTCSharpDriver.Ratings
         [RequestParameter("type", true)]
         public string Type { get; set; }
 
-        [RequestParameter("rank_field", true)]
-        public string RankField { get; set; }
-        
         // todo: use DateTime
-        [RequestParameter("date", false)]
+        [RequestParameter("date", true)]
         public string Date { get; set; }
-
-        [RequestParameter("limit", false)]
-        public int Limit { get; set; }
     }
 }

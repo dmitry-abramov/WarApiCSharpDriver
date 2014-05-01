@@ -7,28 +7,19 @@ using System.Threading.Tasks;
 using WoTCSharpDriver.Requests;
 using WoTCSharpDriver.Attributes;
 
-namespace WoTCSharpDriver.Tanks
+namespace WoTCSharpDriver.Requests.Ratings
 {
-    public class TanksRequestBase : RequestBase
+    public class RatingsRequestBase : RequestBase
     {
         public override string MethodBlock
         {
             get
             {
-                return "tanks";
+                return "ratings";
             }
         }
 
         [RequestParameter("fields", false)]
         public string Fields { get; set; }
-
-        [RequestParameter("account_id", true)]
-        public string AccountId { get; set; }
-
-        [RequestParameter("tank_id", false)]
-        public string TankId { get; set; }
-
-        [RequestParameter("in_garage", false)]
-        public int InGarage { get; set; }
     }
 }

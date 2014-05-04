@@ -53,7 +53,16 @@
     <Compile Include="Requests\Clan\ClanVictoryPoints.cs" />
     <Compile Include="Requests\Clan\ClanVictoryPointsHistoryRequest.cs" />
     <Compile Include="Requests\Clan\TopClansRequest.cs" />
+    <Compile Include="Requests\Encyclopedia\AchievementsRequest.cs" />
     <Compile Include="Requests\Encyclopedia\EncyclopediaRequestBase.cs" />
+    <Compile Include="Requests\Encyclopedia\ModuleInfoRequestBase.cs" />
+    <Compile Include="Requests\Encyclopedia\TankChassisRequest.cs" />
+    <Compile Include="Requests\Encyclopedia\TankEnginesRequest.cs" />
+    <Compile Include="Requests\Encyclopedia\TankGunsRequest.cs" />
+    <Compile Include="Requests\Encyclopedia\TankInfoRequest.cs" />
+    <Compile Include="Requests\Encyclopedia\TankRadiosRequest.cs" />
+    <Compile Include="Requests\Encyclopedia\TanksRequest.cs" />
+    <Compile Include="Requests\Encyclopedia\TankTurretsRequest.cs" />
     <Compile Include="Requests\GlobalWar\ClansRequest.cs" />
     <Compile Include="Requests\GlobalWar\FamePointsRequest.cs" />
     <Compile Include="Requests\GlobalWar\MapsRequest.cs" />

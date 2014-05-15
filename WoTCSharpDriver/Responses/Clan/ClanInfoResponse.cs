@@ -61,10 +61,10 @@ namespace WoTCSharpDriver.Responses.Clan
         public ClanEmblems Emblems { get; set; }
 
         [DataMember(Name = "members")]
-        public IList<ClanMemberInfo> Emblems { get; set; }
+        public IList<ClanMemberInfo> Members { get; set; }
 
         [DataMember(Name = "private")]
-        public ClanPrivateInfo Emblems { get; set; }
+        public ClanPrivateInfo PrivateInfo { get; set; }
     }
 
     [DataContract]

@@ -5,7 +5,9 @@ using Microsoft.VisualStudio.TestTools.UnitTesting;
 
 using WoTCSharpDriver;
 using WoTCSharpDriver.Requests.Account;
+using WoTCSharpDriver.Requests.Clan;
 using WoTCSharpDriver.Responses.Account;
+using WoTCSharpDriver.Responses.Clan;
 
 namespace UnitTests
 {
@@ -62,6 +64,28 @@ namespace UnitTests
             Assert.AreEqual(response.Count, 0);
             Assert.AreEqual(response.Status, "ok");
             Assert.IsNull(response.Error);
+        }
+
+        [TestMethod]
+        public void TestSearchClanRequest()
+        {
+            var application = new WoTApplication("demo", "api.worldoftanks.ru", "wot");
+
+            var request = application.CreateRequest<ClansListRequest>();
+
+            request.Search = "virtus";
+            request.Limit = 1;
+
+            var response = application.GetResponseFor<ClanListResponse>(request);
+
+            Assert.IsNotNull(response);
+            Assert.AreEqual(response.Count, 1);
+            Assert.AreEqual(response.Status, "ok");
+            Assert.IsNull(response.Error);
+            
+            Assert.AreEqual(response.Data[0].Abbreviation, "VIRT");
+            Assert.AreEqual(response.Data[0].Createdt, "1297894124");
+            Assert.AreEqual(response.Data[0].Emblems.EmblemOnTank.ToString(), "http://clans.worldoftanks.ru/media/clans/emblems/cl_319/2319/emblem_64x64_tank.png");
         }
     }
 }

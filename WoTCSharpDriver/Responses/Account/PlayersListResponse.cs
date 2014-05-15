@@ -21,6 +21,7 @@ namespace WoTCSharpDriver.Responses.Account
         public string Nickname { get; set; }
     }
 
+    [DataContract]
     public class PlayersListResponse : ResponseBase<IList<PlayersListData>>
     { 
     }

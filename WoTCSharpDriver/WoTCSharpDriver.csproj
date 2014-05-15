@@ -90,6 +90,8 @@
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Requests\GlobalWar\WorldWarRequestBase.cs" />
     <Compile Include="Responses\Account\PlayersListResponse.cs" />
+    <Compile Include="Responses\Clan\ClanEmblem.cs" />
+    <Compile Include="Responses\Clan\ClanListResponse.cs" />
     <Compile Include="Responses\Error.cs" />
     <Compile Include="Responses\ResponseBase.cs" />
     <Compile Include="Requests\Tanks\TanksAchievementsRequest.cs" />
@@ -99,7 +101,6 @@
   </ItemGroup>
   <ItemGroup>
     <Folder Include="Responses\Auth\" />
-    <Folder Include="Responses\Clan\" />
     <Folder Include="Responses\Encyclopedia\" />
     <Folder Include="Responses\GlobalWar\" />
     <Folder Include="Responses\Ratings\" />

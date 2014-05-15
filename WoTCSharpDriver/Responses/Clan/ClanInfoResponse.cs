@@ -9,7 +9,7 @@ using System.Runtime.Serialization;
 namespace WoTCSharpDriver.Responses.Clan
 {
     [DataContract]
-    public class ClanListData
+    public class ClanInfoData
     {
         [DataMember(Name = "abbreviation")]
         public string Abbreviation { get; set; }
@@ -21,8 +21,23 @@ namespace WoTCSharpDriver.Responses.Clan
         [DataMember(Name = "color")]
         public string Color { get; set; }
 
+        /// <summary>
+        /// Clan color. Field will be disabled. Use field <href>Color</href>
+        /// </summary>
+        [DataMember(Name = "clan_color")]
+        public string ClanColor { get; set; }
+
         [DataMember(Name = "created_at")]
         public string CreatedAt { get; set; }
+
+        [DataMember(Name = "description")]
+        public string Description { get; set; }
+
+        [DataMember(Name = "description_html")]
+        public string DescriptionHtml { get; set; }
+
+        [DataMember(Name = "is_clan_disbanded ")]
+        public bool IsClanDisbanded { get; set; }
 
         [DataMember(Name = "members_count")]
         public int MembersCount { get; set; }
@@ -36,15 +51,24 @@ namespace WoTCSharpDriver.Responses.Clan
         [DataMember(Name = "owner_id")]
         public int OwnerId { get; set; }
 
-        [DataMember(Name = "owner_name")]
-        public string OwnerName { get; set; }
+        [DataMember(Name = "request_availability ")]
+        public bool RequestAvailability { get; set; }
 
+        [DataMember(Name = "updated_at")]
+        public string UpdatedAt { get; set; }
+        
         [DataMember(Name = "emblems")]
         public ClanEmblems Emblems { get; set; }
+
+        [DataMember(Name = "members")]
+        public IList<ClanMemberInfo> Emblems { get; set; }
+
+        [DataMember(Name = "private")]
+        public ClanPrivateInfo Emblems { get; set; }
     }
 
     [DataContract]
-    public class ClanListResponse : ResponseBase<IList<ClanListData>>
+    public class ClanInfoResponse : ResponseBase<Dictionary<int, ClanInfoData>>
     {
     }
 }

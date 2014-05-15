@@ -91,7 +91,10 @@
     <Compile Include="Requests\GlobalWar\WorldWarRequestBase.cs" />
     <Compile Include="Responses\Account\PlayersListResponse.cs" />
     <Compile Include="Responses\Clan\ClanEmblem.cs" />
+    <Compile Include="Responses\Clan\ClanInfoResponse.cs" />
     <Compile Include="Responses\Clan\ClanListResponse.cs" />
+    <Compile Include="Responses\Clan\ClanMemberInfo.cs" />
+    <Compile Include="Responses\Clan\ClanPrivateInfo.cs" />
     <Compile Include="Responses\Error.cs" />
     <Compile Include="Responses\ResponseBase.cs" />
     <Compile Include="Requests\Tanks\TanksAchievementsRequest.cs" />

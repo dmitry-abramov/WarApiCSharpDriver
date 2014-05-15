@@ -84,7 +84,7 @@ namespace UnitTests
             Assert.IsNull(response.Error);
             
             Assert.AreEqual(response.Data[0].Abbreviation, "VIRT");
-            Assert.AreEqual(response.Data[0].Createdt, "1297894124");
+            Assert.AreEqual(response.Data[0].CreatedAt, "1297894124");
             Assert.AreEqual(response.Data[0].Emblems.EmblemOnTank.ToString(), "http://clans.worldoftanks.ru/media/clans/emblems/cl_319/2319/emblem_64x64_tank.png");
         }
     }

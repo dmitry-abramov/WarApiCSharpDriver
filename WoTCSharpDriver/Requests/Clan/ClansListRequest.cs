@@ -18,8 +18,7 @@ namespace WoTCSharpDriver.Requests.Clan
         [RequestParameter("limit", false)]
         public int Limit { get; set; }
 
-        // todo: create constants
         [RequestParameter("order_by", false)]
-        public string OrderBy { get; set; }
+        public ClansSortOrder OrderBy { get; set; }
     }
 }

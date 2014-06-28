@@ -26,7 +26,7 @@
 
         public static Language Vietnamese { get { return new Language("vi"); } }
 
-        public Language Korean { get { return new Language("ko"); } }
+        public static Language Korean { get { return new Language("ko"); } }
 
         protected Language(string abbreviation)
         {

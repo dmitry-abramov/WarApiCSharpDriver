@@ -10,19 +10,19 @@ namespace WoTCSharpDriver
     {
         public string Name { get; private set; }
 
-        public Nation USSR { get { return new Nation("ussr"); } }
+        public static Nation USSR { get { return new Nation("ussr"); } }
 
-        public Nation Germany { get { return new Nation("germany"); } }
+        public static Nation Germany { get { return new Nation("germany"); } }
 
-        public Nation USA { get { return new Nation("usa"); } }
+        public static Nation USA { get { return new Nation("usa"); } }
 
-        public Nation France { get { return new Nation("france"); } }
+        public static Nation France { get { return new Nation("france"); } }
 
-        public Nation GreatBritain { get { return new Nation("uk"); } }
+        public static Nation GreatBritain { get { return new Nation("uk"); } }
 
-        public Nation China { get { return new Nation("china"); } }
+        public static Nation China { get { return new Nation("china"); } }
 
-        public Nation Japan { get { return new Nation("japan"); } }
+        public static Nation Japan { get { return new Nation("japan"); } }
 
         protected Nation(string name)
         {

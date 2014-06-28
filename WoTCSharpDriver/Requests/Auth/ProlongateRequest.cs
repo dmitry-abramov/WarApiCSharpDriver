@@ -2,7 +2,7 @@
 
 namespace WoTCSharpDriver.Requests.Auth
 {
-    public class Prolongate : AuthRequestBase
+    public class ProlongateRequest : AuthRequestBase
     {
         public override string MethodName
         {

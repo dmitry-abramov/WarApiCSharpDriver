@@ -1,10 +1,4 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-
-using WoTCSharpDriver.Requests;
+﻿using WoTCSharpDriver.Requests;
 using WoTCSharpDriver.Attributes;
 
 namespace WoTCSharpDriver.Requests.Tanks

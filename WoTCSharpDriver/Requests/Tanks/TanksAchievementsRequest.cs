@@ -1,10 +1,4 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-
-namespace WoTCSharpDriver.Requests.Tanks
+﻿namespace WoTCSharpDriver.Requests.Tanks
 {
     public class TanksAchievementsRequest : TanksRequestBase
     {

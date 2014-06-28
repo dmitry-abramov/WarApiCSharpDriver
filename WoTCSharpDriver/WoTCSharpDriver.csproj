@@ -93,6 +93,8 @@
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Requests\GlobalWar\WorldWarRequestBase.cs" />
     <Compile Include="Responses\Account\PlayersListResponse.cs" />
+    <Compile Include="Responses\Auth\LoginResponse.cs" />
+    <Compile Include="Responses\Auth\ProlongateResponse.cs" />
     <Compile Include="Responses\Clan\ClanEmblem.cs" />
     <Compile Include="Responses\Clan\ClanInfoResponse.cs" />
     <Compile Include="Responses\Clan\ClanListResponse.cs" />
@@ -106,7 +108,6 @@
     <Compile Include="WoTApplication.cs" />
   </ItemGroup>
   <ItemGroup>
-    <Folder Include="Responses\Auth\" />
     <Folder Include="Responses\Encyclopedia\" />
     <Folder Include="Responses\GlobalWar\" />
     <Folder Include="Responses\Ratings\" />

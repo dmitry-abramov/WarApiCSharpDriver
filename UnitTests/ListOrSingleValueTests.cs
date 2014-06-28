@@ -16,6 +16,7 @@ namespace UnitTests
 
             Assert.AreEqual(3, o.Count);
             Assert.IsFalse(o.IsSingle);
+            Assert.AreEqual(o.CastErrorMode, CastErrorMode.ThrowExceptionIfList);
             Assert.AreEqual(1, o.ElementAt(0));
             Assert.AreEqual(2, o.ElementAt(1));
             Assert.AreEqual(3, o.ElementAt(2));
@@ -34,13 +35,44 @@ namespace UnitTests
         }
 
         [TestMethod]
+        public void TestIsSinglePropertyForDeafaultValueType()
+        {
+            var o = new ListOrSingleValue<int>();
+
+            Assert.AreEqual(0, o.Count);
+            Assert.IsTrue(o.IsSingle);
+            Assert.AreEqual(default(int), (int)o);
+        }
+
+        [TestMethod]
+        public void TestIsSinglePropertyForDeafaultReferenseType()
+        {
+            var o = new ListOrSingleValue<List<int>>();
+
+            Assert.AreEqual(0, o.Count);
+            Assert.IsTrue(o.IsSingle);
+            Assert.IsNull((List<int>)o);
+        }
+
+        [TestMethod]
         public void TestImplicitCastFromSingleInt()
         {
             ListOrSingleValue<int> o = 5;
 
             Assert.AreEqual(1, o.Count);
+            Assert.AreEqual(o.CastErrorMode, CastErrorMode.ThrowExceptionIfList);
             Assert.IsTrue(o.IsSingle);
             Assert.AreEqual(5, o.ElementAt(0));
+        }
+
+        [TestMethod]
+        public void TestImplicitCastToSingleDefaultInt()
+        {
+            ListOrSingleValue<int> o = new ListOrSingleValue<int>();
+
+            int intValue = o;
+
+            Assert.AreEqual(0, intValue);
         }
 
         [TestMethod]
@@ -50,6 +82,7 @@ namespace UnitTests
             ListOrSingleValue<int> o = list;
 
             Assert.AreEqual(3, o.Count);
+            Assert.AreEqual(o.CastErrorMode, CastErrorMode.ThrowExceptionIfList);
             Assert.IsFalse(o.IsSingle);
             Assert.AreEqual(10, o.ElementAt(0));
             Assert.AreEqual(12, o.ElementAt(1));
@@ -90,11 +123,29 @@ namespace UnitTests
         }
 
         [TestMethod]
-        public void TestToStringMethodForEmptyCase()
+        public void TestToStringMethodForValuedType()
         {
             var o = new ListOrSingleValue<int>();
 
-            Assert.AreEqual(o.ToString(), string.Empty);
+            Assert.AreEqual(o.ToString(), default(int).ToString());
+        }
+
+        [TestMethod]
+        [ExpectedException(typeof(NullReferenceException))]
+        public void TestToStringMethodForDefaultReferenceType()
+        {
+            var o = new ListOrSingleValue<List<int>>();
+
+            o.ToString();
+        }
+
+        [TestMethod]
+        public void TestCastExceptionModeUseFirstOrDefaultElementIfList()
+        {
+            var o = new ListOrSingleValue<int>(CastErrorMode.UseFirstOrDefaultElementIfList) { 1, 2, 3 };
+            int intValue = o;
+
+            Assert.AreEqual(1, intValue);
         }
     }
 }

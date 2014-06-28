@@ -22,7 +22,7 @@ namespace UnitTests
 
             var response = application.GetResponseAsStringFor(request);
 
-            var expectedString = "{\"status\":\"ok\",\"count\":1,\"data\":[{\"nickname\":\"gollazio\",\"id\":2989679,\"account_id\":2989679}]}";
+            var expectedString = "{\"status\":\"ok\",\"count\":1,\"data\":[{\"nickname\":\"gollazio\",\"id\":null,\"account_id\":2989679}]}";
             Assert.AreEqual(expectedString, response);
         }
 
@@ -42,7 +42,7 @@ namespace UnitTests
             Assert.AreEqual(response.Status, "ok");
             Assert.AreEqual(response.Data[0].Nickname, "gollazio");
             Assert.AreEqual(response.Data[0].AccountId, "2989679");
-            Assert.AreEqual(response.Data[0].Id, "2989679");
+            Assert.IsNull(response.Data[0].Id);
             Assert.IsNull(response.Error);
         }
 

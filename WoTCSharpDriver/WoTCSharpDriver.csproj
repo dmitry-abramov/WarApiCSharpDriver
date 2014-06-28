@@ -45,6 +45,7 @@
     <Compile Include="Extensions\DictionaryExtension.cs" />
     <Compile Include="Extensions\KeyValuePairExtension.cs" />
     <Compile Include="ListOrSingleValue.cs" />
+    <Compile Include="Nation.cs" />
     <Compile Include="Requests\Clan\ClanBattlesRequest.cs" />
     <Compile Include="Requests\Clan\ClanInfoRequest.cs" />
     <Compile Include="Requests\Clan\ClanMembersInfo.cs" />

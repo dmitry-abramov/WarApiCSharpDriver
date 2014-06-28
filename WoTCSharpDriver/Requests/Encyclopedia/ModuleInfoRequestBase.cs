@@ -15,6 +15,6 @@ namespace WoTCSharpDriver.Requests.Encyclopedia
 
         // todo: create consts
         [RequestParameter("nation", false)]
-        public string Nation { get; set; }
+        public Nation Nation { get; set; }
     }
 }

@@ -105,13 +105,14 @@
     <Compile Include="Requests\Tanks\TanksAchievementsRequest.cs" />
     <Compile Include="Requests\Tanks\TanksRequestBase.cs" />
     <Compile Include="Requests\Tanks\TanksStatisticsRequest.cs" />
+    <Compile Include="Responses\Tanks\TanksAchivementsResponse.cs" />
+    <Compile Include="Responses\Tanks\TanksStatisticsResponse.cs" />
     <Compile Include="WoTApplication.cs" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="Responses\Encyclopedia\" />
     <Folder Include="Responses\GlobalWar\" />
     <Folder Include="Responses\Ratings\" />
-    <Folder Include="Responses\Tanks\" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 

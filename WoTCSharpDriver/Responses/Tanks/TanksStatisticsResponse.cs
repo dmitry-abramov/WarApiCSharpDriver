@@ -11,7 +11,7 @@ namespace WoTCSharpDriver.Responses.Tanks
 
         // todo: use enum
         [DataMember(Name = "mark_of_mastery")]
-        public int AccountId { get; set; }
+        public int MarkOfMastery { get; set; }
 
         [DataMember(Name = "max_frags")]
         public int MaxFrags { get; set; }

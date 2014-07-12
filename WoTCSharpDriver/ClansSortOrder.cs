@@ -8,7 +8,7 @@ namespace WoTCSharpDriver
 {
     public class ClansSortOrder
     {
-        private string OrderBy { get; private set; }
+        public string OrderBy { get; private set; }
 
         public static ClansSortOrder ByName { get { return new ClansSortOrder("name"); } }
 

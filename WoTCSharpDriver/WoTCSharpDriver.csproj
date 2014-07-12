@@ -101,6 +101,13 @@
     <Compile Include="Responses\Clan\ClanMemberInfo.cs" />
     <Compile Include="Responses\Clan\ClanPrivateInfo.cs" />
     <Compile Include="Responses\Error.cs" />
+    <Compile Include="Responses\Ratings\DatesWithRatingsResponse.cs" />
+    <Compile Include="Responses\Ratings\NeighborsResponse.cs" />
+    <Compile Include="Responses\Ratings\PlayerRatingsData.cs" />
+    <Compile Include="Responses\Ratings\PlayerRatingsResponse.cs" />
+    <Compile Include="Responses\Ratings\RatingTypesResponse.cs" />
+    <Compile Include="Responses\Ratings\StatisticsBySingleParameter.cs" />
+    <Compile Include="Responses\Ratings\TopPlayersResponse.cs" />
     <Compile Include="Responses\ResponseBase.cs" />
     <Compile Include="Requests\Tanks\TanksAchievementsRequest.cs" />
     <Compile Include="Requests\Tanks\TanksRequestBase.cs" />
@@ -112,7 +119,6 @@
   <ItemGroup>
     <Folder Include="Responses\Encyclopedia\" />
     <Folder Include="Responses\GlobalWar\" />
-    <Folder Include="Responses\Ratings\" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 

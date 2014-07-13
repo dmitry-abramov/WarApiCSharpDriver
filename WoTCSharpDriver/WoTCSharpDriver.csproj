@@ -101,6 +101,13 @@
     <Compile Include="Responses\Clan\ClanMemberInfo.cs" />
     <Compile Include="Responses\Clan\ClanPrivateInfo.cs" />
     <Compile Include="Responses\Error.cs" />
+    <Compile Include="Responses\GlobalWar\ClansResponse.cs" />
+    <Compile Include="Responses\GlobalWar\FamePointsResponse.cs" />
+    <Compile Include="Responses\GlobalWar\MapsResponse.cs" />
+    <Compile Include="Responses\GlobalWar\Province.cs" />
+    <Compile Include="Responses\GlobalWar\ProvincesResponse.cs" />
+    <Compile Include="Responses\GlobalWar\Region.cs" />
+    <Compile Include="Responses\GlobalWar\TopClansResponse.cs" />
     <Compile Include="Responses\Ratings\DatesWithRatingsResponse.cs" />
     <Compile Include="Responses\Ratings\NeighborsResponse.cs" />
     <Compile Include="Responses\Ratings\PlayerRatingsData.cs" />
@@ -118,7 +125,6 @@
   </ItemGroup>
   <ItemGroup>
     <Folder Include="Responses\Encyclopedia\" />
-    <Folder Include="Responses\GlobalWar\" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 

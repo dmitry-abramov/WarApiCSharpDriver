@@ -95,7 +95,7 @@
     <Compile Include="Responses\Account\PlayersListResponse.cs" />
     <Compile Include="Responses\Auth\LoginResponse.cs" />
     <Compile Include="Responses\Auth\ProlongateResponse.cs" />
-    <Compile Include="Responses\Clan\ClanEmblem.cs" />
+    <Compile Include="Responses\ClanEmblem.cs" />
     <Compile Include="Responses\Clan\ClanInfoResponse.cs" />
     <Compile Include="Responses\Clan\ClanListResponse.cs" />
     <Compile Include="Responses\Clan\ClanMemberInfo.cs" />

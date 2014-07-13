@@ -10,7 +10,7 @@ namespace WoTCSharpDriver.Responses.GlobalWar
         public string Arena { get; set; }
 
         [DataMember(Name = "clan_id")]
-        public int Arena { get; set; }
+        public int ClanId { get; set; }
 
         // todo use ListOrSingel
         [DataMember(Name = "neighbors")]

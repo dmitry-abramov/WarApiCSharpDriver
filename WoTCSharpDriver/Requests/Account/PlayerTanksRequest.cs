@@ -15,7 +15,7 @@ namespace WarApiCSharpDriver.Requests.Account
         [RequestParameter("account_id", true)]
         public string AccountId { get; set; }
 
-        [RequestParameter("tank_id", true)]
+        [RequestParameter("tank_id", false)]
         public string TankId { get; set; }
     }
 }

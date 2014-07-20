@@ -50,6 +50,8 @@
     </Otherwise>
   </Choose>
   <ItemGroup>
+    <Compile Include="API\AccountAPI.cs" />
+    <Compile Include="API\TestClient\TestWotApplication.cs" />
     <Compile Include="LanguageTests.cs" />
     <Compile Include="ListOrSingleValueTests.cs" />
     <Compile Include="Requests\Account\PlayerInfoTests.cs" />
@@ -59,11 +61,16 @@
     <Compile Include="WoTApplicationTests.cs" />
   </ItemGroup>
   <ItemGroup>
+    <ProjectReference Include="..\Utilities\Utilities.csproj">
+      <Project>{9a4ffb87-b8d2-467e-9fc7-cf86f34bc3f6}</Project>
+      <Name>Utilities</Name>
+    </ProjectReference>
     <ProjectReference Include="..\WoTCSharpDriver\WoTCSharpDriver.csproj">
       <Project>{50848325-2973-4ac3-82aa-b47215e0c466}</Project>
       <Name>WoTCSharpDriver</Name>
     </ProjectReference>
   </ItemGroup>
+  <ItemGroup />
   <Choose>
     <When Condition="'$(VisualStudioVersion)' == '10.0' And '$(IsCodedUITest)' == 'True'">
       <ItemGroup>

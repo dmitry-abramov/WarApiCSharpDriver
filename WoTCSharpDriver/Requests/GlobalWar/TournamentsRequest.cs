@@ -2,7 +2,7 @@
 
 namespace WarApiCSharpDriver.Requests.GlobalWar
 {
-    public class TournamentsReqest : GlobalWarRequestBase
+    public class TournamentsRequest : GlobalWarRequestBase
     {
         public override string MethodName
         {

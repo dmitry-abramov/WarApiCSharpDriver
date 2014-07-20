@@ -68,7 +68,7 @@
     <Compile Include="Requests\GlobalWar\MapsRequest.cs" />
     <Compile Include="Requests\GlobalWar\ProvincesRequest.cs" />
     <Compile Include="Requests\GlobalWar\TopClansRequest.cs" />
-    <Compile Include="Requests\GlobalWar\TournamentsReqest.cs" />
+    <Compile Include="Requests\GlobalWar\TournamentsRequest.cs" />
     <Compile Include="Requests\Ratings\DatesWithRatingsRequest.cs" />
     <Compile Include="Requests\Ratings\NeighborsRequest.cs" />
     <Compile Include="Requests\Ratings\PlayerRatingsRequest.cs" />

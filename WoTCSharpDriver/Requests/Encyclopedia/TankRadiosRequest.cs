@@ -1,4 +1,4 @@
-﻿namespace WoTCSharpDriver.Requests.Encyclopedia
+﻿namespace WarApiCSharpDriver.Requests.Encyclopedia
 {
     public class TankRadiosRequest : ModuleInfoRequestBase
     {

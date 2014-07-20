@@ -1,7 +1,7 @@
 ﻿using System;
 using Microsoft.VisualStudio.TestTools.UnitTesting;
 
-using WoTCSharpDriver.Requests;
+using WarApiCSharpDriver.Requests;
 
 namespace UnitTests
 {

@@ -1,6 +1,6 @@
 ﻿using System.Runtime.Serialization;
 
-namespace WoTCSharpDriver.Responses.Ratings
+namespace WarApiCSharpDriver.Responses.Ratings
 {
     [DataContract]
     public class PlayerRatingsData

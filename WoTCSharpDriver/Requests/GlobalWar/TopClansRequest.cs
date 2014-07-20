@@ -1,6 +1,6 @@
-﻿using WoTCSharpDriver.Attributes;
+﻿using WarApiCSharpDriver.Attributes;
 
-namespace WoTCSharpDriver.Requests.GlobalWar
+namespace WarApiCSharpDriver.Requests.GlobalWar
 {
     public class TopClansRequest : GlobalWarRequestBase
     {

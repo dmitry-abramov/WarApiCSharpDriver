@@ -1,7 +1,7 @@
-﻿using WoTCSharpDriver.Requests;
-using WoTCSharpDriver.Attributes;
+﻿using WarApiCSharpDriver.Requests;
+using WarApiCSharpDriver.Attributes;
 
-namespace WoTCSharpDriver.Requests.Tanks
+namespace WarApiCSharpDriver.Requests.Tanks
 {
     public class TanksRequestBase : RequestBase
     {

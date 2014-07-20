@@ -1,4 +1,4 @@
-﻿namespace WoTCSharpDriver.Requests.Ratings
+﻿namespace WarApiCSharpDriver.Requests.Ratings
 {
     public class RatingsTypesRequest : RatingsRequestBase
     {

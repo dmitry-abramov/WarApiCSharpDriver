@@ -1,6 +1,6 @@
-﻿using WoTCSharpDriver.Attributes;
+﻿using WarApiCSharpDriver.Attributes;
 
-namespace WoTCSharpDriver.Requests.Clan
+namespace WarApiCSharpDriver.Requests.Clan
 {
     public class TopClansRequest : ClansRequestBase
     {

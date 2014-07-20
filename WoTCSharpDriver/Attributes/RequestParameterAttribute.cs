@@ -1,6 +1,6 @@
 ﻿using System;
 
-namespace WoTCSharpDriver.Attributes
+namespace WarApiCSharpDriver.Attributes
 {
     internal class RequestParameterAttribute : Attribute
     {

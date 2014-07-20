@@ -1,5 +1,5 @@
 ﻿using Microsoft.VisualStudio.TestTools.UnitTesting;
-using WoTCSharpDriver.Requests.Account;
+using WarApiCSharpDriver.Requests.Account;
 
 namespace UnitTests.Requests.Account
 {

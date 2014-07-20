@@ -1,6 +1,6 @@
-﻿using WoTCSharpDriver.Attributes;
+﻿using WarApiCSharpDriver.Attributes;
 
-namespace WoTCSharpDriver.Requests.Ratings
+namespace WarApiCSharpDriver.Requests.Ratings
 {
     public class DatesWithRatingsRequest : RatingsRequestBase
     {

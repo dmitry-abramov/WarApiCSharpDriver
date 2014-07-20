@@ -1,7 +1,7 @@
-﻿using WoTCSharpDriver.Attributes;
+﻿using WarApiCSharpDriver.Attributes;
 
 
-namespace WoTCSharpDriver.Requests.Encyclopedia
+namespace WarApiCSharpDriver.Requests.Encyclopedia
 {
     public class TankEnginesRequest : ModuleInfoRequestBase
     {

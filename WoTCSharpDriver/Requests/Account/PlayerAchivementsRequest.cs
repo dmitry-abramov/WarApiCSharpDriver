@@ -1,6 +1,6 @@
-﻿using WoTCSharpDriver.Attributes;
+﻿using WarApiCSharpDriver.Attributes;
 
-namespace WoTCSharpDriver.Requests.Account
+namespace WarApiCSharpDriver.Requests.Account
 {
     public class PlayerAchivementsRequest : AccountRequestBase
     {

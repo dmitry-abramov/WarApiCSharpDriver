@@ -1,7 +1,7 @@
 ﻿using System.Collections.Generic;
 using System.Runtime.Serialization;
 
-namespace WoTCSharpDriver.Responses.Tanks
+namespace WarApiCSharpDriver.Responses.Tanks
 {
     [DataContract]
     public class TanksStatisticsData

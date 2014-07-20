@@ -1,7 +1,7 @@
-﻿using WoTCSharpDriver.Requests;
-using WoTCSharpDriver.Attributes;
+﻿using WarApiCSharpDriver.Requests;
+using WarApiCSharpDriver.Attributes;
 
-namespace WoTCSharpDriver.Requests.Ratings
+namespace WarApiCSharpDriver.Requests.Ratings
 {
     public class RatingsRequestBase : RequestBase
     {

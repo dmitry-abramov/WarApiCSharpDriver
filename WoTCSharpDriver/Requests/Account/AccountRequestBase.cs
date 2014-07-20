@@ -1,7 +1,7 @@
-﻿using WoTCSharpDriver.Attributes;
-using WoTCSharpDriver.Requests;
+﻿using WarApiCSharpDriver.Attributes;
+using WarApiCSharpDriver.Requests;
 
-namespace WoTCSharpDriver.Requests.Account
+namespace WarApiCSharpDriver.Requests.Account
 {
     public class AccountRequestBase : RequestBase
     {

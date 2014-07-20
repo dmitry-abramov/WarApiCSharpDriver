@@ -1,4 +1,4 @@
-﻿namespace WoTCSharpDriver
+﻿namespace WarApiCSharpDriver
 {
     public class Language
     {

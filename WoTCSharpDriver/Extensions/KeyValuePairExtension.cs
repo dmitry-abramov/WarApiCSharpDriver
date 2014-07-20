@@ -1,6 +1,6 @@
 ﻿using System.Collections.Generic;
 
-namespace WoTCSharpDriver.Extensions
+namespace WarApiCSharpDriver.Extensions
 {
     internal static class KeyValuePairExtension
     {

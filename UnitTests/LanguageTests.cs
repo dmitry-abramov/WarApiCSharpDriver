@@ -1,6 +1,6 @@
 ﻿using Microsoft.VisualStudio.TestTools.UnitTesting;
-using WoTCSharpDriver;
-using WoTCSharpDriver.Requests;
+using WarApiCSharpDriver;
+using WarApiCSharpDriver.Requests;
 
 namespace UnitTests
 {

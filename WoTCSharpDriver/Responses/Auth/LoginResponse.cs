@@ -1,6 +1,6 @@
 ﻿using System.Runtime.Serialization;
 
-namespace WoTCSharpDriver.Responses.Auth
+namespace WarApiCSharpDriver.Responses.Auth
 {
     [DataContract]
     public class LoginResponse

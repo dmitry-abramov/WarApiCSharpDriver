@@ -1,6 +1,6 @@
 ﻿
 using System.Runtime.Serialization;
-namespace WoTCSharpDriver.Responses.GlobalWar
+namespace WarApiCSharpDriver.Responses.GlobalWar
 {
     [DataContract]
     public class Province

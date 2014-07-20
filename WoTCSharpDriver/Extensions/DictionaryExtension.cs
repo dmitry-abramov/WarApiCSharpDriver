@@ -1,7 +1,7 @@
 ﻿using System.Collections.Generic;
 using System.Linq;
 
-namespace WoTCSharpDriver.Extensions
+namespace WarApiCSharpDriver.Extensions
 {
     internal static class DictionaryExtension
     {

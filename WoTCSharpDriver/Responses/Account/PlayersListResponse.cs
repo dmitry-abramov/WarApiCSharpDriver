@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 using System.Runtime.Serialization;
 
-namespace WoTCSharpDriver.Responses.Account
+namespace WarApiCSharpDriver.Responses.Account
 {
     [DataContract]
     public class PlayersListData

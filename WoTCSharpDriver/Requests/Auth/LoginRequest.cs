@@ -1,6 +1,6 @@
-﻿using WoTCSharpDriver.Attributes;
+﻿using WarApiCSharpDriver.Attributes;
 
-namespace WoTCSharpDriver.Requests.Auth
+namespace WarApiCSharpDriver.Requests.Auth
 {
     public class LoginRequest : AuthRequestBase
     {

@@ -2,10 +2,10 @@
 using System.Collections.Generic;
 using System.Linq;
 
-using WoTCSharpDriver.Extensions;
-using WoTCSharpDriver.Attributes;
+using WarApiCSharpDriver.Extensions;
+using WarApiCSharpDriver.Attributes;
 
-namespace WoTCSharpDriver.Requests
+namespace WarApiCSharpDriver.Requests
 {
     public class RequestBase
     {

@@ -4,15 +4,18 @@ using System.Net;
 using System.IO;
 using System.Runtime.Serialization.Json;
 
-using WoTCSharpDriver.Requests;
+using WarApiCSharpDriver.Requests;
+using Utilities.Serialization;
 
-namespace WoTCSharpDriver
+namespace WarApiCSharpDriver
 {
     public class WoTApplication
     {
         private readonly string server;
 
         private readonly string apiName;
+
+        private readonly ISerializer serializer;
 
         public string ApplicationId { get; private set; }
 
@@ -21,6 +24,17 @@ namespace WoTCSharpDriver
             ApplicationId = applicationId;
             this.server = server;
             this.apiName = apiName;
+
+            serializer = new NewtonsoftSerializer();
+        }
+
+        public WoTApplication(string applicationId, string server, string apiName, ISerializer serializer)
+        {
+            ApplicationId = applicationId;
+            this.server = server;
+            this.apiName = apiName;
+
+            this.serializer = serializer;
         }
 
         public TRequest CreateRequest<TRequest>() where TRequest : RequestBase, new()
@@ -55,10 +69,7 @@ namespace WoTCSharpDriver
             var webClient = new WebClient();
             var responseString = webClient.DownloadString(requestString);
 
-            var serializer = new DataContractJsonSerializer(typeof(TResponse));
-            
-            var stream = new MemoryStream(Encoding.Default.GetBytes(responseString));
-            var response = (TResponse)serializer.ReadObject(stream);
+            var response = serializer.Deserialize<TResponse>(responseString);
 
             return response;
         }

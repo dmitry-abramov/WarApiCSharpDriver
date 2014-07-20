@@ -1,4 +1,4 @@
-﻿using WarApiCSharpDriver.Attributes;
+﻿using Utilities.Attributes;
 using WarApiCSharpDriver.Requests;
 
 namespace WarApiCSharpDriver.Requests.Account

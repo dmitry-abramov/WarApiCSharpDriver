@@ -1,5 +1,5 @@
 ﻿using WarApiCSharpDriver.Requests;
-using WarApiCSharpDriver.Attributes;
+using Utilities.Attributes;
 
 namespace WarApiCSharpDriver.Requests.Tanks
 {

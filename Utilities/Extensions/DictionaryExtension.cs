@@ -1,9 +1,9 @@
 ﻿using System.Collections.Generic;
 using System.Linq;
 
-namespace WarApiCSharpDriver.Extensions
+namespace Utilities.Extensions
 {
-    internal static class DictionaryExtension
+    public static class DictionaryExtension
     {
         public static void AddOrUpdate<TKey, TValue>(this IDictionary<TKey, TValue> dictionary, TKey key, TValue value)
         {

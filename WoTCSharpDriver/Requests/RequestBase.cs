@@ -2,8 +2,8 @@
 using System.Collections.Generic;
 using System.Linq;
 
-using WarApiCSharpDriver.Extensions;
-using WarApiCSharpDriver.Attributes;
+using Utilities.Extensions;
+using Utilities.Attributes;
 
 namespace WarApiCSharpDriver.Requests
 {

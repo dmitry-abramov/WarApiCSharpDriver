@@ -1,4 +1,4 @@
-﻿using WarApiCSharpDriver.Attributes;
+﻿using Utilities.Attributes;
 
 namespace WarApiCSharpDriver.Requests.GlobalWar
 {

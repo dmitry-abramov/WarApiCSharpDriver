@@ -1,8 +1,8 @@
 ﻿using System;
 
-namespace WarApiCSharpDriver.Attributes
+namespace Utilities.Attributes
 {
-    internal class RequestParameterAttribute : Attribute
+    public class RequestParameterAttribute : Attribute
     {
         public string Name { get; set; }
         public bool IsRequired { get; set; }

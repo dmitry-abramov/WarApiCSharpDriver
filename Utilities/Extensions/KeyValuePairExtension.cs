@@ -1,8 +1,8 @@
 ﻿using System.Collections.Generic;
 
-namespace WarApiCSharpDriver.Extensions
+namespace Utilities.Extensions
 {
-    internal static class KeyValuePairExtension
+    public static class KeyValuePairExtension
     {
         public static string GetLikeUriParameter<TKey, TValue>(this KeyValuePair<TKey, TValue> keyValuePair)
         {

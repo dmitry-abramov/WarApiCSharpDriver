@@ -1,4 +1,5 @@
-﻿using Utilities.Attributes;
+﻿using System;
+using Utilities.Attributes;
 
 namespace WarApiCSharpDriver.Requests.Ratings
 {
@@ -22,9 +23,8 @@ namespace WarApiCSharpDriver.Requests.Ratings
         [RequestParameter("rank_field", true)]
         public string RankField { get; set; }
         
-        // todo: use DateTime
         [RequestParameter("date", false)]
-        public string Date { get; set; }
+        public DateTime Date { get; set; }
 
         [RequestParameter("limit", false)]
         public int Limit { get; set; }

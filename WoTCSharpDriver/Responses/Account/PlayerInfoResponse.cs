@@ -2,6 +2,7 @@
 using System;
 using System.Collections.Generic;
 using System.Runtime.Serialization;
+using WarApiCSharpDriver.Serialization;
 
 namespace WarApiCSharpDriver.Responses.Account
 {
@@ -18,27 +19,27 @@ namespace WarApiCSharpDriver.Responses.Account
         [JsonProperty("client_language")]
         public string ClientLanguage { get; set; }
 
-        //todo: use DateTime
         [JsonProperty("created_at")]
-        public string CreatedAt { get; set; }
+        [JsonConverter(typeof(DateTimeJsonConverter))]
+        public DateTime CreatedAt { get; set; }
 
         [JsonProperty("global_rating")]
         public int GlobalRating { get; set; }
 
-        //todo: use timestamp
         [JsonProperty("last_battle_time")]
-        public string LastBattleTime { get; set; }
+        [JsonConverter(typeof(DateTimeJsonConverter))]
+        public DateTime LastBattleTime { get; set; }
 
-        //todo: use timestamp
         [JsonProperty("logout_at")]
-        public string LogoutAt { get; set; }
+        [JsonConverter(typeof(DateTimeJsonConverter))]
+        public DateTime LogoutAt { get; set; }
 
         [JsonProperty("nickname")]
         public string Nickname { get; set; }
 
-        //todo: use timestamp
         [JsonProperty("updated_at")]
-        public string UpdatedAt { get; set; }
+        [JsonConverter(typeof(DateTimeJsonConverter))]
+        public DateTime UpdatedAt { get; set; }
 
         [Obsolete("Use achievements api")]
         [JsonProperty("achievements")]

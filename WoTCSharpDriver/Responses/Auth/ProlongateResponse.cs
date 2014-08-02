@@ -1,5 +1,7 @@
 ﻿using Newtonsoft.Json;
+using System;
 using System.Runtime.Serialization;
+using WarApiCSharpDriver.Serialization;
 
 namespace WarApiCSharpDriver.Responses.Auth
 {
@@ -11,9 +13,9 @@ namespace WarApiCSharpDriver.Responses.Auth
 
         [JsonProperty("account_id")]
         public string AccountId { get; set; }
-
-        // todo: use date time
+                
         [JsonProperty("expires_at")]
-        public string ExpiresAt { get; set; }
+        [JsonConverter(typeof(DateTimeJsonConverter))]
+        public DateTime ExpiresAt { get; set; }
     }
 }

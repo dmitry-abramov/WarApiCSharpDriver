@@ -1,4 +1,5 @@
-﻿using Utilities.Attributes;
+﻿using System;
+using Utilities.Attributes;
 
 namespace WarApiCSharpDriver.Requests.Auth
 {
@@ -12,9 +13,7 @@ namespace WarApiCSharpDriver.Requests.Auth
             }
         }
 
-        // note: use UTC format
-        // todo: make DateTime
         [RequestParameter("expires_at", false)]
-        public string ExpiresAt { get; set; }
+        public DateTime ExpiresAt { get; set; }
     }
 }

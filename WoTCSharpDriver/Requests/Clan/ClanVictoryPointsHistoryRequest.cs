@@ -1,4 +1,5 @@
-﻿using Utilities.Attributes;
+﻿using System;
+using Utilities.Attributes;
 
 namespace WarApiCSharpDriver.Requests.Clan
 {
@@ -18,13 +19,11 @@ namespace WarApiCSharpDriver.Requests.Clan
         [RequestParameter("map_id", false)]
         public int MapId { get; set; }
 
-        // todo: use DateTime
         [RequestParameter("since", false)]
-        public string Since { get; set; }
+        public DateTime Since { get; set; }
 
-        // todo: use DateTime
         [RequestParameter("until", false)]
-        public string Until { get; set; }
+        public DateTime Until { get; set; }
 
         [RequestParameter("offset", false)]
         public int Offset { get; set; }

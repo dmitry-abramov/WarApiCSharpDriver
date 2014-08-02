@@ -2,7 +2,7 @@
 
 namespace Utilities.Extensions
 {
-    public static class KeyValuePairExtension
+    public static class KeyValuePairExtensions
     {
         public static string GetLikeUriParameter<TKey, TValue>(this KeyValuePair<TKey, TValue> keyValuePair)
         {

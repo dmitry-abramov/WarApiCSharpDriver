@@ -1,4 +1,5 @@
-﻿using Utilities.Attributes;
+﻿using System;
+using Utilities.Attributes;
 
 namespace WarApiCSharpDriver.Requests.Auth
 {
@@ -12,10 +13,8 @@ namespace WarApiCSharpDriver.Requests.Auth
             }
         }
                 
-        // note: use UTC format
-        // todo: make DateTime
         [RequestParameter("expires_at", false)]
-        public string ExpiresAt { get; set; }
+        public DateTime ExpiresAt { get; set; }
 
         [RequestParameter("redirect_uri", false)]
         public string RedirectUri { get; set; }
@@ -23,6 +22,7 @@ namespace WarApiCSharpDriver.Requests.Auth
         [RequestParameter("display", false)]
         public DisplayType Display { get; set; }
 
+        //todo: use enum
         [RequestParameter("nofollow", false)]
         public int NoFollow { get; set; }
     }

@@ -91,16 +91,15 @@ namespace WarApiCSharpDriver.Requests
                     var value = field.GetValue(this);
 
                     if (value != null)
-                    {
+                    {                      
                         var stringValue = value.ToString();
 
-                        if (!string.IsNullOrEmpty(stringValue))
+                        if (value is DateTime)
                         {
-                            parameters.AddOrUpdate(name, stringValue);
-                            continue;
+                            stringValue = ((DateTime)value).ToUnixTime().ToString();
                         }
 
-                        if (!isNeedRequeredValidation)
+                        if (!string.IsNullOrEmpty(stringValue) || !isNeedRequeredValidation)
                         {
                             parameters.AddOrUpdate(name, stringValue);
                             continue;

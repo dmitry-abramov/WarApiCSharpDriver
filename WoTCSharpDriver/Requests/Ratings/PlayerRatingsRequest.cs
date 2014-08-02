@@ -1,4 +1,5 @@
-﻿using Utilities.Attributes;
+﻿using System;
+using Utilities.Attributes;
 
 namespace WarApiCSharpDriver.Requests.Ratings
 {
@@ -19,8 +20,7 @@ namespace WarApiCSharpDriver.Requests.Ratings
         [RequestParameter("type", true)]
         public string Type { get; set; }
 
-        // todo: use DateTime
         [RequestParameter("date", true)]
-        public string Date { get; set; }
+        public DateTime Date { get; set; }
     }
 }

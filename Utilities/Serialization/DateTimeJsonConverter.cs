@@ -1,6 +1,7 @@
 ﻿using Newtonsoft.Json;
 using Newtonsoft.Json.Linq;
 using System;
+using Utilities.Extensions;
 
 namespace WarApiCSharpDriver.Serialization
 {
@@ -22,10 +23,7 @@ namespace WarApiCSharpDriver.Serialization
 
             var ticks = (long)reader.Value;
 
-            var date = new DateTime(1970, 1, 1);
-            date = date.AddSeconds(ticks);
-
-            return date;
+            return ticks.ToDateTime();
         }
 
         public override void WriteJson(JsonWriter writer, object value, JsonSerializer serializer)
@@ -33,16 +31,7 @@ namespace WarApiCSharpDriver.Serialization
             long ticks;
             if (value is DateTime)
             {
-                var epoc = new DateTime(1970, 1, 1);
-                var delta = ((DateTime)value) - epoc;
-                
-                /*if (delta.TotalSeconds < 0)
-                {
-                    throw new ArgumentOutOfRangeException(
-                        "Unix epoc starts January 1st, 1970");
-                }*/
-
-                ticks = (long)delta.TotalSeconds;
+                ticks = ((DateTime)value).ToUnixTime();
             }
             else
             {

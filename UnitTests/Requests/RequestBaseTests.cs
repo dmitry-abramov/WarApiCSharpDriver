@@ -2,12 +2,19 @@
 using Microsoft.VisualStudio.TestTools.UnitTesting;
 
 using WarApiCSharpDriver.Requests;
+using Utilities.Attributes;
 
 namespace UnitTests
 {
     [TestClass]
     public class RequestBaseTests
     {
+        protected class TestRequestWithDateParameter : RequestBase
+        {
+            [RequestParameter("date", true)]
+            public DateTime Date { get; set; }
+        }
+
         [TestMethod]
         public void GetEmptyParameters()
         {
@@ -73,6 +80,19 @@ namespace UnitTests
             var request = new RequestBase();
 
             var parameter1 = request.GetParameter("parameter1");
+        }
+
+        [TestMethod]
+        public void TestRequestWithDate()
+        {
+            var request = new TestRequestWithDateParameter();
+            request.ApplicationId = "application id";
+
+            request.Date = new DateTime(2011, 8, 15, 8, 42, 30);
+
+            var uriParameters = request.GetParametersLikeUri();
+
+            Assert.AreEqual("date=1313397750&application_id=application id", uriParameters);
         }
     }
 }

@@ -3,7 +3,7 @@ using System.Linq;
 
 namespace Utilities.Extensions
 {
-    public static class DictionaryExtension
+    public static class DictionaryExtensions
     {
         public static void AddOrUpdate<TKey, TValue>(this IDictionary<TKey, TValue> dictionary, TKey key, TValue value)
         {

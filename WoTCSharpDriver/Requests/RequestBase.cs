@@ -4,6 +4,7 @@ using System.Linq;
 
 using Utilities.Extensions;
 using Utilities.Attributes;
+using System.Web;
 
 namespace WarApiCSharpDriver.Requests
 {
@@ -59,7 +60,7 @@ namespace WarApiCSharpDriver.Requests
             string value;
             if (GetParameters(false).TryGetValue(key, out value))
             {
-                return value;
+                return HttpUtility.UrlDecode(value);
             }
 
             throw new ArgumentException(string.Format("Request does not have parameter '{0}'", key), "key");
@@ -98,6 +99,8 @@ namespace WarApiCSharpDriver.Requests
                         {
                             stringValue = ((DateTime)value).ToUnixTime().ToString();
                         }
+
+                        stringValue = HttpUtility.UrlPathEncode(stringValue);
 
                         if (!string.IsNullOrEmpty(stringValue) || !isNeedRequeredValidation)
                         {

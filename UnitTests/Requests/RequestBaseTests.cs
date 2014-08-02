@@ -41,7 +41,7 @@ namespace UnitTests
 
             var uriParameters = request.GetParametersLikeUri();
 
-            Assert.AreEqual("access_token=access token&application_id=application id", uriParameters);
+            Assert.AreEqual("access_token=access%20token&application_id=application%20id", uriParameters);
         }
 
         [TestMethod]
@@ -54,7 +54,7 @@ namespace UnitTests
 
             var uriParameters = request.GetParametersLikeUri();
 
-            Assert.AreEqual("parameter1=value1&access_token=access token&application_id=application id", uriParameters);
+            Assert.AreEqual("parameter1=value1&access_token=access%20token&application_id=application%20id", uriParameters);
         }
 
         [TestMethod]
@@ -92,7 +92,7 @@ namespace UnitTests
 
             var uriParameters = request.GetParametersLikeUri();
 
-            Assert.AreEqual("date=1313397750&application_id=application id", uriParameters);
+            Assert.AreEqual("date=1313397750&application_id=application%20id", uriParameters);
         }
     }
 }

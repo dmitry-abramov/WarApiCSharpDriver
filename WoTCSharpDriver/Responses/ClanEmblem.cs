@@ -5,22 +5,23 @@ using System.Text;
 using System.Threading.Tasks;
 
 using System.Runtime.Serialization;
+using Newtonsoft.Json;
 
 namespace WarApiCSharpDriver.Responses
 {
     [DataContract]
     public class ClanEmblems
     {
-        [DataMember(Name = "bw_tank")]
+        [JsonProperty("bw_tank")]
         public Uri EmblemOnTank { get; set; }
 
-        [DataMember(Name = "large")]
+        [JsonProperty("large")]
         public Uri LargeEmblem { get; set; }
 
-        [DataMember(Name = "medium")]
+        [JsonProperty("medium")]
         public Uri MediumEmblem { get; set; }
 
-        [DataMember(Name = "small")]
+        [JsonProperty("small")]
         public Uri SmallEmblem { get; set; }
     }
 }

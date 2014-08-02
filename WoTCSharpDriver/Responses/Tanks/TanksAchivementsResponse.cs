@@ -1,4 +1,5 @@
-﻿using System.Collections.Generic;
+﻿using Newtonsoft.Json;
+using System.Collections.Generic;
 using System.Runtime.Serialization;
 
 namespace WarApiCSharpDriver.Responses.Tanks
@@ -6,19 +7,19 @@ namespace WarApiCSharpDriver.Responses.Tanks
     [DataContract]
     public class TanksAchivementsData
     {
-        [DataMember(Name = "account_id")]
+        [JsonProperty("account_id")]
         public string AccountId { get; set; }
 
-        [DataMember(Name = "TankId")]
+        [JsonProperty("TankId")]
         public string TankId { get; set; }
 
-        [DataMember(Name = "series")]
+        [JsonProperty("series")]
         public string Series { get; set; }
 
-        [DataMember(Name = "max_series")]
+        [JsonProperty("max_series")]
         public string MaxSeries { get; set; }
 
-        [DataMember(Name = "achivements")]
+        [JsonProperty("achivements")]
         public string Achivements { get; set; }
     }
 

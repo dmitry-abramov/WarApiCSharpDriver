@@ -1,56 +1,57 @@
-﻿using System.Runtime.Serialization;
+﻿using Newtonsoft.Json;
+using System.Runtime.Serialization;
 
 namespace WarApiCSharpDriver.Responses.Ratings
 {
     [DataContract]
     public class PlayerRatingsData
     {
-        [DataMember(Name = "account_id")]
+        [JsonProperty("account_id")]
         public int AccountId { get; set; }
 
-        [DataMember(Name = "battles_to_play")]
+        [JsonProperty("battles_to_play")]
         public int BattlesToPlay { get; set; }
 
-        [DataMember(Name = "battles_count")]
+        [JsonProperty("battles_count")]
         public StatisticsBySingleParameter BattlesCount { get; set; }
 
-        [DataMember(Name = "capture_points ")]
+        [JsonProperty("capture_points ")]
         public StatisticsBySingleParameter CapturePoints { get; set; }
 
-        [DataMember(Name = "damage_avg")]
+        [JsonProperty("damage_avg")]
         public StatisticsBySingleParameter DamageAvg { get; set; }
 
-        [DataMember(Name = "damage_dealt")]
+        [JsonProperty("damage_dealt")]
         public StatisticsBySingleParameter DamageDealt { get; set; }
 
-        [DataMember(Name = "frags_avg")]
+        [JsonProperty("frags_avg")]
         public StatisticsBySingleParameter FragsAvg { get; set; }
 
-        [DataMember(Name = "global_rating")]
+        [JsonProperty("global_rating")]
         public StatisticsBySingleParameter GlobalRating { get; set; }
 
-        [DataMember(Name = "hits_ratio")]
+        [JsonProperty("hits_ratio")]
         public StatisticsBySingleParameter HitsRatio { get; set; }
 
-        [DataMember(Name = "spotted_avg")]
+        [JsonProperty("spotted_avg")]
         public StatisticsBySingleParameter SpottedAvg { get; set; }
 
-        [DataMember(Name = "spotted_count")]
+        [JsonProperty("spotted_count")]
         public StatisticsBySingleParameter SpottedCount { get; set; }
 
-        [DataMember(Name = "survived_ratio")]
+        [JsonProperty("survived_ratio")]
         public StatisticsBySingleParameter SurvivedRatio { get; set; }
 
-        [DataMember(Name = "wins_ratio")]
+        [JsonProperty("wins_ratio")]
         public StatisticsBySingleParameter WinsRatio { get; set; }
 
-        [DataMember(Name = "xp_amount")]
+        [JsonProperty("xp_amount")]
         public StatisticsBySingleParameter XpAmount { get; set; }
 
-        [DataMember(Name = "xp_avg")]
+        [JsonProperty("xp_avg")]
         public StatisticsBySingleParameter XpAvg { get; set; }
 
-        [DataMember(Name = "xp_max ")]
+        [JsonProperty("xp_max ")]
         public StatisticsBySingleParameter XpMax { get; set; }
     }
 }

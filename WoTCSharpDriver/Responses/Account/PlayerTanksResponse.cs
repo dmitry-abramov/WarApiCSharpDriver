@@ -7,16 +7,13 @@ namespace WarApiCSharpDriver.Responses.Account
     [DataContract]
     public class PlayerTanksResponseData
     {
-        [DataMember(Name = "tank_id")]
-        [JsonProperty(PropertyName = "tank_id")]
+        [JsonProperty("tank_id")]
         public int TankId { get; set; }
 
-        [DataMember(Name = "mark_of_mastery")]
-        [JsonProperty(PropertyName = "mark_of_mastery")]
+        [JsonProperty("mark_of_mastery")]
         public int MarkOfMastery { get; set; }
         
-        [DataMember(Name = "statistics")]
-        [JsonProperty(PropertyName = "statistics")]
+        [JsonProperty("statistics")]
         public TankStatistic Statistic { get; set; }
     }
 

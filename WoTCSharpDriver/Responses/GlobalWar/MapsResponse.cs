@@ -1,4 +1,5 @@
-﻿using System.Collections.Generic;
+﻿using Newtonsoft.Json;
+using System.Collections.Generic;
 using System.Runtime.Serialization;
 
 namespace WarApiCSharpDriver.Responses.GlobalWar
@@ -6,17 +7,17 @@ namespace WarApiCSharpDriver.Responses.GlobalWar
     [DataContract]
     public class MapsResponseData
     {
-        [DataMember(Name = "map_id")]
+        [JsonProperty("map_id")]
         public int MapId { get; set; }
 
-        [DataMember(Name = "map_url")]
+        [JsonProperty("map_url")]
         public string MapUrl { get; set; }
 
-        [DataMember(Name = "state")]
+        [JsonProperty("state")]
         public string State { get; set; }
 
         // todo use consts
-        [DataMember(Name = "type")]
+        [JsonProperty("type")]
         public string Type { get; set; }
     }
 

@@ -5,41 +5,42 @@ using System.Text;
 using System.Threading.Tasks;
 
 using System.Runtime.Serialization;
+using Newtonsoft.Json;
 
 namespace WarApiCSharpDriver.Responses.Clan
 {
     [DataContract]
     public class ClanListData
     {
-        [DataMember(Name = "abbreviation")]
+        [JsonProperty("abbreviation")]
         public string Abbreviation { get; set; }
 
-        [DataMember(Name = "clan_id")]
+        [JsonProperty("clan_id")]
         public int ClanId { get; set; }
 
         // todo: use class Color
-        [DataMember(Name = "color")]
+        [JsonProperty("color")]
         public string Color { get; set; }
 
-        [DataMember(Name = "created_at")]
+        [JsonProperty("created_at")]
         public string CreatedAt { get; set; }
 
-        [DataMember(Name = "members_count")]
+        [JsonProperty("members_count")]
         public int MembersCount { get; set; }
 
-        [DataMember(Name = "motto")]
+        [JsonProperty("motto")]
         public string Motto { get; set; }
 
-        [DataMember(Name = "name")]
+        [JsonProperty("name")]
         public string Name { get; set; }
 
-        [DataMember(Name = "owner_id")]
+        [JsonProperty("owner_id")]
         public int OwnerId { get; set; }
 
-        [DataMember(Name = "owner_name")]
+        [JsonProperty("owner_name")]
         public string OwnerName { get; set; }
 
-        [DataMember(Name = "emblems")]
+        [JsonProperty("emblems")]
         public ClanEmblems Emblems { get; set; }
     }
 

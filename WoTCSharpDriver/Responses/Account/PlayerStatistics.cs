@@ -1,80 +1,81 @@
-﻿using System.Runtime.Serialization;
+﻿using Newtonsoft.Json;
+using System.Runtime.Serialization;
 namespace WarApiCSharpDriver.Responses.Account
 {
     [DataContract]
     public class PlayerStatistics
     {
-        [DataMember(Name = "max_damage")]
+        [JsonProperty("max_damage")]
         public int MaxDamage { get; set; }
 
-        [DataMember(Name = "max_damage_vehicle")]
+        [JsonProperty("max_damage_vehicle")]
         public int MaxDamageVehicle { get; set; }
 
-        [DataMember(Name = "max_xp")]
+        [JsonProperty("max_xp")]
         public int MaxXp { get; set; }
 
-        [DataMember(Name = "all")]
+        [JsonProperty("all")]
         public PlayerStatisticsDetails All { get; set; }
 
-        [DataMember(Name = "clan")]
+        [JsonProperty("clan")]
         public PlayerStatisticsDetails Clan { get; set; }
 
-        [DataMember(Name = "complany")]
+        [JsonProperty("complany")]
         public PlayerStatisticsDetails Company { get; set; }
 
-        [DataMember(Name = "historical")]
+        [JsonProperty("historical")]
         public PlayerStatisticsDetails Historical { get; set; }
     }
 
     [DataContract]
     public class PlayerStatisticsDetails
     {
-        [DataMember(Name = "battle_avg_xp")]
+        [JsonProperty("battle_avg_xp")]
         public int BattleAvgXp { get; set; }
 
-        [DataMember(Name = "battles")]
+        [JsonProperty("battles")]
         public int Battles { get; set; }
 
-        [DataMember(Name = "capture_points")]
+        [JsonProperty("capture_points")]
         public int CapturePoints { get; set; }
 
-        [DataMember(Name = "damage_dealt")]
+        [JsonProperty("damage_dealt")]
         public int DamageDealt { get; set; }
 
-        [DataMember(Name = "damage_received")]
+        [JsonProperty("damage_received")]
         public int DamageReceived { get; set; }
 
-        [DataMember(Name = "draws")]
+        [JsonProperty("draws")]
         public int Draws { get; set; }
 
-        [DataMember(Name = "dropped_capture_points")]
+        [JsonProperty("dropped_capture_points")]
         public int DroppedCapturePoints { get; set; }
 
-        [DataMember(Name = "frags")]
+        [JsonProperty("frags")]
         public int Frags { get; set; }
 
-        [DataMember(Name = "hits")]
+        [JsonProperty("hits")]
         public int Hits { get; set; }
 
-        [DataMember(Name = "hits_percents")]
+        [JsonProperty("hits_percents")]
         public int HitsPercents { get; set; }
 
-        [DataMember(Name = "losses")]
+        [JsonProperty("losses")]
         public int Losses { get; set; }
 
-        [DataMember(Name = "shots")]
+        [JsonProperty("shots")]
         public int Shots { get; set; }
 
-        [DataMember(Name = "spotted")]
+        [JsonProperty("spotted")]
         public int Spotted { get; set; }
 
-        [DataMember(Name = "survived_battles")]
+        [JsonProperty("survived_battles")]
         public int SurvivedBattles { get; set; }
 
-        [DataMember(Name = "wins")]
+        [JsonProperty("wins")]
         public int Wins { get; set; }
 
-        [DataMember(Name = "xp")]
+        [JsonProperty("xp")]
         public int Xp { get; set; }
     }
 }

@@ -1,11 +1,12 @@
-﻿using System.Runtime.Serialization;
+﻿using Newtonsoft.Json;
+using System.Runtime.Serialization;
 
 namespace WarApiCSharpDriver.Responses.Auth
 {
     [DataContract]
     public class LoginResponse
     {
-        [DataMember(Name = "location")]
+        [JsonProperty("location")]
         public string Location { get; set; }
     }
 }

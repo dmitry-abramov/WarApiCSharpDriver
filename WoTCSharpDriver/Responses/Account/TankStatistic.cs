@@ -5,12 +5,10 @@ namespace WarApiCSharpDriver.Responses.Account
     [DataContract]
     public class TankStatistic
     {
-        [DataMember(Name = "battles")]
-        [JsonProperty(PropertyName = "battles")]
+        [JsonProperty("battles")]
         public int Battles { get; set; }
         
-        [DataMember(Name = "wins")]
-        [JsonProperty(PropertyName = "wins")]
+        [JsonProperty("wins")]
         public int Wins { get; set; }
     }
 }

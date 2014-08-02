@@ -5,19 +5,20 @@ using System.Text;
 using System.Threading.Tasks;
 
 using System.Runtime.Serialization;
+using Newtonsoft.Json;
 
 namespace WarApiCSharpDriver.Responses.Account
 {
     [DataContract]
     public class PlayersListData
     {
-        [DataMember(Name = "account_id")]
+        [JsonProperty("account_id")]
         public string AccountId { get; set; }
 
-        [DataMember(Name = "id")]
+        [JsonProperty("id")]
         public string Id { get; set; }
 
-        [DataMember(Name = "nickname")]
+        [JsonProperty("nickname")]
         public string Nickname { get; set; }
     }
 

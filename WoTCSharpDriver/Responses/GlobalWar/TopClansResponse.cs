@@ -1,4 +1,5 @@
-﻿using System.Collections.Generic;
+﻿using Newtonsoft.Json;
+using System.Collections.Generic;
 using System.Runtime.Serialization;
 
 namespace WarApiCSharpDriver.Responses.GlobalWar
@@ -6,44 +7,44 @@ namespace WarApiCSharpDriver.Responses.GlobalWar
     [DataContract]
     public class TopClansResponseData
     {
-        [DataMember(Name = "abbreviation")]
+        [JsonProperty("abbreviation")]
         public string Abbreviation { get; set; }
 
-        [DataMember(Name = "clan_id")]
+        [JsonProperty("clan_id")]
         public int ClanId { get; set; }
 
         // todo: use class Color
-        [DataMember(Name = "color")]
+        [JsonProperty("color")]
         public string Color { get; set; }
 
-        [DataMember(Name = "combats_count")]
+        [JsonProperty("combats_count")]
         public int CombatsCount { get; set; }
 
-        [DataMember(Name = "created_at")]
+        [JsonProperty("created_at")]
         public string CreatedAt { get; set; }
 
-        [DataMember(Name = "members_count")]
+        [JsonProperty("members_count")]
         public int MembersCount { get; set; }
 
-        [DataMember(Name = "motto")]
+        [JsonProperty("motto")]
         public string Motto { get; set; }
 
-        [DataMember(Name = "name")]
+        [JsonProperty("name")]
         public string Name { get; set; }
 
-        [DataMember(Name = "owner_id")]
+        [JsonProperty("owner_id")]
         public int OwnerId { get; set; }
 
-        [DataMember(Name = "owner_name")]
+        [JsonProperty("owner_name")]
         public string OwnerName { get; set; }
 
-        [DataMember(Name = "provinces_count")]
+        [JsonProperty("provinces_count")]
         public int ProvincesCount { get; set; }
 
-        [DataMember(Name = "wins_count")]
+        [JsonProperty("wins_count")]
         public int WinsCount { get; set; }
 
-        [DataMember(Name = "emblems")]
+        [JsonProperty("emblems")]
         public ClanEmblems Emblems { get; set; }
     }
 

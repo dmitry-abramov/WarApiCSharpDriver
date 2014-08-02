@@ -1,18 +1,19 @@
-﻿using System.Runtime.Serialization;
+﻿using Newtonsoft.Json;
+using System.Runtime.Serialization;
 
 namespace WarApiCSharpDriver.Responses.Auth
 {
     [DataContract]
     public class ProlongateResponse
     {
-        [DataMember(Name = "access_token")]
+        [JsonProperty("access_token")]
         public string AccessToken { get; set; }
 
-        [DataMember(Name = "account_id")]
+        [JsonProperty("account_id")]
         public string AccountId { get; set; }
 
         // todo: use date time
-        [DataMember(Name = "expires_at")]
+        [JsonProperty("expires_at")]
         public string ExpiresAt { get; set; }
     }
 }

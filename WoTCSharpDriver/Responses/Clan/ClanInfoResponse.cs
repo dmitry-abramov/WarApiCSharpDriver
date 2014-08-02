@@ -5,65 +5,66 @@ using System.Text;
 using System.Threading.Tasks;
 
 using System.Runtime.Serialization;
+using Newtonsoft.Json;
 
 namespace WarApiCSharpDriver.Responses.Clan
 {
     [DataContract]
     public class ClanInfoData
     {
-        [DataMember(Name = "abbreviation")]
+        [JsonProperty("abbreviation")]
         public string Abbreviation { get; set; }
 
-        [DataMember(Name = "clan_id")]
+        [JsonProperty("clan_id")]
         public int ClanId { get; set; }
 
         // todo: use class Color
-        [DataMember(Name = "color")]
+        [JsonProperty("color")]
         public string Color { get; set; }
 
         /// <summary>
         /// Clan color. Field will be disabled. Use field <href>Color</href>
         /// </summary>
-        [DataMember(Name = "clan_color")]
+        [JsonProperty("clan_color")]
         public string ClanColor { get; set; }
 
-        [DataMember(Name = "created_at")]
+        [JsonProperty("created_at")]
         public string CreatedAt { get; set; }
 
-        [DataMember(Name = "description")]
+        [JsonProperty("description")]
         public string Description { get; set; }
 
-        [DataMember(Name = "description_html")]
+        [JsonProperty("description_html")]
         public string DescriptionHtml { get; set; }
 
-        [DataMember(Name = "is_clan_disbanded ")]
+        [JsonProperty("is_clan_disbanded ")]
         public bool IsClanDisbanded { get; set; }
 
-        [DataMember(Name = "members_count")]
+        [JsonProperty("members_count")]
         public int MembersCount { get; set; }
 
-        [DataMember(Name = "motto")]
+        [JsonProperty("motto")]
         public string Motto { get; set; }
 
-        [DataMember(Name = "name")]
+        [JsonProperty("name")]
         public string Name { get; set; }
 
-        [DataMember(Name = "owner_id")]
+        [JsonProperty("owner_id")]
         public int OwnerId { get; set; }
 
-        [DataMember(Name = "request_availability ")]
+        [JsonProperty("request_availability ")]
         public bool RequestAvailability { get; set; }
 
-        [DataMember(Name = "updated_at")]
+        [JsonProperty("updated_at")]
         public string UpdatedAt { get; set; }
         
-        [DataMember(Name = "emblems")]
+        [JsonProperty("emblems")]
         public ClanEmblems Emblems { get; set; }
 
-        [DataMember(Name = "members")]
+        [JsonProperty("members")]
         public IList<ClanMemberInfo> Members { get; set; }
 
-        [DataMember(Name = "private")]
+        [JsonProperty("private")]
         public ClanPrivateInfo PrivateInfo { get; set; }
     }
 

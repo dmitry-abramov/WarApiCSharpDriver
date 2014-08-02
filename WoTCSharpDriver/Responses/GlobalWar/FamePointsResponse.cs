@@ -1,4 +1,5 @@
-﻿using System.Collections.Generic;
+﻿using Newtonsoft.Json;
+using System.Collections.Generic;
 using System.Runtime.Serialization;
 
 namespace WarApiCSharpDriver.Responses.GlobalWar
@@ -6,13 +7,13 @@ namespace WarApiCSharpDriver.Responses.GlobalWar
     [DataContract]
     public class FamePointsResponseData
     {
-        [DataMember(Name = "account_id")]
+        [JsonProperty("account_id")]
         public int AccountId { get; set; }
 
-        [DataMember(Name = "fame_points")]
+        [JsonProperty("fame_points")]
         public int NamePoints { get; set; }
 
-        [DataMember(Name = "position")]
+        [JsonProperty("position")]
         public int Position { get; set; }
     }
 

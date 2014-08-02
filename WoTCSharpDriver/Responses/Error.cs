@@ -5,22 +5,23 @@ using System.Text;
 using System.Threading.Tasks;
 
 using System.Runtime.Serialization;
+using Newtonsoft.Json;
 
 namespace WarApiCSharpDriver.Responses
 {
     [DataContract]
     public class Error
     {
-        [DataMember(Name = "code")]
+        [JsonProperty("code")]
         public string Code { get; set; }
 
-        [DataMember(Name = "message")]
+        [JsonProperty("message")]
         public string message { get; set; }
 
-        [DataMember(Name = "field")]
+        [JsonProperty("field")]
         public string Field { get; set; }
 
-        [DataMember(Name = "value")]
+        [JsonProperty("value")]
         public string Value { get; set; }
     }
 }

@@ -1,4 +1,5 @@
-﻿using System.Collections.Generic;
+﻿using Newtonsoft.Json;
+using System.Collections.Generic;
 using System.Runtime.Serialization;
 
 namespace WarApiCSharpDriver.Responses.Ratings
@@ -6,14 +7,14 @@ namespace WarApiCSharpDriver.Responses.Ratings
     [DataContract]
     public class RatingTypesData
     {
-        [DataMember(Name = "rank_fields")]
+        [JsonProperty("rank_fields")]
         IList<string> RankFields { get; set; }
 
-        [DataMember(Name = "threshold")]
+        [JsonProperty("threshold")]
         int Threshold { get; set; }
 
         // todo create consts
-        [DataMember(Name = "type")]
+        [JsonProperty("type")]
         string Type { get; set; }
     }
 

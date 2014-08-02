@@ -5,16 +5,17 @@ using System.Text;
 using System.Threading.Tasks;
 
 using System.Runtime.Serialization;
+using Newtonsoft.Json;
 
 namespace WarApiCSharpDriver.Responses.Clan
 {
     [DataContract]
     public class ClanPrivateInfo
     {
-        [DataMember(Name = "chips_count")]
+        [JsonProperty("chips_count")]
         public int ChipsCount { get; set; }
 
-        [DataMember(Name = "treasury")]
+        [JsonProperty("treasury")]
         public int Treasury { get; set; }
     }
 }

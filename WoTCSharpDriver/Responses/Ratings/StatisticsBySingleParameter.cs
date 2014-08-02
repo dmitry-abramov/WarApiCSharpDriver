@@ -1,17 +1,18 @@
-﻿using System.Runtime.Serialization;
+﻿using Newtonsoft.Json;
+using System.Runtime.Serialization;
 
 namespace WarApiCSharpDriver.Responses.Ratings
 {
     [DataContract]
     public class StatisticsBySingleParameter
     {
-        [DataMember(Name = "rank")]
+        [JsonProperty("rank")]
         public int Rank { get; set; }
 
-        [DataMember(Name = "rank_delta")]
+        [JsonProperty("rank_delta")]
         public int RankDelta { get; set; }
 
-        [DataMember(Name = "value")]
+        [JsonProperty("value")]
         public double Value { get; set; }
     }
 }

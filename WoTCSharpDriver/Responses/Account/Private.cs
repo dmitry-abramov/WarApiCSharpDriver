@@ -1,4 +1,5 @@
-﻿using System;
+﻿using Newtonsoft.Json;
+using System;
 using System.Runtime.Serialization;
 namespace WarApiCSharpDriver.Responses.Account
 {
@@ -6,51 +7,51 @@ namespace WarApiCSharpDriver.Responses.Account
     public class Private
     {
         [Obsolete("field will be off")]
-        [DataMember(Name = "account_type")]
+        [JsonProperty("account_type")]
         public string AccountType { get; set; }
 
         [Obsolete("field will be off")]
-        [DataMember(Name = "account_type_i18n")]
+        [JsonProperty("account_type_i18n")]
         public string AccountTypeI18n { get; set; }
 
-        [DataMember(Name = "ban_info")]
+        [JsonProperty("ban_info")]
         public string BanInfo { get; set; }
 
-        [DataMember(Name = "ban_time")]
+        [JsonProperty("ban_time")]
         public string BanTime { get; set; }
 
-        [DataMember(Name = "credits")]
+        [JsonProperty("credits")]
         public string Credits { get; set; }
 
-        [DataMember(Name = "free_xp")]
+        [JsonProperty("free_xp")]
         public string FreeXp { get; set; }
 
-        [DataMember(Name = "friends")]
+        [JsonProperty("friends")]
         public string Friends { get; set; }
 
-        [DataMember(Name = "gold")]
+        [JsonProperty("gold")]
         public string Gold { get; set; }
 
-        [DataMember(Name = "is_bound_to_phone")]
+        [JsonProperty("is_bound_to_phone")]
         public string IsBoundToPhone { get; set; }
 
-        [DataMember(Name = "is_premium")]
+        [JsonProperty("is_premium")]
         public string IsPremium { get; set; }
 
-        [DataMember(Name = "premium_expires_at")]
+        [JsonProperty("premium_expires_at")]
         public string PremiumExpiresAt { get; set; }
 
-        [DataMember(Name = "restrictions")]
+        [JsonProperty("restrictions")]
         Restriction Restrictions { get; set; }
     }
 
     [DataContract]
     public class Restriction
     {
-        [DataMember(Name = "chat_ban_time")]
+        [JsonProperty("chat_ban_time")]
         public string ChatBanTime { get; set; }
 
-        [DataMember(Name = "clan_time")]
+        [JsonProperty("clan_time")]
         public string ClanTime { get; set; }
     }
 }

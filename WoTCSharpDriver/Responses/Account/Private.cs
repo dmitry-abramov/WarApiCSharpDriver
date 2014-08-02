@@ -6,11 +6,11 @@ namespace WarApiCSharpDriver.Responses.Account
     [DataContract]
     public class Private
     {
-        [Obsolete("field will be off")]
+        [Obsolete("Field will be off")]
         [JsonProperty("account_type")]
         public string AccountType { get; set; }
 
-        [Obsolete("field will be off")]
+        [Obsolete("Field will be off")]
         [JsonProperty("account_type_i18n")]
         public string AccountTypeI18n { get; set; }
 

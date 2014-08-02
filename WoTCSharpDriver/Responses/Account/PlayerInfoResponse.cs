@@ -1,4 +1,5 @@
 ﻿using Newtonsoft.Json;
+using System;
 using System.Collections.Generic;
 using System.Runtime.Serialization;
 
@@ -39,6 +40,7 @@ namespace WarApiCSharpDriver.Responses.Account
         [JsonProperty("updated_at")]
         public string UpdatedAt { get; set; }
 
+        [Obsolete("Use achievements api")]
         [JsonProperty("achievements")]
         public Achievements Achievements { get; set; }
 

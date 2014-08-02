@@ -3,7 +3,7 @@ using System.Runtime.Serialization;
 namespace WarApiCSharpDriver.Responses.Account
 {
     [DataContract]
-    public class Statistic
+    public class TankStatistic
     {
         [DataMember(Name = "battles")]
         [JsonProperty(PropertyName = "battles")]

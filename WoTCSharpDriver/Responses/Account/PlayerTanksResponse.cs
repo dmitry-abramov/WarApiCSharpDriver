@@ -17,7 +17,7 @@ namespace WarApiCSharpDriver.Responses.Account
         
         [DataMember(Name = "statistics")]
         [JsonProperty(PropertyName = "statistics")]
-        public Statistic Statistic { get; set; }
+        public TankStatistic Statistic { get; set; }
     }
 
     [DataContract]

@@ -1,4 +1,5 @@
-﻿using Utilities.Attributes;
+﻿using Utilities;
+using Utilities.Attributes;
 
 namespace WarApiCSharpDriver.Requests.Clan
 {
@@ -13,7 +14,7 @@ namespace WarApiCSharpDriver.Requests.Clan
         }
 
         [RequestParameter("clan_id", true)]
-        public string ClanId { get; set; }
+        public ListOrSingleValue<string> ClanId { get; set; }
 
         [RequestParameter("map_id", false)]
         public int MapId { get; set; }

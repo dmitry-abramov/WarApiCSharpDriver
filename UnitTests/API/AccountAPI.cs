@@ -1,4 +1,5 @@
 ﻿using Microsoft.VisualStudio.TestTools.UnitTesting;
+using System;
 using Utilities.Serialization;
 using WarApiCSharpDriver;
 using WarApiCSharpDriver.Requests.Account;
@@ -72,6 +73,60 @@ namespace UnitTests.API
             Assert.IsTrue(response.Count > 0);
             Assert.IsTrue(response.Data["2989679"]["achievements"].Keys.Count > 0);
             Assert.IsTrue(response.Data["2989679"]["max_series"].Keys.Count > 0);
+        }
+
+        [TestMethod]
+        public void PlayerInfoRequestTest()
+        {
+            var request = Client.CreateRequest<PlayerInfoRequest>();
+            request.AccountId = "2989679";
+
+            var response = Client.GetResponseFor<PlayerInfoResponse>(request);
+
+            Assert.AreEqual("ok", response.Status);
+            Assert.IsNull(response.Error);
+            Assert.IsTrue(response.Count > 0);
+            Assert.AreEqual(response.Data["2989679"].AccountId, "2989679");
+            Assert.AreEqual(response.Data["2989679"].ClanId, null);
+            Assert.AreEqual(response.Data["2989679"].CreatedAt, new DateTime(2011, 8, 15, 8, 42, 30));
+            Assert.IsNotNull(response.Data["2989679"].Statistics);
+            Assert.IsNotNull(response.Data["2989679"].Statistics.All);
+            Assert.IsNotNull(response.Data["2989679"].Statistics.Clan);
+            Assert.IsNotNull(response.Data["2989679"].Statistics.Company);
+            Assert.IsNotNull(response.Data["2989679"].Statistics.Historical);
+        }
+
+        [TestMethod]
+        public void PlayerInfoRequestForTwoPlayersTest()
+        {
+            var request = Client.CreateRequest<PlayerInfoRequest>();
+            request.AccountId = "2989679";
+            request.AccountId.Add("2989680");
+
+            var response = Client.GetResponseFor<PlayerInfoResponse>(request);
+
+            Assert.AreEqual("ok", response.Status);
+            Assert.IsNull(response.Error);
+            Assert.IsTrue(response.Count > 0);
+            Assert.AreEqual(response.Data["2989679"].AccountId, "2989679");
+            Assert.AreEqual(response.Data["2989679"].ClanId, null);
+            Assert.AreEqual(response.Data["2989679"].CreatedAt, new DateTime(2011, 8, 15, 8, 42, 30));
+            Assert.IsNotNull(response.Data["2989679"].Statistics);
+            Assert.IsNotNull(response.Data["2989679"].Statistics.All);
+            Assert.IsNotNull(response.Data["2989679"].Statistics.Clan);
+            Assert.IsNotNull(response.Data["2989679"].Statistics.Company);
+            Assert.IsNotNull(response.Data["2989679"].Statistics.Historical);
+
+            Assert.AreEqual("ok", response.Status);
+            Assert.IsNull(response.Error);
+            Assert.IsTrue(response.Count > 0);
+            Assert.AreEqual(response.Data["2989680"].AccountId, "2989680");
+            Assert.IsNotNull(response.Data["2989680"].Statistics);
+            Assert.IsNotNull(response.Data["2989680"].Statistics.All);
+            Assert.IsNotNull(response.Data["2989680"].Statistics.Clan);
+            Assert.IsNotNull(response.Data["2989680"].Statistics.Company);
+            Assert.IsNotNull(response.Data["2989680"].Statistics.Historical);
+            Assert.AreEqual(0, response.Data["2989680"].Statistics.MaxDamageVehicle);
         }
     }
 }

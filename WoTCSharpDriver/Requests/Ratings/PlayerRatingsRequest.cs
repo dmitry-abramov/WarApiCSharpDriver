@@ -1,4 +1,5 @@
 ﻿using System;
+using Utilities;
 using Utilities.Attributes;
 
 namespace WarApiCSharpDriver.Requests.Ratings
@@ -14,7 +15,7 @@ namespace WarApiCSharpDriver.Requests.Ratings
         }
 
         [RequestParameter("account_id", true)]
-        public string AccountId { get; set; }
+        public ListOrSingleValue<string> AccountId { get; set; }
 
         // todo: create constants for it
         [RequestParameter("type", true)]

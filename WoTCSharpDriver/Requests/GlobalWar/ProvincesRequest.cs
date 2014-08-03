@@ -1,4 +1,5 @@
-﻿using Utilities.Attributes;
+﻿using Utilities;
+using Utilities.Attributes;
 
 namespace WarApiCSharpDriver.Requests.GlobalWar
 {
@@ -16,6 +17,6 @@ namespace WarApiCSharpDriver.Requests.GlobalWar
         public int MapId { get; set; }
 
         [RequestParameter("province_id", false)]
-        public string ProvinceId { get; set; }
+        public ListOrSingleValue<string> ProvinceId { get; set; }
     }
 }

@@ -1,5 +1,6 @@
 ﻿using WarApiCSharpDriver.Requests;
 using Utilities.Attributes;
+using Utilities;
 
 namespace WarApiCSharpDriver.Requests.Tanks
 {
@@ -20,7 +21,7 @@ namespace WarApiCSharpDriver.Requests.Tanks
         public string AccountId { get; set; }
 
         [RequestParameter("tank_id", false)]
-        public string TankId { get; set; }
+        public ListOrSingleValue<string> TankId { get; set; }
 
         [RequestParameter("in_garage", false)]
         public int InGarage { get; set; }

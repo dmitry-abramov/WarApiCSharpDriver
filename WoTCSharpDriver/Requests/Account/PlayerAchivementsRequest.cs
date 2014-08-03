@@ -1,4 +1,5 @@
-﻿using Utilities.Attributes;
+﻿using Utilities;
+using Utilities.Attributes;
 
 namespace WarApiCSharpDriver.Requests.Account
 {
@@ -13,6 +14,6 @@ namespace WarApiCSharpDriver.Requests.Account
         }
 
         [RequestParameter("account_id", true)]
-        public string AccountId { get; set; }
+        public ListOrSingleValue<string> AccountId { get; set; }
     }
 }

@@ -1,4 +1,5 @@
-﻿using Utilities.Attributes;
+﻿using Utilities;
+using Utilities.Attributes;
 
 namespace WarApiCSharpDriver.Requests.Encyclopedia
 {
@@ -13,6 +14,6 @@ namespace WarApiCSharpDriver.Requests.Encyclopedia
         }
 
         [RequestParameter("tank_id", true)]
-        public string TankId { get; set; }
+        public ListOrSingleValue<string> TankId { get; set; }
     }
 }

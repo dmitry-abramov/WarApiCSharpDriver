@@ -1,6 +1,6 @@
-﻿using Utilities.Attributes;
+﻿using WarApi.Utilities.Attributes;
 
-namespace WarApiCSharpDriver.Requests.GlobalWar
+namespace WarApi.Requests.GlobalWar
 {
     public class GlobalWarRequestBase : RequestBase
     {

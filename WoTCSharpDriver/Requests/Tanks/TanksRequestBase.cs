@@ -1,8 +1,8 @@
-﻿using WarApiCSharpDriver.Requests;
-using Utilities.Attributes;
-using Utilities;
+﻿using WarApi.Requests;
+using WarApi.Utilities.Attributes;
+using WarApi.Utilities;
 
-namespace WarApiCSharpDriver.Requests.Tanks
+namespace WarApi.Requests.Tanks
 {
     public class TanksRequestBase : RequestBase
     {

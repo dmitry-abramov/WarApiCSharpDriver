@@ -1,7 +1,7 @@
 ﻿using Newtonsoft.Json;
 using System;
 using System.Runtime.Serialization;
-namespace WarApiCSharpDriver.Responses.Account
+namespace WarApi.Responses.Account
 {
     [DataContract]
     public class Private

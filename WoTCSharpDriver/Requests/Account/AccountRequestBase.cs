@@ -1,7 +1,7 @@
-﻿using Utilities.Attributes;
-using WarApiCSharpDriver.Requests;
+﻿using WarApi.Utilities.Attributes;
+using WarApi.Requests;
 
-namespace WarApiCSharpDriver.Requests.Account
+namespace WarApi.Requests.Account
 {
     public class AccountRequestBase : RequestBase
     {

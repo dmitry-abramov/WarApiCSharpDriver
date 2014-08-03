@@ -4,10 +4,10 @@ using System.Net;
 using System.IO;
 using System.Runtime.Serialization.Json;
 
-using WarApiCSharpDriver.Requests;
-using Utilities.Serialization;
+using WarApi.Requests;
+using WarApi.Utilities.Serialization;
 
-namespace WarApiCSharpDriver
+namespace WarApi
 {
     public class WoTApplication
     {

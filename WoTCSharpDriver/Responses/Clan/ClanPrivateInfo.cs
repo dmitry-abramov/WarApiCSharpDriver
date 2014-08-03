@@ -7,7 +7,7 @@ using System.Threading.Tasks;
 using System.Runtime.Serialization;
 using Newtonsoft.Json;
 
-namespace WarApiCSharpDriver.Responses.Clan
+namespace WarApi.Responses.Clan
 {
     [DataContract]
     public class ClanPrivateInfo

@@ -1,7 +1,7 @@
-﻿using WarApiCSharpDriver.Requests;
-using Utilities.Attributes;
+﻿using WarApi.Requests;
+using WarApi.Utilities.Attributes;
 
-namespace WarApiCSharpDriver.Requests.Ratings
+namespace WarApi.Requests.Ratings
 {
     public class RatingsRequestBase : RequestBase
     {

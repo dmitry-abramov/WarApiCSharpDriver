@@ -1,5 +1,5 @@
 ﻿using System;
-namespace WarApiCSharpDriver
+namespace WarApi.ConstantVlaues
 {
     public class Language
     {

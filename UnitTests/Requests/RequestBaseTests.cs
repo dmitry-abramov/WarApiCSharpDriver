@@ -1,8 +1,8 @@
 ﻿using System;
 using Microsoft.VisualStudio.TestTools.UnitTesting;
 
-using WarApiCSharpDriver.Requests;
-using Utilities.Attributes;
+using WarApi.Requests;
+using WarApi.Utilities.Attributes;
 
 namespace UnitTests
 {

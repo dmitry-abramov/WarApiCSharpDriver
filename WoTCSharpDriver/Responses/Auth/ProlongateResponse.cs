@@ -1,9 +1,9 @@
 ﻿using Newtonsoft.Json;
 using System;
 using System.Runtime.Serialization;
-using Utilities.Serialization;
+using WarApi.Utilities.Serialization;
 
-namespace WarApiCSharpDriver.Responses.Auth
+namespace WarApi.Responses.Auth
 {
     [DataContract]
     public class ProlongateResponse

@@ -1,6 +1,6 @@
 ﻿using Newtonsoft.Json;
 
-namespace Utilities.Serialization
+namespace WarApi.Utilities.Serialization
 {
     public class NewtonsoftSerializer : ISerializer
     {

@@ -1,4 +1,4 @@
-﻿namespace WarApiCSharpDriver.Requests.Encyclopedia
+﻿namespace WarApi.Requests.Encyclopedia
 {
     public class TankTurretsRequest : ModuleInfoRequestBase
     {

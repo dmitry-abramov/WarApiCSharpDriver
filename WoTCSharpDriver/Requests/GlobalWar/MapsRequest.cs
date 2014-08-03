@@ -1,4 +1,4 @@
-﻿namespace WarApiCSharpDriver.Requests.GlobalWar
+﻿namespace WarApi.Requests.GlobalWar
 {
     public class MapsRequest : GlobalWarRequestBase
     {

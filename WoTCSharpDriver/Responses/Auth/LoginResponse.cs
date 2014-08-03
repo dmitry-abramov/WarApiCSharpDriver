@@ -1,7 +1,7 @@
 ﻿using Newtonsoft.Json;
 using System.Runtime.Serialization;
 
-namespace WarApiCSharpDriver.Responses.Auth
+namespace WarApi.Responses.Auth
 {
     [DataContract]
     public class LoginResponse

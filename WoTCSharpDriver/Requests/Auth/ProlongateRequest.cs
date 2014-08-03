@@ -1,7 +1,7 @@
 ﻿using System;
-using Utilities.Attributes;
+using WarApi.Utilities.Attributes;
 
-namespace WarApiCSharpDriver.Requests.Auth
+namespace WarApi.Requests.Auth
 {
     public class ProlongateRequest : AuthRequestBase
     {

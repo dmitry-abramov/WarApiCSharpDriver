@@ -1,7 +1,7 @@
-﻿using Utilities;
-using Utilities.Attributes;
+﻿using WarApi.Utilities;
+using WarApi.Utilities.Attributes;
 
-namespace WarApiCSharpDriver.Requests.Ratings
+namespace WarApi.Requests.Ratings
 {
     public class DatesWithRatingsRequest : RatingsRequestBase
     {

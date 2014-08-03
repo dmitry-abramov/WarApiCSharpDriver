@@ -1,6 +1,6 @@
-﻿using Utilities.Attributes;
+﻿using WarApi.Utilities.Attributes;
 
-namespace WarApiCSharpDriver.Requests.Account
+namespace WarApi.Requests.Account
 {
     public class PlayerRatingRequest : AccountRequestBase
     {

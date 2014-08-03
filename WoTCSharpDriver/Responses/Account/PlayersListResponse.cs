@@ -7,7 +7,7 @@ using System.Threading.Tasks;
 using System.Runtime.Serialization;
 using Newtonsoft.Json;
 
-namespace WarApiCSharpDriver.Responses.Account
+namespace WarApi.Responses.Account
 {
     [DataContract]
     public class PlayersListData

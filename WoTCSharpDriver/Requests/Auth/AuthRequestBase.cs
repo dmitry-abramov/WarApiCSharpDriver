@@ -1,4 +1,4 @@
-﻿namespace WarApiCSharpDriver.Requests.Auth
+﻿namespace WarApi.Requests.Auth
 {
     public class AuthRequestBase : RequestBase
     {

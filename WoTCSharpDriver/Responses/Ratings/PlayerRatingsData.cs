@@ -1,7 +1,7 @@
 ﻿using Newtonsoft.Json;
 using System.Runtime.Serialization;
 
-namespace WarApiCSharpDriver.Responses.Ratings
+namespace WarApi.Responses.Ratings
 {
     [DataContract]
     public class PlayerRatingsData

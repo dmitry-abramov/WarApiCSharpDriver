@@ -7,7 +7,7 @@ using System.Threading.Tasks;
 using System.Runtime.Serialization;
 using Newtonsoft.Json;
 
-namespace WarApiCSharpDriver.Responses
+namespace WarApi.Responses
 {
     [DataContract]
     public class Error

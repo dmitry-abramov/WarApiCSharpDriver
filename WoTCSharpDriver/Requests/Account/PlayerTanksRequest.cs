@@ -1,7 +1,7 @@
-﻿using Utilities;
-using Utilities.Attributes;
+﻿using WarApi.Utilities;
+using WarApi.Utilities.Attributes;
 
-namespace WarApiCSharpDriver.Requests.Account
+namespace WarApi.Requests.Account
 {
     public class PlayerTanksRequest : AccountRequestBase
     {

@@ -1,4 +1,4 @@
-﻿namespace WarApiCSharpDriver
+﻿namespace WarApi.ConstantVlaues
 {
     public class DisplayType
     {

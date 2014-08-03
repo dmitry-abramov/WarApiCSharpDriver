@@ -1,4 +1,4 @@
-﻿namespace WarApiCSharpDriver.Requests.Tanks
+﻿namespace WarApi.Requests.Tanks
 {
     public class TanksStatisticsRequest : TanksRequestBase
     {

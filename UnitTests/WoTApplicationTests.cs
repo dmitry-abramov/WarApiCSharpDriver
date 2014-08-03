@@ -1,10 +1,10 @@
 ﻿using Microsoft.VisualStudio.TestTools.UnitTesting;
 
-using WarApiCSharpDriver;
-using WarApiCSharpDriver.Requests.Account;
-using WarApiCSharpDriver.Requests.Clan;
-using WarApiCSharpDriver.Responses.Account;
-using WarApiCSharpDriver.Responses.Clan;
+using WarApi;
+using WarApi.Requests.Account;
+using WarApi.Requests.Clan;
+using WarApi.Responses.Account;
+using WarApi.Responses.Clan;
 
 namespace UnitTests
 {

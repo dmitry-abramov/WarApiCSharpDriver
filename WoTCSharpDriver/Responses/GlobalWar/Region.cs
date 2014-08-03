@@ -2,7 +2,7 @@
 using System.Collections.Generic;
 using System.Runtime.Serialization;
 
-namespace WarApiCSharpDriver.Responses.GlobalWar
+namespace WarApi.Responses.GlobalWar
 {
     [DataContract]
     public class Region

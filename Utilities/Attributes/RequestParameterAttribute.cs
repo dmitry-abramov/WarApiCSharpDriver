@@ -1,6 +1,6 @@
 ﻿using System;
 
-namespace Utilities.Attributes
+namespace WarApi.Utilities.Attributes
 {
     public class RequestParameterAttribute : Attribute
     {

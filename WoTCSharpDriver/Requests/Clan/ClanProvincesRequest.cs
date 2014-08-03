@@ -1,6 +1,6 @@
-﻿using Utilities.Attributes;
+﻿using WarApi.Utilities.Attributes;
 
-namespace WarApiCSharpDriver.Requests.Clan
+namespace WarApi.Requests.Clan
 {
     public class ClanProvincesRequest : ClansRequestBase
     {

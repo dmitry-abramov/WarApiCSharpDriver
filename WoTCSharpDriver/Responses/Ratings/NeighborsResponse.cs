@@ -1,7 +1,7 @@
 ﻿using System.Collections.Generic;
 using System.Runtime.Serialization;
 
-namespace WarApiCSharpDriver.Responses.Ratings
+namespace WarApi.Responses.Ratings
 {
     // todo maybe we should use one class for
     // NeighborsResponse, PlayerRatingsResponse and TopPlayersResponse

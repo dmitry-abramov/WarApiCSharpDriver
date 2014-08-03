@@ -2,7 +2,7 @@
 using System.Collections.Generic;
 using System.Runtime.Serialization;
 
-namespace WarApiCSharpDriver.Responses.Account
+namespace WarApi.Responses.Account
 {
     [DataContract]
     public class PlayerTanksResponseData

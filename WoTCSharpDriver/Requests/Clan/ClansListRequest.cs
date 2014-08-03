@@ -1,6 +1,7 @@
-﻿using Utilities.Attributes;
+﻿using WarApi.Utilities.Attributes;
+using WarApi.ConstantVlaues;
 
-namespace WarApiCSharpDriver.Requests.Clan
+namespace WarApi.Requests.Clan
 {
     public class ClansListRequest : ClansRequestBase
     {

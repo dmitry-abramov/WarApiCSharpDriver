@@ -1,7 +1,7 @@
-﻿using Utilities;
-using Utilities.Attributes;
+﻿using WarApi.Utilities;
+using WarApi.Utilities.Attributes;
 
-namespace WarApiCSharpDriver.Requests.Encyclopedia
+namespace WarApi.Requests.Encyclopedia
 {
     public class TankInfoRequest : EncyclopediaRequestBase
     {

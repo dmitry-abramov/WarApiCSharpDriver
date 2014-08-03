@@ -1,9 +1,9 @@
 ﻿using Newtonsoft.Json;
 using Newtonsoft.Json.Linq;
 using System;
-using Utilities.Extensions;
+using WarApi.Utilities.Extensions;
 
-namespace Utilities.Serialization
+namespace WarApi.Utilities.Serialization
 {
     public class DateTimeJsonConverter : JsonConverter
     {

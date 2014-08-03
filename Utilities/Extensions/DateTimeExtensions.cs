@@ -1,6 +1,6 @@
 ﻿using System;
 
-namespace Utilities.Extensions
+namespace WarApi.Utilities.Extensions
 {
     public static class DateTimeExtensions
     {

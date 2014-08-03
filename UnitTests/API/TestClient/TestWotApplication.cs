@@ -3,10 +3,10 @@ using System.Net;
 
 using System.IO;
 
-using WarApiCSharpDriver.Requests;
-using Utilities.Serialization;
+using WarApi.Requests;
+using WarApi.Utilities.Serialization;
 
-namespace WarApiCSharpDriver
+namespace UnitTests
 {
     public class TestWotApplication
     {

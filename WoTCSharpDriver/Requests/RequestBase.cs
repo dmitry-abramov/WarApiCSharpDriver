@@ -2,11 +2,12 @@
 using System.Collections.Generic;
 using System.Linq;
 
-using Utilities.Extensions;
-using Utilities.Attributes;
+using WarApi.Utilities.Extensions;
+using WarApi.Utilities.Attributes;
 using System.Web;
+using WarApi.ConstantVlaues;
 
-namespace WarApiCSharpDriver.Requests
+namespace WarApi.Requests
 {
     public class RequestBase
     {

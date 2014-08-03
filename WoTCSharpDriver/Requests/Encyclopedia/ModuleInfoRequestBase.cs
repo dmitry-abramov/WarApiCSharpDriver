@@ -1,7 +1,8 @@
-﻿using Utilities;
-using Utilities.Attributes;
+﻿using WarApi.Utilities;
+using WarApi.Utilities.Attributes;
+using WarApi.ConstantVlaues;
 
-namespace WarApiCSharpDriver.Requests.Encyclopedia
+namespace WarApi.Requests.Encyclopedia
 {
     public class ModuleInfoRequestBase : EncyclopediaRequestBase
     {

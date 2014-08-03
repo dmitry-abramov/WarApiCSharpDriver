@@ -1,9 +1,10 @@
 ﻿using Microsoft.VisualStudio.TestTools.UnitTesting;
 using System;
-using Utilities.Serialization;
-using WarApiCSharpDriver;
-using WarApiCSharpDriver.Requests.Account;
-using WarApiCSharpDriver.Responses.Account;
+using WarApi.Utilities.Serialization;
+using WarApi;
+using WarApi.ConstantVlaues;
+using WarApi.Requests.Account;
+using WarApi.Responses.Account;
 
 namespace UnitTests.API
 {

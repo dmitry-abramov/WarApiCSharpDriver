@@ -2,10 +2,10 @@
 using System;
 using System.Collections.Generic;
 using System.Runtime.Serialization;
-using Utilities.Serialization;
-using WarApiCSharpDriver.Serialization;
+using WarApi.Utilities.Serialization;
+using WarApi.ConstantVlaues;
 
-namespace WarApiCSharpDriver.Responses.Account
+namespace WarApi.Responses.Account
 {
     [DataContract]
     public class PlayerInfoData

@@ -1,7 +1,8 @@
 ﻿using System;
-using Utilities.Attributes;
+using WarApi.Utilities.Attributes;
+using WarApi.ConstantVlaues;
 
-namespace WarApiCSharpDriver.Requests.Auth
+namespace WarApi.Requests.Auth
 {
     public class LoginRequest : AuthRequestBase
     {

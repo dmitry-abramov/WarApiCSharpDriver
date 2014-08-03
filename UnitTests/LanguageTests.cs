@@ -1,8 +1,9 @@
 ﻿using Microsoft.VisualStudio.TestTools.UnitTesting;
 using Newtonsoft.Json;
-using WarApiCSharpDriver;
-using WarApiCSharpDriver.Requests;
-using WarApiCSharpDriver.Serialization;
+using WarApi.Utilities.Serialization;
+using WarApi;
+using WarApi.ConstantVlaues;
+using WarApi.Requests;
 
 namespace UnitTests
 {

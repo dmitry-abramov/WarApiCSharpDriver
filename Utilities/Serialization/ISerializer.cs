@@ -1,4 +1,4 @@
-﻿namespace Utilities.Serialization
+﻿namespace WarApi.Utilities.Serialization
 {
     public interface ISerializer
     {

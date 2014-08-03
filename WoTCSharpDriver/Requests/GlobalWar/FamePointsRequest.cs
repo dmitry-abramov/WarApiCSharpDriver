@@ -1,7 +1,7 @@
-﻿using Utilities;
-using Utilities.Attributes;
+﻿using WarApi.Utilities;
+using WarApi.Utilities.Attributes;
 
-namespace WarApiCSharpDriver.Requests.GlobalWar
+namespace WarApi.Requests.GlobalWar
 {
     public class FamePointsRequest : GlobalWarRequestBase
     {

@@ -8,7 +8,8 @@ namespace WarApiCSharpDriver.Responses.Account
         [JsonProperty("max_damage")]
         public int MaxDamage { get; set; }
 
-        [JsonProperty("max_damage_vehicle")]
+        //for some players this field is null
+        [JsonProperty("max_damage_vehicle", NullValueHandling = NullValueHandling.Ignore)]        
         public int MaxDamageVehicle { get; set; }
 
         [JsonProperty("max_xp")]
@@ -20,7 +21,7 @@ namespace WarApiCSharpDriver.Responses.Account
         [JsonProperty("clan")]
         public PlayerStatisticsDetails Clan { get; set; }
 
-        [JsonProperty("complany")]
+        [JsonProperty("company")]
         public PlayerStatisticsDetails Company { get; set; }
 
         [JsonProperty("historical")]

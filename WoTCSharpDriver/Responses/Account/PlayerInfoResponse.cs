@@ -47,10 +47,13 @@ namespace WarApiCSharpDriver.Responses.Account
 
         [JsonProperty("private")]
         public Private Private { get; set; }
+
+        [JsonProperty("statistics")]
+        public PlayerStatistics Statistics { get; set; }
     }
     
     [DataContract]
-    public class PlayerInfoResponse : ResponseBase<PlayerInfoData>
+    public class PlayerInfoResponse : ResponseBase<IDictionary<string, PlayerInfoData>>
     {
     }    
 }

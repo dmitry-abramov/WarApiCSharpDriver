@@ -2,7 +2,7 @@
 using System.Collections.Generic;
 using System.Linq;
 
-namespace WarApiCSharpDriver
+namespace Utilities
 {
     public enum CastErrorMode
     {
@@ -74,7 +74,7 @@ namespace WarApiCSharpDriver
         {
             if (this.Count == 0)
             {
-                var defaultValue = default(TValue).ToString();
+                var defaultValue = default(TValue);
 
                 if (defaultValue == null)
                 {

@@ -47,7 +47,6 @@
   <ItemGroup>
     <Compile Include="ClansSortOrder.cs" />
     <Compile Include="DisplayType.cs" />
-    <Compile Include="ListOrSingleValue.cs" />
     <Compile Include="Nation.cs" />
     <Compile Include="Requests\Clan\ClanBattlesRequest.cs" />
     <Compile Include="Requests\Clan\ClanInfoRequest.cs" />

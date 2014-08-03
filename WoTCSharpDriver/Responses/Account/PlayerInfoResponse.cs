@@ -2,7 +2,7 @@
 using System;
 using System.Collections.Generic;
 using System.Runtime.Serialization;
-using WarApiCSharpDriver.Serialization;
+using Utilities.Serialization;
 
 namespace WarApiCSharpDriver.Responses.Account
 {

@@ -3,7 +3,7 @@ using Newtonsoft.Json.Linq;
 using System;
 using Utilities.Extensions;
 
-namespace WarApiCSharpDriver.Serialization
+namespace Utilities.Serialization
 {
     public class DateTimeJsonConverter : JsonConverter
     {

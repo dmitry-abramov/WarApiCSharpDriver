@@ -49,9 +49,11 @@
     <Compile Include="Extensions\DateTimeExtensions.cs" />
     <Compile Include="Extensions\DictionaryExtensions.cs" />
     <Compile Include="Extensions\KeyValuePairExtensions.cs" />
+    <Compile Include="ListOrSingleValue.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Serialization\DateTimeJsonConverter.cs" />
     <Compile Include="Serialization\ISerializer.cs" />
+    <Compile Include="Serialization\ListOrSingleValueJsonConverter.cs" />
     <Compile Include="Serialization\NewtonsoftSerializer.cs" />
   </ItemGroup>
   <ItemGroup>

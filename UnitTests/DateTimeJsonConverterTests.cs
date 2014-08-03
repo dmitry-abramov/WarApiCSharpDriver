@@ -2,7 +2,6 @@
 using Newtonsoft.Json;
 using System;
 using Utilities.Serialization;
-using WarApiCSharpDriver.Serialization;
 
 namespace UnitTests
 {

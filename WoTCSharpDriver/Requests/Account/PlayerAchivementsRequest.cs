@@ -8,7 +8,7 @@ namespace WarApiCSharpDriver.Requests.Account
         {
             get
             {
-                return "achivements";
+                return "achievements";
             }
         }
 

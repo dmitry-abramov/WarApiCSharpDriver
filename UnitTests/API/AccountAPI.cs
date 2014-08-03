@@ -58,5 +58,20 @@ namespace UnitTests.API
             Assert.IsTrue(response.Data["2989679"][0].Statistic.Battles > 0);
             Assert.IsTrue(response.Data["2989679"][0].Statistic.Wins > 0);
         }
+
+        [TestMethod]
+        public void PlayerAchievementsRequestTest()
+        {
+            var request = Client.CreateRequest<PlayerAchivementsRequest>();
+            request.AccountId = "2989679";
+
+            var response = Client.GetResponseFor<PlayerAchivementsResponse>(request);
+
+            Assert.AreEqual("ok", response.Status);
+            Assert.IsNull(response.Error);
+            Assert.IsTrue(response.Count > 0);
+            Assert.IsTrue(response.Data["2989679"]["achievements"].Keys.Count > 0);
+            Assert.IsTrue(response.Data["2989679"]["max_series"].Keys.Count > 0);
+        }
     }
 }

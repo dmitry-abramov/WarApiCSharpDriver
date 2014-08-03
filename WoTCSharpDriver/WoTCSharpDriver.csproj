@@ -45,9 +45,6 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="ClansSortOrder.cs" />
-    <Compile Include="DisplayType.cs" />
-    <Compile Include="Nation.cs" />
     <Compile Include="Requests\Clan\ClanBattlesRequest.cs" />
     <Compile Include="Requests\Clan\ClanInfoRequest.cs" />
     <Compile Include="Requests\Clan\ClanMembersInfo.cs" />
@@ -89,7 +86,6 @@
     <Compile Include="Requests\Auth\LoginRequest.cs" />
     <Compile Include="Requests\Auth\Logout.cs" />
     <Compile Include="Requests\Auth\ProlongateRequest.cs" />
-    <Compile Include="Language.cs" />
     <Compile Include="Requests\RequestBase.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Requests\GlobalWar\WorldWarRequestBase.cs" />
@@ -138,6 +134,10 @@
     <ProjectReference Include="..\Utilities\Utilities.csproj">
       <Project>{9a4ffb87-b8d2-467e-9fc7-cf86f34bc3f6}</Project>
       <Name>Utilities</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\WarApi.ConstantValues\WarApi.ConstantValues.csproj">
+      <Project>{9110f698-004e-45f7-8211-fdc9b90a7e38}</Project>
+      <Name>WarApi.ConstantValues</Name>
     </ProjectReference>
   </ItemGroup>
   <ItemGroup>

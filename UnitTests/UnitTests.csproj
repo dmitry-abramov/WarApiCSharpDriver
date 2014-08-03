@@ -70,6 +70,10 @@
       <Project>{9a4ffb87-b8d2-467e-9fc7-cf86f34bc3f6}</Project>
       <Name>Utilities</Name>
     </ProjectReference>
+    <ProjectReference Include="..\WarApi.ConstantValues\WarApi.ConstantValues.csproj">
+      <Project>{9110f698-004e-45f7-8211-fdc9b90a7e38}</Project>
+      <Name>WarApi.ConstantValues</Name>
+    </ProjectReference>
     <ProjectReference Include="..\WoTCSharpDriver\WoTCSharpDriver.csproj">
       <Project>{50848325-2973-4ac3-82aa-b47215e0c466}</Project>
       <Name>WoTCSharpDriver</Name>

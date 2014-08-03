@@ -88,7 +88,8 @@ namespace UnitTests.API
             Assert.IsTrue(response.Count > 0);
             Assert.AreEqual(response.Data["2989679"].AccountId, "2989679");
             Assert.AreEqual(response.Data["2989679"].ClanId, null);
-            Assert.AreEqual(response.Data["2989679"].CreatedAt, new DateTime(2011, 8, 15, 8, 42, 30));
+            Assert.AreEqual(new DateTime(2011, 8, 15, 8, 42, 30), response.Data["2989679"].CreatedAt);
+            Assert.AreEqual(Language.Russian, response.Data["2989679"].ClientLanguage);
             Assert.IsNotNull(response.Data["2989679"].Statistics);
             Assert.IsNotNull(response.Data["2989679"].Statistics.All);
             Assert.IsNotNull(response.Data["2989679"].Statistics.Clan);

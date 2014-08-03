@@ -1,6 +1,8 @@
 ﻿using Microsoft.VisualStudio.TestTools.UnitTesting;
+using Newtonsoft.Json;
 using WarApiCSharpDriver;
 using WarApiCSharpDriver.Requests;
+using WarApiCSharpDriver.Serialization;
 
 namespace UnitTests
 {
@@ -28,6 +30,46 @@ namespace UnitTests
             request.Language = Language.English;
 
             Assert.AreEqual("application_id=appId&language=en", request.GetParametersLikeUri());
+        }
+
+        [TestMethod]
+        public void TestDeserializationFromJson()
+        {
+            var serializedString = "\"zh-cn\"";
+            var expected = Language.Chinese;
+
+            var result = JsonConvert.DeserializeObject<Language>(serializedString, new LanguageJsonConverter());
+
+            Assert.AreEqual(expected, result);
+        }
+
+        [TestMethod]
+        public void TestSerializationToJson()
+        {
+            var expected = "\"zh-cn\"";
+            var language = Language.Chinese;
+
+            var result = JsonConvert.SerializeObject(language, new LanguageJsonConverter());
+
+            Assert.AreEqual(expected, result);
+        }
+
+        [TestMethod]
+        public void TestEqual()
+        {
+            var abbreviation = "zh-cn";
+            var language = Language.Chinese;
+
+            Assert.IsTrue(language.Equals(new Language(abbreviation)));
+        }
+
+        [TestMethod]
+        public void TestEqualToCaseInsensetive()
+        {
+            var abbreviation = "De";
+            var language = Language.German;
+
+            Assert.IsTrue(language.Equals(new Language(abbreviation)));
         }
     }
 }

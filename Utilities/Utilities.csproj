@@ -53,10 +53,17 @@
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Serialization\DateTimeJsonConverter.cs" />
     <Compile Include="Serialization\ISerializer.cs" />
+    <Compile Include="Serialization\LanguageJsonConverter.cs" />
     <Compile Include="Serialization\NewtonsoftSerializer.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="packages.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\WarApi.ConstantValues\WarApi.ConstantValues.csproj">
+      <Project>{9110f698-004e-45f7-8211-fdc9b90a7e38}</Project>
+      <Name>WarApi.ConstantValues</Name>
+    </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 

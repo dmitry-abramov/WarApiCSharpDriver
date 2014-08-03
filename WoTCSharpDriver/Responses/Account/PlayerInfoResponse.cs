@@ -3,6 +3,7 @@ using System;
 using System.Collections.Generic;
 using System.Runtime.Serialization;
 using Utilities.Serialization;
+using WarApiCSharpDriver.Serialization;
 
 namespace WarApiCSharpDriver.Responses.Account
 {
@@ -15,9 +16,9 @@ namespace WarApiCSharpDriver.Responses.Account
         [JsonProperty("clan_id")]
         public string ClanId { get; set; }
 
-        //todo: use languages consts
         [JsonProperty("client_language")]
-        public string ClientLanguage { get; set; }
+        [JsonConverter(typeof(LanguageJsonConverter))]
+        public Language ClientLanguage { get; set; }
 
         [JsonProperty("created_at")]
         [JsonConverter(typeof(DateTimeJsonConverter))]

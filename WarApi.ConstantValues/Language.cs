@@ -1,4 +1,5 @@
-﻿namespace WarApiCSharpDriver
+﻿using System;
+namespace WarApiCSharpDriver
 {
     public class Language
     {
@@ -28,7 +29,7 @@
 
         public static Language Korean { get { return new Language("ko"); } }
 
-        protected Language(string abbreviation)
+        public Language(string abbreviation)
         {
             Abbreviation = abbreviation;
         }
@@ -36,6 +37,23 @@
         public override string ToString()
         {
             return Abbreviation;
+        }
+
+        public override bool Equals(object obj)
+        {
+            if (obj == null)
+            {
+                return false;
+            }
+
+            var language = obj as Language;
+
+            if (language != null)
+            {
+                return string.Compare(this.Abbreviation, language.Abbreviation, StringComparison.InvariantCultureIgnoreCase) == 0;
+            }
+
+            return false;
         }
     }
 }

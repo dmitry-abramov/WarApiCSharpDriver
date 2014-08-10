@@ -55,6 +55,7 @@
     <Compile Include="Serialization\ISerializer.cs" />
     <Compile Include="Serialization\LanguageJsonConverter.cs" />
     <Compile Include="Serialization\NewtonsoftSerializer.cs" />
+    <Compile Include="Serialization\RatingTypeJsonConverter.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="packages.config" />

@@ -16,10 +16,7 @@ namespace UnitTests
             {
                 if (serializer == null)
                 {
-                    var serializerSettings = new JsonSerializerSettings();
-                    serializerSettings.Converters.Add(new DateTimeJsonConverter());
-
-                    serializer = new NewtonsoftSerializer(serializerSettings);
+                    serializer = new NewtonsoftSerializer();
                 }
 
                 return serializer;

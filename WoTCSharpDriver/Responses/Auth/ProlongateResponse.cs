@@ -1,7 +1,6 @@
 ﻿using Newtonsoft.Json;
 using System;
 using System.Runtime.Serialization;
-using WarApi.Utilities.Serialization;
 
 namespace WarApi.Responses.Auth
 {
@@ -15,7 +14,6 @@ namespace WarApi.Responses.Auth
         public string AccountId { get; set; }
                 
         [JsonProperty("expires_at")]
-        [JsonConverter(typeof(DateTimeJsonConverter))]
         public DateTime ExpiresAt { get; set; }
     }
 }

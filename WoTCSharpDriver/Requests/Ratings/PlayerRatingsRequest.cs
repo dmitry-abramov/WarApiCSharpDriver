@@ -1,4 +1,5 @@
 ﻿using System;
+using WarApi.ConstantValues;
 using WarApi.Utilities;
 using WarApi.Utilities.Attributes;
 
@@ -17,9 +18,8 @@ namespace WarApi.Requests.Ratings
         [RequestParameter("account_id", true)]
         public ListOrSingleValue<string> AccountId { get; set; }
 
-        // todo: create constants for it
         [RequestParameter("type", true)]
-        public string Type { get; set; }
+        public RatingType Type { get; set; }
 
         [RequestParameter("date", true)]
         public DateTime Date { get; set; }

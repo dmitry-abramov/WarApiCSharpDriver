@@ -1,11 +1,19 @@
-﻿using System.Collections.Generic;
+﻿using Newtonsoft.Json;
+using System;
+using System.Collections.Generic;
 using System.Runtime.Serialization;
+using WarApi.ConstantValues;
 
 namespace WarApi.Responses.Ratings
 {
-    // todo use DateTime
     [DataContract]
-    public class DatesWithRatingsResponse : ResponseBase<IList<string>>
+    public class DatesWithRatingsResponse : ResponseBase<IDictionary<RatingType, DatesWithRatingsResponseData>>
     {
+    }
+
+    public class DatesWithRatingsResponseData
+    {
+        [JsonProperty("dates")]
+        public IList<DateTime> Dates; 
     }
 }

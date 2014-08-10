@@ -9,11 +9,9 @@ namespace WarApi.Utilities.Serialization
         public NewtonsoftSerializer()
         {
             settings = new JsonSerializerSettings();
-        }
-
-        public NewtonsoftSerializer(JsonSerializerSettings serializer)
-        {
-            this.settings = serializer;
+            settings.Converters.Add(new DateTimeJsonConverter());
+            settings.Converters.Add(new LanguageJsonConverter());
+            settings.Converters.Add(new RatingTypeJsonConverter());
         }
 
         public string Serialize(object obj)

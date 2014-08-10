@@ -1,6 +1,7 @@
 ﻿using Newtonsoft.Json;
 using System.Collections.Generic;
 using System.Runtime.Serialization;
+using WarApi.ConstantValues;
 
 namespace WarApi.Responses.Ratings
 {
@@ -8,18 +9,17 @@ namespace WarApi.Responses.Ratings
     public class RatingTypesData
     {
         [JsonProperty("rank_fields")]
-        IList<string> RankFields { get; set; }
+        public IList<string> RankFields { get; set; }
 
         [JsonProperty("threshold")]
-        int Threshold { get; set; }
+        public int Threshold { get; set; }
 
-        // todo create consts
         [JsonProperty("type")]
-        string Type { get; set; }
+        public RatingType Type { get; set; }
     }
 
     [DataContract]
-    public class RatingTypesResponse : ResponseBase<IList<RatingTypesData>>
+    public class RatingTypesResponse : ResponseBase<IDictionary<RatingType, RatingTypesData>>
     {
     }
 }

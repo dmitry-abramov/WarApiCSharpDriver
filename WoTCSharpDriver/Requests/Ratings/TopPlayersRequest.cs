@@ -1,4 +1,5 @@
 ﻿using System;
+using WarApi.ConstantValues;
 using WarApi.Utilities.Attributes;
 
 namespace WarApi.Requests.Ratings
@@ -13,9 +14,8 @@ namespace WarApi.Requests.Ratings
             }
         }
 
-        // todo: create constants for it
         [RequestParameter("type", true)]
-        public string Type { get; set; }
+        public RatingType Type { get; set; }
 
         [RequestParameter("rank_field", true)]
         public string RankField { get; set; }

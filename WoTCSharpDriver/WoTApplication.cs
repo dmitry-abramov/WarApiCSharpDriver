@@ -6,10 +6,11 @@ using System.Runtime.Serialization.Json;
 
 using WarApi.Requests;
 using WarApi.Utilities.Serialization;
+using WarApi.Client;
 
 namespace WarApi
 {
-    public class WoTApplication
+    public class WoTApplication : IWarApiApplication
     {
         private readonly string server;
 

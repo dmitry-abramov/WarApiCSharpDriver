@@ -5,15 +5,16 @@ using WarApi;
 using WarApi.ConstantValues;
 using WarApi.Requests.Account;
 using WarApi.Responses.Account;
+using WarApi.Client;
 
 namespace UnitTests.API
 {
     [TestClass]
     public class AccountAPI
     {
-        private TestWotApplication client;
+        private IWarApiApplication client;
 
-        private TestWotApplication Client
+        private IWarApiApplication Client
         {
             get 
             {

@@ -71,6 +71,10 @@
       <Project>{9a4ffb87-b8d2-467e-9fc7-cf86f34bc3f6}</Project>
       <Name>WarApi.Utilities</Name>
     </ProjectReference>
+    <ProjectReference Include="..\WarApi.Common\WarApi.Common.csproj">
+      <Project>{65637275-4002-420d-8870-d4bc0a9150a6}</Project>
+      <Name>WarApi.Common</Name>
+    </ProjectReference>
     <ProjectReference Include="..\WarApi.ConstantValues\WarApi.ConstantValues.csproj">
       <Project>{9110f698-004e-45f7-8211-fdc9b90a7e38}</Project>
       <Name>WarApi.ConstantValues</Name>

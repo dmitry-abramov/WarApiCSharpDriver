@@ -5,10 +5,11 @@ using System.IO;
 
 using WarApi.Requests;
 using WarApi.Utilities.Serialization;
+using WarApi.Client;
 
 namespace UnitTests
 {
-    public class TestWotApplication
+    public class TestWotApplication : IWarApiApplication
     {
         private readonly string server;
 

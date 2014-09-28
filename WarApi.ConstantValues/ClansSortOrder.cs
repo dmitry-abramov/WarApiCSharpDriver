@@ -4,7 +4,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace WarApi.ConstantVlaues
+namespace WarApi.ConstantValues
 {
     public class ClansSortOrder
     {

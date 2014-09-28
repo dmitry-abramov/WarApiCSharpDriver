@@ -2,7 +2,7 @@
 using System;
 using WarApi.Utilities.Serialization;
 using WarApi;
-using WarApi.ConstantVlaues;
+using WarApi.ConstantValues;
 using WarApi.Requests.Account;
 using WarApi.Responses.Account;
 

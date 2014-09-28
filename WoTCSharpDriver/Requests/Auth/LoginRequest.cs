@@ -1,6 +1,6 @@
 ﻿using System;
 using WarApi.Utilities.Attributes;
-using WarApi.ConstantVlaues;
+using WarApi.ConstantValues;
 
 namespace WarApi.Requests.Auth
 {

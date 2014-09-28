@@ -1,5 +1,5 @@
 ﻿using System;
-namespace WarApi.ConstantVlaues
+namespace WarApi.ConstantValues
 {
     public class Language
     {

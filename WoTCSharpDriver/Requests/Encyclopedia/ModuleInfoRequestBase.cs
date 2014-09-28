@@ -1,6 +1,6 @@
 ﻿using WarApi.Utilities;
 using WarApi.Utilities.Attributes;
-using WarApi.ConstantVlaues;
+using WarApi.ConstantValues;
 
 namespace WarApi.Requests.Encyclopedia
 {

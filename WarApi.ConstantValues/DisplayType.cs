@@ -1,4 +1,4 @@
-﻿namespace WarApi.ConstantVlaues
+﻿namespace WarApi.ConstantValues
 {
     public class DisplayType
     {

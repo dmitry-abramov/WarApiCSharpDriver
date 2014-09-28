@@ -2,7 +2,7 @@
 using Newtonsoft.Json;
 using WarApi.Utilities.Serialization;
 using WarApi;
-using WarApi.ConstantVlaues;
+using WarApi.ConstantValues;
 using WarApi.Requests;
 
 namespace UnitTests

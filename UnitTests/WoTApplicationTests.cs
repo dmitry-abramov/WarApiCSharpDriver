@@ -1,6 +1,6 @@
 ﻿using Microsoft.VisualStudio.TestTools.UnitTesting;
-
 using WarApi;
+using WarApi.Client;
 using WarApi.Requests.Account;
 using WarApi.Requests.Clan;
 using WarApi.Responses.Account;

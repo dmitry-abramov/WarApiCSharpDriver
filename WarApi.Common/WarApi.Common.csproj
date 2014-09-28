@@ -45,6 +45,7 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Client\IWarApiApplication.cs" />
+    <Compile Include="Client\WarApiClientBase.cs" />
     <Compile Include="Responses\Error.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Requests\RequestBase.cs" />

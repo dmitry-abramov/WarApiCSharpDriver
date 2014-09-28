@@ -7,71 +7,28 @@ using System.Runtime.Serialization.Json;
 using WarApi.Requests;
 using WarApi.Utilities.Serialization;
 
-namespace WarApi
+namespace WarApi.Client
 {
-    public class WoTApplication
+    public class WoTApplication : WarApiClientBase
     {
-        private readonly string server;
+        public WoTApplication(string applicationId) 
+            : this(applicationId, new NewtonsoftSerializer())
+        {            
+        }
 
-        private readonly string apiName;
-
-        private readonly ISerializer serializer;
-
-        public string ApplicationId { get; private set; }
-
-        public WoTApplication(string applicationId, string server, string apiName)
+        public WoTApplication(string applicationId, ISerializer serializer)
+            : this(applicationId, "api.worldoftanks.ru", "wot", serializer)
         {
-            ApplicationId = applicationId;
-            this.server = server;
-            this.apiName = apiName;
+        }
 
-            serializer = new NewtonsoftSerializer();
+        public WoTApplication(string applicationId, string server, string apiName) 
+            : this(applicationId, server, apiName, new NewtonsoftSerializer())
+        {
         }
 
         public WoTApplication(string applicationId, string server, string apiName, ISerializer serializer)
+            : base(applicationId, server, apiName, serializer)
         {
-            ApplicationId = applicationId;
-            this.server = server;
-            this.apiName = apiName;
-
-            this.serializer = serializer;
-        }
-
-        public TRequest CreateRequest<TRequest>() where TRequest : RequestBase, new()
-        {
-            var request = new TRequest();
-            request.ApplicationId = ApplicationId;
-            return request;
-        }
-
-        public string GetResponseAsStringFor(RequestBase request)
-        {
-            var requestString = string.Format("https://{0}/{1}/{2}/?{3}", 
-                server, 
-                apiName, 
-                request.GetPath(), 
-                request.GetParametersLikeUri());
-
-            var webClient = new WebClient();
-            var response = webClient.DownloadString(requestString);
-
-            return response;
-        }
-
-        public TResponse GetResponseFor<TResponse>(RequestBase request)
-        {
-            var requestString = string.Format("https://{0}/{1}/{2}/?{3}",
-                server,
-                apiName,
-                request.GetPath(),
-                request.GetParametersLikeUri());
-
-            var webClient = new WebClient();
-            var responseString = webClient.DownloadString(requestString);
-
-            var response = serializer.Deserialize<TResponse>(responseString);
-
-            return response;
         }
     }
 }

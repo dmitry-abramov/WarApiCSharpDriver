@@ -7,15 +7,16 @@ using WarApi.Responses.Ratings;
 using WarApi.ConstantValues;
 using Newtonsoft.Json;
 using System.Collections.Generic;
+using WarApi.Client;
 
 namespace UnitTests.API
 {
     [TestClass]
     public class RatingsAPI
     {
-        private TestWotApplication client;
+        private IWarApiApplication client;
 
-        private TestWotApplication Client
+        private IWarApiApplication Client
         {
             get
             {

@@ -9,6 +9,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "WarApi.Utilities", "Utiliti
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "WarApi.ConstantValues", "WarApi.ConstantValues\WarApi.ConstantValues.csproj", "{9110F698-004E-45F7-8211-FDC9B90A7E38}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "WarApi.Common", "WarApi.Common\WarApi.Common.csproj", "{65637275-4002-420D-8870-D4BC0A9150A6}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -31,6 +33,10 @@ Global
 		{9110F698-004E-45F7-8211-FDC9B90A7E38}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{9110F698-004E-45F7-8211-FDC9B90A7E38}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{9110F698-004E-45F7-8211-FDC9B90A7E38}.Release|Any CPU.Build.0 = Release|Any CPU
+		{65637275-4002-420D-8870-D4BC0A9150A6}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{65637275-4002-420D-8870-D4BC0A9150A6}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{65637275-4002-420D-8870-D4BC0A9150A6}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{65637275-4002-420D-8870-D4BC0A9150A6}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

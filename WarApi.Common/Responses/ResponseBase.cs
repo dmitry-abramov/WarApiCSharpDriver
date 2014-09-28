@@ -9,7 +9,6 @@ using Newtonsoft.Json;
 
 namespace WarApi.Responses
 {
-    [DataContract]
     public class ResponseBase<TData>
     {
         [JsonProperty("status")]

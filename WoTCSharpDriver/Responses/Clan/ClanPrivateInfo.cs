@@ -9,7 +9,6 @@ using Newtonsoft.Json;
 
 namespace WarApi.Responses.Clan
 {
-    [DataContract]
     public class ClanPrivateInfo
     {
         [JsonProperty("chips_count")]

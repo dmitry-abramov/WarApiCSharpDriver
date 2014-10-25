@@ -3,7 +3,6 @@ using System;
 using System.Runtime.Serialization;
 namespace WarApi.Responses.Account
 {
-    [DataContract]
     public class Private
     {
         [Obsolete("Field will be off")]
@@ -45,7 +44,6 @@ namespace WarApi.Responses.Account
         Restriction Restrictions { get; set; }
     }
 
-    [DataContract]
     public class Restriction
     {
         [JsonProperty("chat_ban_time")]

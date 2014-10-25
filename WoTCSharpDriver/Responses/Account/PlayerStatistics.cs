@@ -2,7 +2,6 @@
 using System.Runtime.Serialization;
 namespace WarApi.Responses.Account
 {
-    [DataContract]
     public class PlayerStatistics
     {
         [JsonProperty("max_damage")]
@@ -28,7 +27,6 @@ namespace WarApi.Responses.Account
         public PlayerStatisticsDetails Historical { get; set; }
     }
 
-    [DataContract]
     public class PlayerStatisticsDetails
     {
         [JsonProperty("battle_avg_xp")]

@@ -3,7 +3,6 @@ using Newtonsoft.Json;
 using System.Runtime.Serialization;
 namespace WarApi.Responses.GlobalWar
 {
-    [DataContract]
     public class Province
     {
         [JsonProperty("occupancy_time")]

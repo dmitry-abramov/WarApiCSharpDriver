@@ -9,7 +9,6 @@ using Newtonsoft.Json;
 
 namespace WarApi.Responses.Account
 {
-    [DataContract]
     public class PlayersListData
     {
         [JsonProperty("account_id")]
@@ -22,7 +21,6 @@ namespace WarApi.Responses.Account
         public string Nickname { get; set; }
     }
 
-    [DataContract]
     public class PlayersListResponse : ResponseBase<IList<PlayersListData>>
     { 
     }

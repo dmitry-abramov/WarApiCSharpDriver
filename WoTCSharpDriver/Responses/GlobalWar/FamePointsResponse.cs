@@ -4,7 +4,6 @@ using System.Runtime.Serialization;
 
 namespace WarApi.Responses.GlobalWar
 {
-    [DataContract]
     public class FamePointsResponseData
     {
         [JsonProperty("account_id")]
@@ -17,7 +16,6 @@ namespace WarApi.Responses.GlobalWar
         public int Position { get; set; }
     }
 
-    [DataContract]
     public class FamePointsResponse : ResponseBase<IList<FamePointsResponseData>>
     {
     }

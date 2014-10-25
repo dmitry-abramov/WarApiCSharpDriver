@@ -4,7 +4,6 @@ using System.Runtime.Serialization;
 
 namespace WarApi.Responses.Tanks
 {
-    [DataContract]
     public class TanksStatisticsData
     {
         [JsonProperty("account_id")]
@@ -36,7 +35,6 @@ namespace WarApi.Responses.Tanks
         public TankStatisticDetails Company { get; set; }
     }
 
-    [DataContract]
     public class TankStatisticDetails
     {
         [JsonProperty("battle_avg_xp")]
@@ -88,7 +86,6 @@ namespace WarApi.Responses.Tanks
         public int Expirience { get; set; }
     }
 
-    [DataContract]
     public class TanksStatisticsResponse : ResponseBase<IDictionary<string, TanksStatisticsData>>
     {
     }

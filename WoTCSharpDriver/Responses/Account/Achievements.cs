@@ -2,7 +2,6 @@
 using System.Runtime.Serialization;
 namespace WarApi.Responses.Account
 {
-    [DataContract]
     public class Achievements
     {
         [JsonProperty("armor_piercer")]

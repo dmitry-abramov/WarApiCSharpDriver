@@ -5,7 +5,6 @@ using WarApi.ConstantValues;
 
 namespace WarApi.Responses.Ratings
 {
-    [DataContract]
     public class RatingTypesData
     {
         [JsonProperty("rank_fields")]
@@ -18,7 +17,6 @@ namespace WarApi.Responses.Ratings
         public RatingType Type { get; set; }
     }
 
-    [DataContract]
     public class RatingTypesResponse : ResponseBase<IDictionary<RatingType, RatingTypesData>>
     {
     }

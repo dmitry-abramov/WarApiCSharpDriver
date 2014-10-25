@@ -4,7 +4,6 @@ using System.Runtime.Serialization;
 
 namespace WarApi.Responses.GlobalWar
 {
-    [DataContract]
     public class TopClansResponseData
     {
         [JsonProperty("abbreviation")]
@@ -48,7 +47,6 @@ namespace WarApi.Responses.GlobalWar
         public ClanEmblems Emblems { get; set; }
     }
 
-    [DataContract]
     public class TopClansResponse : ResponseBase<IList<TopClansResponseData>>
     {
     }

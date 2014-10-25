@@ -3,7 +3,6 @@ using System.Runtime.Serialization;
 
 namespace WarApi.Responses.Ratings
 {
-    [DataContract]
     public class StatisticsBySingleParameter
     {
         [JsonProperty("rank")]

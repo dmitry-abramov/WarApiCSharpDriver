@@ -6,7 +6,6 @@ using WarApi.ConstantValues;
 
 namespace WarApi.Responses.Ratings
 {
-    [DataContract]
     public class DatesWithRatingsResponse : ResponseBase<IDictionary<RatingType, DatesWithRatingsResponseData>>
     {
     }

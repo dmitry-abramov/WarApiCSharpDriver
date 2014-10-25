@@ -9,7 +9,6 @@ using Newtonsoft.Json;
 
 namespace WarApi.Responses.Clan
 {
-    [DataContract]
     public class ClanInfoData
     {
         [JsonProperty("abbreviation")]
@@ -68,7 +67,6 @@ namespace WarApi.Responses.Clan
         public ClanPrivateInfo PrivateInfo { get; set; }
     }
 
-    [DataContract]
     public class ClanInfoResponse : ResponseBase<Dictionary<int, ClanInfoData>>
     {
     }

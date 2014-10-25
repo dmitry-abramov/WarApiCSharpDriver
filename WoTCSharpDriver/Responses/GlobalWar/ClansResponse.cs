@@ -4,7 +4,6 @@ using System.Runtime.Serialization;
 
 namespace WarApi.Responses.GlobalWar
 {
-    [DataContract]
     public class ClansResponsData
     {
         [JsonProperty("clan_id")]
@@ -14,7 +13,6 @@ namespace WarApi.Responses.GlobalWar
         public IList<Province> Provinces { get; set; }
     }
 
-    [DataContract]
     public class ClansResponse : ResponseBase<IList<ClansResponsData>>
     {
     }

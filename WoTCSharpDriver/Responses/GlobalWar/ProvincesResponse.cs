@@ -4,7 +4,6 @@ using System.Runtime.Serialization;
 
 namespace WarApi.Responses.GlobalWar
 {
-    [DataContract]
     public class ProvincesResponseData
     {
         [JsonProperty("arena")]
@@ -42,7 +41,6 @@ namespace WarApi.Responses.GlobalWar
         public IList<Region> Regions { get; set; }
     }
 
-    [DataContract]
     public class ProvincesResponse : ResponseBase<IList<ProvincesResponseData>>
     {
     }

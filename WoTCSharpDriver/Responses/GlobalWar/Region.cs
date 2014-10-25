@@ -4,7 +4,6 @@ using System.Runtime.Serialization;
 
 namespace WarApi.Responses.GlobalWar
 {
-    [DataContract]
     public class Region
     {
         [JsonProperty("region_i18n")]

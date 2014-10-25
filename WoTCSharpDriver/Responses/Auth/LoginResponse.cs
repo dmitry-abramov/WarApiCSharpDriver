@@ -3,7 +3,6 @@ using System.Runtime.Serialization;
 
 namespace WarApi.Responses.Auth
 {
-    [DataContract]
     public class LoginResponse
     {
         [JsonProperty("location")]

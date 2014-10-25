@@ -4,7 +4,6 @@ using System.Runtime.Serialization;
 
 namespace WarApi.Responses.Auth
 {
-    [DataContract]
     public class ProlongateResponse
     {
         [JsonProperty("access_token")]

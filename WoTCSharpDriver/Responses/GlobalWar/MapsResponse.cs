@@ -4,7 +4,6 @@ using System.Runtime.Serialization;
 
 namespace WarApi.Responses.GlobalWar
 {
-    [DataContract]
     public class MapsResponseData
     {
         [JsonProperty("map_id")]
@@ -21,7 +20,6 @@ namespace WarApi.Responses.GlobalWar
         public string Type { get; set; }
     }
 
-    [DataContract]
     public class MapsResponse : ResponseBase<IList<MapsResponseData>>
     {
     }

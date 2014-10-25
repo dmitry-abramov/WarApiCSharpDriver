@@ -6,7 +6,6 @@ using WarApi.ConstantValues;
 
 namespace WarApi.Responses.Account
 {
-    [DataContract]
     public class PlayerInfoData
     {
         [JsonProperty("account_id")]
@@ -47,7 +46,6 @@ namespace WarApi.Responses.Account
         public PlayerStatistics Statistics { get; set; }
     }
     
-    [DataContract]
     public class PlayerInfoResponse : ResponseBase<IDictionary<string, PlayerInfoData>>
     {
     }    

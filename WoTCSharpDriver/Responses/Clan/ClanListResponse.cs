@@ -43,6 +43,7 @@ namespace WarApi.Responses.Clan
         public ClanEmblems Emblems { get; set; }
     }
 
+    [Obsolete("Method disabled", false)]
     public class ClanListResponse : ResponseBase<IList<ClanListData>>
     {
     }

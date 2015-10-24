@@ -39,7 +39,7 @@ namespace UnitTests.API
 
             Assert.AreEqual("ok", response.Status);
             Assert.IsNull(response.Error);
-            Assert.AreEqual(20, response.Count);
+            Assert.AreEqual(20, response.MetaData.Count);
             Assert.IsNotNull(string.IsNullOrEmpty(response.Data[0].AccountId));
             Assert.IsNotNull(string.IsNullOrEmpty(response.Data[0].Nickname));
         }
@@ -55,7 +55,7 @@ namespace UnitTests.API
 
             Assert.AreEqual("ok", response.Status);
             Assert.IsNull(response.Error);
-            Assert.IsTrue(response.Count > 0);
+            Assert.IsTrue(response.MetaData.Count > 0);
             Assert.IsNotNull(response.Data["2989679"][0].TankId);
             Assert.IsNotNull(response.Data["2989679"][0].Statistic);
             Assert.IsTrue(response.Data["2989679"][0].Statistic.Battles > 0);
@@ -72,7 +72,7 @@ namespace UnitTests.API
 
             Assert.AreEqual("ok", response.Status);
             Assert.IsNull(response.Error);
-            Assert.IsTrue(response.Count > 0);
+            Assert.IsTrue(response.MetaData.Count > 0);
             Assert.IsTrue(response.Data["2989679"]["achievements"].Keys.Count > 0);
             Assert.IsTrue(response.Data["2989679"]["max_series"].Keys.Count > 0);
         }
@@ -87,7 +87,7 @@ namespace UnitTests.API
 
             Assert.AreEqual("ok", response.Status);
             Assert.IsNull(response.Error);
-            Assert.IsTrue(response.Count > 0);
+            Assert.IsTrue(response.MetaData.Count > 0);
             Assert.AreEqual(response.Data["2989679"].AccountId, "2989679");
             Assert.AreEqual(response.Data["2989679"].ClanId, null);
             Assert.AreEqual(new DateTime(2011, 8, 15, 8, 42, 30), response.Data["2989679"].CreatedAt);
@@ -110,7 +110,7 @@ namespace UnitTests.API
 
             Assert.AreEqual("ok", response.Status);
             Assert.IsNull(response.Error);
-            Assert.IsTrue(response.Count > 0);
+            Assert.IsTrue(response.MetaData.Count > 0);
             Assert.AreEqual(response.Data["2989679"].AccountId, "2989679");
             Assert.AreEqual(response.Data["2989679"].ClanId, null);
             Assert.AreEqual(response.Data["2989679"].CreatedAt, new DateTime(2011, 8, 15, 8, 42, 30));
@@ -121,15 +121,7 @@ namespace UnitTests.API
             Assert.IsNotNull(response.Data["2989679"].Statistics.Historical);
 
             Assert.AreEqual("ok", response.Status);
-            Assert.IsNull(response.Error);
-            Assert.IsTrue(response.Count > 0);
-            Assert.AreEqual(response.Data["2989680"].AccountId, "2989680");
-            Assert.IsNotNull(response.Data["2989680"].Statistics);
-            Assert.IsNotNull(response.Data["2989680"].Statistics.All);
-            Assert.IsNotNull(response.Data["2989680"].Statistics.Clan);
-            Assert.IsNotNull(response.Data["2989680"].Statistics.Company);
-            Assert.IsNotNull(response.Data["2989680"].Statistics.Historical);
-            Assert.AreEqual(0, response.Data["2989680"].Statistics.MaxDamageVehicle);
+            Assert.IsNull(response.Data["2989680"], "2989680");
         }
     }
 }

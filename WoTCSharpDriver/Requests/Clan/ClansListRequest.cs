@@ -1,8 +1,10 @@
 ﻿using WarApi.Utilities.Attributes;
 using WarApi.ConstantValues;
+using System;
 
 namespace WarApi.Requests.Clan
 {
+    [Obsolete("Method disabled", false)]
     public class ClansListRequest : ClansRequestBase
     {
         public override string MethodName

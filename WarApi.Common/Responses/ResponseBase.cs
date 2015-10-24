@@ -17,8 +17,8 @@ namespace WarApi.Responses
         [JsonProperty("error")]
         public Error Error { get; set; }
 
-        [JsonProperty("count")]
-        public int Count { get; set; }
+        [JsonProperty("meta")]
+        public ResponseMetaData MetaData { get; set; }
 
         [JsonProperty("data")]
         public TData Data { get; set; }

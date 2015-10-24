@@ -22,7 +22,7 @@ namespace UnitTests
 
             var response = application.GetResponseAsStringFor(request);
 
-            var expectedString = "{\"status\":\"ok\",\"count\":1,\"data\":[{\"nickname\":\"gollazio\",\"id\":null,\"account_id\":2989679}]}";
+            var expectedString = "{\"status\":\"ok\",\"meta\":{\"count\":1},\"data\":[{\"nickname\":\"gollazio\",\"account_id\":2989679}]}";
             Assert.AreEqual(expectedString, response);
         }
 
@@ -38,7 +38,7 @@ namespace UnitTests
             var response = application.GetResponseFor<PlayersListResponse>(request);
 
             Assert.IsNotNull(response);
-            Assert.AreEqual(response.Count, 1);
+            Assert.AreEqual(response.MetaData.Count, 1);
             Assert.AreEqual(response.Status, "ok");
             Assert.AreEqual(response.Data[0].Nickname, "gollazio");
             Assert.AreEqual(response.Data[0].AccountId, "2989679");
@@ -58,12 +58,13 @@ namespace UnitTests
             var response = application.GetResponseFor<PlayersListResponse>(request);
 
             Assert.IsNotNull(response);
-            Assert.AreEqual(response.Count, 0);
+            Assert.AreEqual(0, response.MetaData.Count);
             Assert.AreEqual(response.Status, "ok");
             Assert.IsNull(response.Error);
         }
 
         [TestMethod]
+        [Ignore]
         public void TestSearchClanRequest()
         {
             var application = new WoTApplication("demo", "api.worldoftanks.ru", "wot");
@@ -76,7 +77,7 @@ namespace UnitTests
             var response = application.GetResponseFor<ClanListResponse>(request);
 
             Assert.IsNotNull(response);
-            Assert.AreEqual(response.Count, 1);
+            Assert.IsNull(response.MetaData);
             Assert.AreEqual(response.Status, "ok");
             Assert.IsNull(response.Error);
             

@@ -11,6 +11,12 @@ namespace WarApi.Responses.Account
         [JsonProperty("account_id")]
         public string AccountId { get; set; }
 
+        [JsonProperty("ban_info")]
+        public string BanInfo { get; set; }
+
+        [JsonProperty("ban_time")]
+        public DateTime? BanTime { get; set; }
+
         [JsonProperty("clan_id")]
         public string ClanId { get; set; }
 
@@ -34,10 +40,6 @@ namespace WarApi.Responses.Account
 
         [JsonProperty("updated_at")]
         public DateTime UpdatedAt { get; set; }
-
-        [Obsolete("Use achievements api")]
-        [JsonProperty("achievements")]
-        public Achievements Achievements { get; set; }
 
         [JsonProperty("private")]
         public Private Private { get; set; }

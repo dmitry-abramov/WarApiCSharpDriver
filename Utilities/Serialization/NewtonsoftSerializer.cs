@@ -4,31 +4,31 @@ namespace WarApi.Utilities.Serialization
 {
     public class NewtonsoftSerializer : ISerializer
     {
-        public readonly JsonSerializerSettings settings;
+        public readonly JsonSerializerSettings Settings;
 
         public NewtonsoftSerializer()
         {
-            settings = new JsonSerializerSettings();
-            settings.Converters.Add(new DateTimeJsonConverter());
-            settings.Converters.Add(new LanguageJsonConverter());
-            settings.Converters.Add(new RatingTypeJsonConverter());
+            Settings = new JsonSerializerSettings();
+            Settings.Converters.Add(new DateTimeJsonConverter());
+            Settings.Converters.Add(new LanguageJsonConverter());
+            Settings.Converters.Add(new RatingTypeJsonConverter());
         }
 
         public string Serialize(object obj)
         {
-            var serializedString = JsonConvert.SerializeObject(obj, settings);
+            var serializedString = JsonConvert.SerializeObject(obj, Settings);
             return serializedString;
         }
 
         public object Deserialize(string serializedString)
         {
-            var deserializedObject = JsonConvert.DeserializeObject(serializedString, settings);
+            var deserializedObject = JsonConvert.DeserializeObject(serializedString, Settings);
             return deserializedObject;
         }
 
         public T Deserialize<T>(string serializedString)
         {
-            var deserializedObject = JsonConvert.DeserializeObject<T>(serializedString, settings);
+            var deserializedObject = JsonConvert.DeserializeObject<T>(serializedString, Settings);
             return deserializedObject;
         }
     }

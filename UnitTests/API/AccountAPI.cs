@@ -6,6 +6,7 @@ using WarApi.ConstantValues;
 using WarApi.Requests.Account;
 using WarApi.Responses.Account;
 using WarApi.Client;
+using Newtonsoft.Json;
 
 namespace UnitTests.API
 {
@@ -20,7 +21,9 @@ namespace UnitTests.API
             {
                 if (client == null)
                 {
-                    client = new TestWotApplication("demo", "api.worldoftanks.ru", "wot", new NewtonsoftSerializer());
+                    var serializer = new NewtonsoftSerializer();
+                    serializer.Settings.MissingMemberHandling = MissingMemberHandling.Error;
+                    client = new TestWotApplication("demo", "api.worldoftanks.ru", "wot", serializer);
                 }
 
                 return client;

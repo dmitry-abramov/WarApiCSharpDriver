@@ -55,7 +55,9 @@
   </Choose>
   <ItemGroup>
     <Compile Include="API\AccountAPI.cs" />
+    <Compile Include="API\APITestsBase.cs" />
     <Compile Include="API\RatingsAPI.cs" />
+    <Compile Include="API\TanksAPI.cs" />
     <Compile Include="API\TestClient\TestWotApplication.cs" />
     <Compile Include="DateTimeJsonConverterTests.cs" />
     <Compile Include="LanguageTests.cs" />

@@ -2,6 +2,10 @@
 
 namespace WarApi.Requests.Account
 {
+    /// <summary>
+    /// Method returns partial list of players. 
+    /// The list is filtered by initial characters of user name and sorted alphabetically
+    /// </summary>
     public class PlayersListRequest : AccountRequestBase
     {
         public override string MethodName

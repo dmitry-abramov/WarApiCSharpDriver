@@ -9,20 +9,23 @@ namespace WarApi.Responses.Tanks
         [JsonProperty("account_id")]
         public string AccountId { get; set; }
 
-        [JsonProperty("TankId")]
+        [JsonProperty("tank_id")]
         public string TankId { get; set; }
 
+        //todo: add constants or object
         [JsonProperty("series")]
-        public string Series { get; set; }
+        public IDictionary<string, string> Series { get; set; }
 
+        //todo: add constants or object
         [JsonProperty("max_series")]
-        public string MaxSeries { get; set; }
+        public IDictionary<string, string> MaxSeries { get; set; }
 
-        [JsonProperty("achivements")]
-        public string Achivements { get; set; }
+        //todo: add constants or object
+        [JsonProperty("achievements")]
+        public IDictionary<string, string> Achivements { get; set; }
     }
 
-    public class TanksAchivementsResponse : ResponseBase<IDictionary<string, TanksAchivementsData>>
+    public class TanksAchivementsResponse : ResponseBase<IDictionary<string, IList<TanksAchivementsData>>>
     { 
     }
 }

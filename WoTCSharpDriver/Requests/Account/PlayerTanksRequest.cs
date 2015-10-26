@@ -3,6 +3,9 @@ using WarApi.Utilities.Attributes;
 
 namespace WarApi.Requests.Account
 {
+    /// <summary>
+    /// Method returns details on player's vehicles
+    /// </summary>
     public class PlayerTanksRequest : AccountRequestBase
     {
         public override string MethodName

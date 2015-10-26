@@ -22,17 +22,40 @@ namespace WarApi.Responses.Tanks
         [JsonProperty("tank_id")]
         public string TankId { get; set; }
 
+        //todo: this is stub
+        [JsonProperty("frags")]
+        public IDictionary<string, int> Frags { get; set; }
+
+        //todo: this is stub
         [JsonProperty("in_garage")]
-        public bool InGarage { get; set; }
+        public IDictionary<string, bool> InGarage { get; set; }
 
         [JsonProperty("all")]
-        public TankStatisticDetails All { get; set; }
+        public TankStatisticDetailsExtended All { get; set; }
 
         [JsonProperty("clan")]
         public TankStatisticDetails Clan { get; set; }
 
         [JsonProperty("company")]
         public TankStatisticDetails Company { get; set; }
+
+        [JsonProperty("stronghold_defense")]
+        public TankStatisticDetailsExtended StrongholdDefence { get; set; }
+
+        [JsonProperty("stronghold_skirmish")]
+        public TankStatisticDetailsExtended StrongholdSkirmish { get; set; }
+
+        [JsonProperty("team")]
+        public TankStatisticDetails Team { get; set; }
+
+        [JsonProperty("regular_team")]
+        public TankStatisticDetails RegularTeam { get; set; }
+
+        [JsonProperty("random")]
+        public TankStatisticDetails Random { get; set; }
+
+        [JsonProperty("globalmap")]
+        public TankStatisticDetailsExtended GlobalMap { get; set; }
     }
 
     public class TankStatisticDetails
@@ -84,9 +107,54 @@ namespace WarApi.Responses.Tanks
 
         [JsonProperty("xp")]
         public int Expirience { get; set; }
+
+        [JsonProperty("max_xp")]
+        public int MaxExpirience { get; set; }
+
+        [JsonProperty("max_damage")]
+        public int MaxDamage { get; set; }
+
+        [JsonProperty("max_frags")]
+        public int MaxFrags { get; set; }
     }
 
-    public class TanksStatisticsResponse : ResponseBase<IDictionary<string, TanksStatisticsData>>
+    public class TankStatisticDetailsExtended : TankStatisticDetails
+    {
+        [JsonProperty("no_damage_direct_hits_received")]
+        public int NoDamageDirectHitsReceived { get; set; }
+
+        [JsonProperty("direct_hits_received")]
+        public int DirectHitsReceived { get; set; }
+
+        [JsonProperty("piercings")]
+        public int Piercings { get; set; }
+
+        [JsonProperty("piercings_received")]
+        public int PiercingsReceived { get; set; }
+
+        [JsonProperty("explosion_hits")]
+        public int ExplosionHits { get; set; }
+
+        [JsonProperty("explosion_hits_received")]
+        public int ExplosionHitsReceived { get; set; }
+
+        [JsonProperty("tanking_factor")]
+        public double TankingFactor { get; set; }
+
+        [JsonProperty("avg_damage_assisted")]
+        public double AvgDamageAssisted { get; set; }
+
+        [JsonProperty("avg_damage_assisted_track")]
+        public double AvgDamageAssistedTrack { get; set; }
+
+        [JsonProperty("avg_damage_assisted_radio")]
+        public double AvgDamageAssistedRadio { get; set; }
+
+        [JsonProperty("avg_damage_blocked")]
+        public double AvgDamageAssistedBlocked { get; set; }
+    }
+
+    public class TanksStatisticsResponse : ResponseBase<IDictionary<string, IList<TanksStatisticsData>>>
     {
     }
 }

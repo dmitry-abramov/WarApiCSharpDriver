@@ -11,25 +11,8 @@ using Newtonsoft.Json;
 namespace UnitTests.API
 {
     [TestClass]
-    public class AccountAPI
+    public class AccountAPI : APITestsBase
     {
-        private IWarApiApplication client;
-
-        private IWarApiApplication Client
-        {
-            get 
-            {
-                if (client == null)
-                {
-                    var serializer = new NewtonsoftSerializer();
-                    serializer.Settings.MissingMemberHandling = MissingMemberHandling.Error;
-                    client = new TestWotApplication("demo", "api.worldoftanks.ru", "wot", serializer);
-                }
-
-                return client;
-            }
-        }
-
         [TestMethod]
         public void PlayersListRequestTest()
         {

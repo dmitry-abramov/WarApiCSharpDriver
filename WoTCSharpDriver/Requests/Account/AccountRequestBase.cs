@@ -3,6 +3,9 @@ using WarApi.Requests;
 
 namespace WarApi.Requests.Account
 {
+    /// <summary>
+    /// Base class for Account methods
+    /// </summary>
     public class AccountRequestBase : RequestBase
     {
         public override string MethodBlock

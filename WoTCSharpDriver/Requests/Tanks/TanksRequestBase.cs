@@ -4,6 +4,9 @@ using WarApi.Utilities;
 
 namespace WarApi.Requests.Tanks
 {
+    /// <summary>
+    /// Base class for Tanks methods
+    /// </summary>
     public class TanksRequestBase : RequestBase
     {
         public override string MethodBlock

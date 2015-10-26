@@ -4,6 +4,10 @@ using WarApi.ConstantValues;
 
 namespace WarApi.Requests.Auth
 {
+    /// <summary>
+    /// Method authenticates user based on Wargaming.net ID (OpenID) 
+    /// which is used in World of Tanks, World of Tanks Blitz, World of Warplanes, and WarGag.ru
+    /// </summary>
     public class LoginRequest : AuthRequestBase
     {
         public override string MethodName

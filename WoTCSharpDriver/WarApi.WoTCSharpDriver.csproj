@@ -78,7 +78,6 @@
     <Compile Include="Requests\Ratings\TopPlayersRequest.cs" />
     <Compile Include="Requests\Account\AccountRequestBase.cs" />
     <Compile Include="Requests\Account\PlayerAchivementsRequest.cs" />
-    <Compile Include="Requests\Account\PlayerRatingRequest.cs" />
     <Compile Include="Requests\Account\PlayersListRequest.cs" />
     <Compile Include="Requests\Account\PlayerInfoRequest.cs" />
     <Compile Include="Requests\Account\PlayerTanksRequest.cs" />

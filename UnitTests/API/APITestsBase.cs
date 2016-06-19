@@ -1,5 +1,6 @@
-﻿using Newtonsoft.Json;
-
+﻿using Microsoft.VisualStudio.TestTools.UnitTesting;
+using Newtonsoft.Json;
+using System.Threading;
 using WarApi.Client;
 using WarApi.Utilities.Serialization;
 
@@ -7,6 +8,12 @@ namespace UnitTests.API
 {
     public class APITestsBase
     {
+        [TestInitialize]
+        public void WaitBeforeTest()
+        {
+            Thread.Sleep(500);
+        }
+
         private IWarApiApplication client;
 
         protected IWarApiApplication Client

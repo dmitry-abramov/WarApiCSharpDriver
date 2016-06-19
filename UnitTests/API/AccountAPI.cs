@@ -107,7 +107,7 @@ namespace UnitTests.API
             Assert.IsNotNull(response.Data["2989679"].Statistics.Historical);
 
             Assert.AreEqual("ok", response.Status);
-            Assert.IsNull(response.Data["2989680"], "2989680");
+            Assert.IsNotNull(response.Data["2989680"], "2989680");
         }
     }
 }

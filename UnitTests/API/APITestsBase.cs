@@ -11,6 +11,7 @@ namespace UnitTests.API
         [TestInitialize]
         public void WaitBeforeTest()
         {
+            //waiting before every test to avoid blocking by request per second limit
             Thread.Sleep(500);
         }
 

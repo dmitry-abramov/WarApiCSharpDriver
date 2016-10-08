@@ -1,6 +1,4 @@
-﻿using System;
-
-using WarApi.Client;
+﻿using WarApi.Client;
 using WarApi.Utilities.Serialization;
 
 namespace WarApi.WoWPCSharpDriver

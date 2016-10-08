@@ -1,7 +1,6 @@
 ﻿using Newtonsoft.Json;
 using System;
 using System.Collections.Generic;
-using System.Runtime.Serialization;
 using WarApi.ConstantValues;
 
 namespace WarApi.Responses.Ratings

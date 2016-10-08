@@ -1,7 +1,6 @@
 ﻿using Microsoft.VisualStudio.TestTools.UnitTesting;
 using Newtonsoft.Json;
 using WarApi.Utilities.Serialization;
-using WarApi;
 using WarApi.ConstantValues;
 using WarApi.Requests;
 

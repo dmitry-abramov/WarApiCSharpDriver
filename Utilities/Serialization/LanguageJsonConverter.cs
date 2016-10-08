@@ -1,6 +1,5 @@
 ﻿using Newtonsoft.Json;
 using System;
-using WarApi;
 using WarApi.ConstantValues;
 
 namespace WarApi.Utilities.Serialization

@@ -1,5 +1,5 @@
 ﻿using Newtonsoft.Json;
-using System.Runtime.Serialization;
+
 namespace WarApi.Responses.Account
 {
     public class Achievements

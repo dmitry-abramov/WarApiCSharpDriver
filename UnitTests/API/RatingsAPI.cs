@@ -1,13 +1,10 @@
 ﻿using Microsoft.VisualStudio.TestTools.UnitTesting;
 using System;
 using WarApi.Utilities.Serialization;
-using WarApi;
 using WarApi.Requests.Ratings;
 using WarApi.Responses.Ratings;
 using WarApi.ConstantValues;
-using Newtonsoft.Json;
 using System.Collections.Generic;
-using WarApi.Client;
 
 namespace UnitTests.API
 {

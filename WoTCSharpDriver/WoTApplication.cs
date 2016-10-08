@@ -1,11 +1,4 @@
-﻿using System.Text;
-using System.Net;
-
-using System.IO;
-using System.Runtime.Serialization.Json;
-
-using WarApi.Requests;
-using WarApi.Utilities.Serialization;
+﻿using WarApi.Utilities.Serialization;
 
 namespace WarApi.Client
 {

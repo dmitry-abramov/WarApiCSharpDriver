@@ -1,6 +1,5 @@
-﻿
-using Newtonsoft.Json;
-using System.Runtime.Serialization;
+﻿using Newtonsoft.Json;
+
 namespace WarApi.Responses.GlobalWar
 {
     public class Province

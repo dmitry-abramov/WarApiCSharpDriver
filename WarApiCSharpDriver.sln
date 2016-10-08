@@ -19,6 +19,10 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "WarApi.WoWSCSharpDriver", "
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "WarApi.CodeGenerator", "WarApi.CodeGenerator\WarApi.CodeGenerator.csproj", "{9B97BB30-F6BB-4E31-8B98-029FC20CD9C3}"
 EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Tests", "Tests", "{D6EA4AB5-E37F-436A-BE42-9B3AA2BBD0E0}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Tools", "Tools", "{D61E08F3-CFFE-434F-A549-48F525724991}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -60,5 +64,9 @@ Global
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(NestedProjects) = preSolution
+		{DF16F4BB-6B77-41C3-A236-19CC0ED9D8BA} = {D6EA4AB5-E37F-436A-BE42-9B3AA2BBD0E0}
+		{9B97BB30-F6BB-4E31-8B98-029FC20CD9C3} = {D61E08F3-CFFE-434F-A549-48F525724991}
 	EndGlobalSection
 EndGlobal

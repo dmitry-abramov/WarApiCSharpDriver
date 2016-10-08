@@ -1,4 +1,5 @@
 ﻿using System;
+
 namespace WarApi.ConstantValues
 {
     public class Language

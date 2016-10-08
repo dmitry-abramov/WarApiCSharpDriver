@@ -1,6 +1,6 @@
 ﻿using Newtonsoft.Json;
 using System;
-using System.Runtime.Serialization;
+
 namespace WarApi.Responses.Account
 {
     public class Private

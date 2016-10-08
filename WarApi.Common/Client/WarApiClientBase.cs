@@ -1,7 +1,4 @@
-﻿using System.Text;
-using System.Net;
-
-using System.IO;
+﻿using System.Net;
 
 using WarApi.Requests;
 using WarApi.Utilities.Serialization;

@@ -1,6 +1,4 @@
 ﻿using Newtonsoft.Json;
-using System.Collections.Generic;
-using System.Runtime.Serialization;
 
 namespace WarApi.Responses.GlobalWar
 {

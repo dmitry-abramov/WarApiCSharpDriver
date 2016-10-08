@@ -1,5 +1,4 @@
 ﻿using Microsoft.VisualStudio.TestTools.UnitTesting;
-using WarApi.ConstantValues;
 using WarApi.Requests.Tanks;
 using WarApi.Responses.Tanks;
 

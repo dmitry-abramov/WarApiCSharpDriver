@@ -23,6 +23,8 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Tests", "Tests", "{D6EA4AB5
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Tools", "Tools", "{D61E08F3-CFFE-434F-A549-48F525724991}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "WarApi.CodeGenerator.IntegrationTests", "WarApi.CodeGenerator.IntegrationTests\WarApi.CodeGenerator.IntegrationTests.csproj", "{99CF5E18-850B-4CCC-A847-AC1D443C3E3B}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -61,6 +63,10 @@ Global
 		{9B97BB30-F6BB-4E31-8B98-029FC20CD9C3}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{9B97BB30-F6BB-4E31-8B98-029FC20CD9C3}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{9B97BB30-F6BB-4E31-8B98-029FC20CD9C3}.Release|Any CPU.Build.0 = Release|Any CPU
+		{99CF5E18-850B-4CCC-A847-AC1D443C3E3B}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{99CF5E18-850B-4CCC-A847-AC1D443C3E3B}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{99CF5E18-850B-4CCC-A847-AC1D443C3E3B}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{99CF5E18-850B-4CCC-A847-AC1D443C3E3B}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
@@ -68,5 +74,6 @@ Global
 	GlobalSection(NestedProjects) = preSolution
 		{DF16F4BB-6B77-41C3-A236-19CC0ED9D8BA} = {D6EA4AB5-E37F-436A-BE42-9B3AA2BBD0E0}
 		{9B97BB30-F6BB-4E31-8B98-029FC20CD9C3} = {D61E08F3-CFFE-434F-A549-48F525724991}
+		{99CF5E18-850B-4CCC-A847-AC1D443C3E3B} = {D6EA4AB5-E37F-436A-BE42-9B3AA2BBD0E0}
 	EndGlobalSection
 EndGlobal

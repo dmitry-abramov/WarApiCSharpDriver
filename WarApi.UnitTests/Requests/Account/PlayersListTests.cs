@@ -1,7 +1,7 @@
 ﻿using WarApi.Requests.Account;
 using Xunit;
 
-namespace UnitTests.Requests.Account
+namespace WarApi.UnitTests.Requests.Account
 {
     public class PlayersListTests
     {

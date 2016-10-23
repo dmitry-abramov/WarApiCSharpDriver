@@ -43,7 +43,7 @@
     <Folder Include="Responses\" />
   </ItemGroup>
   <ItemGroup>
-    <ProjectReference Include="..\Utilities\WarApi.Utilities.csproj">
+    <ProjectReference Include="..\WarApi.Utilities\WarApi.Utilities.csproj">
       <Project>{9a4ffb87-b8d2-467e-9fc7-cf86f34bc3f6}</Project>
       <Name>WarApi.Utilities</Name>
     </ProjectReference>

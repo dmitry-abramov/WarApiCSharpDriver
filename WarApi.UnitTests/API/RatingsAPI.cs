@@ -6,7 +6,7 @@ using WarApi.ConstantValues;
 using System.Collections.Generic;
 using Xunit;
 
-namespace UnitTests.API
+namespace WarApi.UnitTests.API
 {
     public class RatingsAPI : APITestsBase
     {

@@ -4,7 +4,7 @@ using WarApi.Requests;
 using WarApi.Utilities.Serialization;
 using WarApi.Client;
 
-namespace UnitTests
+namespace WarApi.UnitTests
 {
     public class TestWotApplication : IWarApiApplication
     {

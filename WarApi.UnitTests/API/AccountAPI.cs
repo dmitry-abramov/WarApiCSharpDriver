@@ -4,7 +4,7 @@ using WarApi.Requests.Account;
 using WarApi.Responses.Account;
 using Xunit;
 
-namespace UnitTests.API
+namespace WarApi.UnitTests.API
 {
     public class AccountAPI : APITestsBase
     {

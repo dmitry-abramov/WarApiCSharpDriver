@@ -3,7 +3,7 @@ using System.Threading;
 using WarApi.Client;
 using WarApi.Utilities.Serialization;
 
-namespace UnitTests.API
+namespace WarApi.UnitTests.API
 {
     public class APITestsBase
     {

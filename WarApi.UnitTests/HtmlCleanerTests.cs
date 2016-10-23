@@ -2,7 +2,7 @@
 using WarApi.CodeGenerator;
 using Xunit;
 
-namespace UnitTests
+namespace WarApi.UnitTests
 {
     public class HtmlCleanerTests
     {

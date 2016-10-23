@@ -2,7 +2,7 @@
 using WarApi.Utilities.Serialization;
 using Xunit;
 
-namespace UnitTests
+namespace WarApi.UnitTests
 {
     public class DateTimeJsonConverterTests
     {

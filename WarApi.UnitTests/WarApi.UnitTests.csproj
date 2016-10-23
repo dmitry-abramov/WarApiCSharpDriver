@@ -7,8 +7,8 @@
     <ProjectGuid>{DF16F4BB-6B77-41C3-A236-19CC0ED9D8BA}</ProjectGuid>
     <OutputType>Library</OutputType>
     <AppDesignerFolder>Properties</AppDesignerFolder>
-    <RootNamespace>UnitTests</RootNamespace>
-    <AssemblyName>UnitTests</AssemblyName>
+    <RootNamespace>WarApi.UnitTests</RootNamespace>
+    <AssemblyName>WarApi.UnitTests</AssemblyName>
     <TargetFrameworkVersion>v4.5.2</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
     <ProjectTypeGuids>{3AC096D0-A1C2-E12C-1390-A8335801FDAB};{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}</ProjectTypeGuids>
@@ -86,7 +86,7 @@
     <Compile Include="WoTApplicationTests.cs" />
   </ItemGroup>
   <ItemGroup>
-    <ProjectReference Include="..\Utilities\WarApi.Utilities.csproj">
+    <ProjectReference Include="..\WarApi.Utilities\WarApi.Utilities.csproj">
       <Project>{9a4ffb87-b8d2-467e-9fc7-cf86f34bc3f6}</Project>
       <Name>WarApi.Utilities</Name>
     </ProjectReference>
@@ -102,7 +102,7 @@
       <Project>{9110f698-004e-45f7-8211-fdc9b90a7e38}</Project>
       <Name>WarApi.ConstantValues</Name>
     </ProjectReference>
-    <ProjectReference Include="..\WoTCSharpDriver\WarApi.WoTCSharpDriver.csproj">
+    <ProjectReference Include="..\WarApi.WoTCSharpDriver\WarApi.WoTCSharpDriver.csproj">
       <Project>{50848325-2973-4ac3-82aa-b47215e0c466}</Project>
       <Name>WarApi.WoTCSharpDriver</Name>
     </ProjectReference>

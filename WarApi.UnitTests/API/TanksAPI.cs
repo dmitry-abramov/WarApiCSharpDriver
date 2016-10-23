@@ -2,7 +2,7 @@
 using WarApi.Responses.Tanks;
 using Xunit;
 
-namespace UnitTests.API
+namespace WarApi.UnitTests.API
 {
     public class TanksAPI : APITestsBase
     {

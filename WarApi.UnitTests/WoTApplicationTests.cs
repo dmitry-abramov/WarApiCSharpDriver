@@ -3,7 +3,7 @@ using WarApi.Requests.Account;
 using WarApi.Responses.Account;
 using Xunit;
 
-namespace UnitTests
+namespace WarApi.UnitTests
 {
     public class WoTApplicationTests
     {

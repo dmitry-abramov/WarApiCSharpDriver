@@ -3,11 +3,11 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio 14
 VisualStudioVersion = 14.0.25123.0
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "WarApi.WoTCSharpDriver", "WoTCSharpDriver\WarApi.WoTCSharpDriver.csproj", "{50848325-2973-4AC3-82AA-B47215E0C466}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "WarApi.WoTCSharpDriver", "WarApi.WoTCSharpDriver\WarApi.WoTCSharpDriver.csproj", "{50848325-2973-4AC3-82AA-B47215E0C466}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "UnitTests", "UnitTests\UnitTests.csproj", "{DF16F4BB-6B77-41C3-A236-19CC0ED9D8BA}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "WarApi.UnitTests", "WarApi.UnitTests\WarApi.UnitTests.csproj", "{DF16F4BB-6B77-41C3-A236-19CC0ED9D8BA}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "WarApi.Utilities", "Utilities\WarApi.Utilities.csproj", "{9A4FFB87-B8D2-467E-9FC7-CF86F34BC3F6}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "WarApi.Utilities", "WarApi.Utilities\WarApi.Utilities.csproj", "{9A4FFB87-B8D2-467E-9FC7-CF86F34BC3F6}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "WarApi.ConstantValues", "WarApi.ConstantValues\WarApi.ConstantValues.csproj", "{9110F698-004E-45F7-8211-FDC9B90A7E38}"
 EndProject

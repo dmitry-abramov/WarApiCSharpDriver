@@ -4,7 +4,7 @@ using WarApi.ConstantValues;
 using WarApi.Requests;
 using Xunit;
 
-namespace UnitTests
+namespace WarApi.UnitTests
 {
     public class LanguageTests
     {

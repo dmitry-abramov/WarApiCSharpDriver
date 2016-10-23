@@ -7,8 +7,8 @@
     <ProjectGuid>{9A4FFB87-B8D2-467E-9FC7-CF86F34BC3F6}</ProjectGuid>
     <OutputType>Library</OutputType>
     <AppDesignerFolder>Properties</AppDesignerFolder>
-    <RootNamespace>WarApi</RootNamespace>
-    <AssemblyName>Utilities</AssemblyName>
+    <RootNamespace>WarApi.Utilities</RootNamespace>
+    <AssemblyName>WarApi.Utilities</AssemblyName>
     <TargetFrameworkVersion>v4.5</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
   </PropertyGroup>

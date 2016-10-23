@@ -7,7 +7,7 @@ before_build:
 
 test:
   assemblies:
-  - UnitTests.dll
+  - WarApi.UnitTests.dll
   - WarApi.CodeGenerator.IntegrationTests
 
 notifications:

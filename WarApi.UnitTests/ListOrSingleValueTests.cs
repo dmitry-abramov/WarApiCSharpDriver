@@ -4,7 +4,7 @@ using System.Linq;
 using WarApi.Utilities;
 using Xunit;
 
-namespace UnitTests
+namespace WarApi.UnitTests
 {
     public class ListOrSingleValueTests
     {

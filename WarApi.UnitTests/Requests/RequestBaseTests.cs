@@ -4,7 +4,7 @@ using WarApi.Requests;
 using WarApi.Utilities.Attributes;
 using Xunit;
 
-namespace UnitTests
+namespace WarApi.UnitTests
 {
     public class RequestBaseTests
     {

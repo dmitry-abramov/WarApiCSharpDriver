@@ -1,13 +1,12 @@
-﻿using Microsoft.VisualStudio.TestTools.UnitTesting;
-using WarApi.Requests.Tanks;
+﻿using WarApi.Requests.Tanks;
 using WarApi.Responses.Tanks;
+using Xunit;
 
 namespace UnitTests.API
 {
-    [TestClass]
     public class TanksAPI : APITestsBase
     {
-        [TestMethod]
+        [Fact]
         public void TanksStatisticsRequetstTest()
         {
             var request = Client.CreateRequest<TanksStatisticsRequest>();
@@ -15,13 +14,13 @@ namespace UnitTests.API
 
             var response = Client.GetResponseFor<TanksStatisticsResponse>(request);
 
-            Assert.AreEqual("ok", response.Status);
-            Assert.IsNotNull(response.Data["2989679"][0].All);
-            Assert.IsNotNull(response.Data["2989679"][0].Clan);
-            Assert.IsNotNull(response.Data["2989679"][0].Company);
+            Assert.Equal("ok", response.Status);
+            Assert.NotNull(response.Data["2989679"][0].All);
+            Assert.NotNull(response.Data["2989679"][0].Clan);
+            Assert.NotNull(response.Data["2989679"][0].Company);
         }
 
-        [TestMethod]
+        [Fact]
         public void TanksAchievementsRequetstTest()
         {
             var request = Client.CreateRequest<TanksAchievementsRequest>();
@@ -29,8 +28,8 @@ namespace UnitTests.API
 
             var response = Client.GetResponseFor<TanksAchivementsResponse>(request);
 
-            Assert.AreEqual("ok", response.Status);
-            Assert.IsNotNull(response.Data["2989679"][0].Achivements);
+            Assert.Equal("ok", response.Status);
+            Assert.NotNull(response.Data["2989679"][0].Achivements);
         }
     }
 }

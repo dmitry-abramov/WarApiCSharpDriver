@@ -1,27 +1,26 @@
-﻿using Microsoft.VisualStudio.TestTools.UnitTesting;
-using Newtonsoft.Json;
+﻿using Newtonsoft.Json;
 using WarApi.Utilities.Serialization;
 using WarApi.ConstantValues;
 using WarApi.Requests;
+using Xunit;
 
 namespace UnitTests
 {
-    [TestClass]
     public class LanguageTests
     {
-        [TestMethod]
+        [Fact]
         public void ToStringTest()
         {
             var englishLanguage = Language.English;
             var russianLanguage = Language.Russian;
             var germanLanguage = Language.German;
 
-            Assert.AreEqual("en", englishLanguage.ToString());
-            Assert.AreEqual("ru", russianLanguage.ToString());
-            Assert.AreEqual("de", germanLanguage.ToString());
+            Assert.Equal("en", englishLanguage.ToString());
+            Assert.Equal("ru", russianLanguage.ToString());
+            Assert.Equal("de", germanLanguage.ToString());
         }
 
-        [TestMethod]
+        [Fact]
         public void TestRequest()
         {
             var request = new RequestBase();
@@ -29,10 +28,10 @@ namespace UnitTests
             request.ApplicationId = "appId";
             request.Language = Language.English;
 
-            Assert.AreEqual("application_id=appId&language=en", request.GetParametersLikeUri());
+            Assert.Equal("application_id=appId&language=en", request.GetParametersLikeUri());
         }
 
-        [TestMethod]
+        [Fact]
         public void TestDeserializationFromJson()
         {
             var serializedString = "\"zh-cn\"";
@@ -40,10 +39,10 @@ namespace UnitTests
 
             var result = JsonConvert.DeserializeObject<Language>(serializedString, new LanguageJsonConverter());
 
-            Assert.AreEqual(expected, result);
+            Assert.Equal(expected, result);
         }
 
-        [TestMethod]
+        [Fact]
         public void TestSerializationToJson()
         {
             var expected = "\"zh-cn\"";
@@ -51,25 +50,25 @@ namespace UnitTests
 
             var result = JsonConvert.SerializeObject(language, new LanguageJsonConverter());
 
-            Assert.AreEqual(expected, result);
+            Assert.Equal(expected, result);
         }
 
-        [TestMethod]
+        [Fact]
         public void TestEqual()
         {
             var abbreviation = "zh-cn";
             var language = Language.Chinese;
 
-            Assert.IsTrue(language.Equals(new Language(abbreviation)));
+            Assert.True(language.Equals(new Language(abbreviation)));
         }
 
-        [TestMethod]
+        [Fact]
         public void TestEqualToCaseInsensetive()
         {
             var abbreviation = "De";
             var language = Language.German;
 
-            Assert.IsTrue(language.Equals(new Language(abbreviation)));
+            Assert.True(language.Equals(new Language(abbreviation)));
         }
     }
 }

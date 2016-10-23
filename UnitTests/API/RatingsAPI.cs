@@ -1,17 +1,16 @@
-﻿using Microsoft.VisualStudio.TestTools.UnitTesting;
-using System;
+﻿using System;
 using WarApi.Utilities.Serialization;
 using WarApi.Requests.Ratings;
 using WarApi.Responses.Ratings;
 using WarApi.ConstantValues;
 using System.Collections.Generic;
+using Xunit;
 
 namespace UnitTests.API
 {
-    [TestClass]
     public class RatingsAPI : APITestsBase
     {
-        [TestMethod]
+        [Fact]
         public void DatesWithRatingsRequestTest()
         {
             var request = Client.CreateRequest<DatesWithRatingsRequest>();
@@ -19,31 +18,31 @@ namespace UnitTests.API
 
             var response = Client.GetResponseFor<DatesWithRatingsResponse>(request);
 
-            Assert.IsTrue(response.Data.ContainsKey(RatingType.All));
-            Assert.IsTrue(response.Data[RatingType.All].Dates.Count > 0);
-            Assert.AreNotEqual(DateTime.MinValue, response.Data[RatingType.All].Dates[0]);
+            Assert.True(response.Data.ContainsKey(RatingType.All));
+            Assert.True(response.Data[RatingType.All].Dates.Count > 0);
+            Assert.NotEqual(DateTime.MinValue, response.Data[RatingType.All].Dates[0]);
         }
 
-        [TestMethod]
+        [Fact]
         public void RatingTypesResponse()
         {
             var request = Client.CreateRequest<RatingsTypesRequest>();
 
             var response = Client.GetResponseFor<RatingTypesResponse>(request);
 
-            Assert.IsTrue(response.Data.Count > 0);
+            Assert.True(response.Data.Count > 0);
 
-            Assert.IsTrue(response.Data.ContainsKey(RatingType.All));
-            Assert.IsTrue(response.Data.ContainsKey(RatingType.Type1));
-            Assert.IsTrue(response.Data.ContainsKey(RatingType.Type7));
-            Assert.IsTrue(response.Data.ContainsKey(RatingType.Type28));
+            Assert.True(response.Data.ContainsKey(RatingType.All));
+            Assert.True(response.Data.ContainsKey(RatingType.Type1));
+            Assert.True(response.Data.ContainsKey(RatingType.Type7));
+            Assert.True(response.Data.ContainsKey(RatingType.Type28));
 
-            Assert.IsTrue(response.Data[RatingType.All].Threshold > 0);
-            Assert.IsTrue(response.Data[RatingType.All].RankFields.Count > 0);
-            Assert.AreEqual(RatingType.All, response.Data[RatingType.All].Type);
+            Assert.True(response.Data[RatingType.All].Threshold > 0);
+            Assert.True(response.Data[RatingType.All].RankFields.Count > 0);
+            Assert.Equal(RatingType.All, response.Data[RatingType.All].Type);
         }
 
-        [TestMethod]
+        [Fact]
         public void TestSerializeAsDictionaryKey()
         {
             var serializer = new NewtonsoftSerializer();

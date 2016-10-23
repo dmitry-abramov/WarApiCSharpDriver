@@ -1,18 +1,17 @@
-﻿using Microsoft.VisualStudio.TestTools.UnitTesting;
-using WarApi.Requests.Account;
+﻿using WarApi.Requests.Account;
+using Xunit;
 
 namespace UnitTests.Requests.Account
 {
-    [TestClass]
     public class PlayersListTests
     {
-        [TestMethod]
+        [Fact]
         public void GetPath()
         {
             var request = new PlayersListRequest();
             var path = request.GetPath();
 
-            Assert.AreEqual("account/list", path);
+            Assert.Equal("account/list", path);
         }
     }
 }

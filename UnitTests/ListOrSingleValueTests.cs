@@ -1,151 +1,148 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Linq;
-using Microsoft.VisualStudio.TestTools.UnitTesting;
 using WarApi.Utilities;
+using Xunit;
 
 namespace UnitTests
 {
-    [TestClass]
     public class ListOrSingleValueTests
     {
-        [TestMethod]
+        [Fact]
         public void TestObjectInitialization()
         {
             var o = new ListOrSingleValue<int>() { 1, 2, 3 };
 
-            Assert.AreEqual(3, o.Count);
-            Assert.IsFalse(o.IsSingle);
-            Assert.AreEqual(o.CastErrorMode, CastErrorMode.ThrowExceptionIfList);
-            Assert.AreEqual(1, o.ElementAt(0));
-            Assert.AreEqual(2, o.ElementAt(1));
-            Assert.AreEqual(3, o.ElementAt(2));
+            Assert.Equal(3, o.Count);
+            Assert.False(o.IsSingle);
+            Assert.Equal(o.CastErrorMode, CastErrorMode.ThrowExceptionIfList);
+            Assert.Equal(1, o.ElementAt(0));
+            Assert.Equal(2, o.ElementAt(1));
+            Assert.Equal(3, o.ElementAt(2));
         }
 
-        [TestMethod]
+        [Fact]
         public void TestIsSingleProperty()
         {
             var o = new ListOrSingleValue<int>();
 
             o.Add(5);
 
-            Assert.AreEqual(1, o.Count);
-            Assert.IsTrue(o.IsSingle);
-            Assert.AreEqual(5, o.ElementAt(0));
+            Assert.Equal(1, o.Count);
+            Assert.True(o.IsSingle);
+            Assert.Equal(5, o.ElementAt(0));
         }
 
-        [TestMethod]
+        [Fact]
         public void TestIsSinglePropertyForDeafaultValueType()
         {
             var o = new ListOrSingleValue<int>();
 
-            Assert.AreEqual(0, o.Count);
-            Assert.IsTrue(o.IsSingle);
-            Assert.AreEqual(default(int), (int)o);
+            Assert.Equal(0, o.Count);
+            Assert.True(o.IsSingle);
+            Assert.Equal(default(int), (int)o);
         }
 
-        [TestMethod]
+        [Fact]
         public void TestIsSinglePropertyForDeafaultReferenseType()
         {
             var o = new ListOrSingleValue<List<int>>();
 
-            Assert.AreEqual(0, o.Count);
-            Assert.IsTrue(o.IsSingle);
-            Assert.IsNull((List<int>)o);
+            Assert.Equal(0, o.Count);
+            Assert.True(o.IsSingle);
+            Assert.Null((List<int>)o);
         }
 
-        [TestMethod]
+        [Fact]
         public void TestImplicitCastFromSingleInt()
         {
             ListOrSingleValue<int> o = 5;
 
-            Assert.AreEqual(1, o.Count);
-            Assert.AreEqual(o.CastErrorMode, CastErrorMode.ThrowExceptionIfList);
-            Assert.IsTrue(o.IsSingle);
-            Assert.AreEqual(5, o.ElementAt(0));
+            Assert.Equal(1, o.Count);
+            Assert.Equal(o.CastErrorMode, CastErrorMode.ThrowExceptionIfList);
+            Assert.True(o.IsSingle);
+            Assert.Equal(5, o.ElementAt(0));
         }
 
-        [TestMethod]
+        [Fact]
         public void TestImplicitCastToSingleDefaultInt()
         {
             ListOrSingleValue<int> o = new ListOrSingleValue<int>();
 
             int intValue = o;
 
-            Assert.AreEqual(0, intValue);
+            Assert.Equal(0, intValue);
         }
 
-        [TestMethod]
+        [Fact]
         public void TestImplicitCastFromListInt()
         {
             var list = new List<int> { 10, 12, 15 };
             ListOrSingleValue<int> o = list;
 
-            Assert.AreEqual(3, o.Count);
-            Assert.AreEqual(o.CastErrorMode, CastErrorMode.ThrowExceptionIfList);
-            Assert.IsFalse(o.IsSingle);
-            Assert.AreEqual(10, o.ElementAt(0));
-            Assert.AreEqual(12, o.ElementAt(1));
-            Assert.AreEqual(15, o.ElementAt(2));
+            Assert.Equal(3, o.Count);
+            Assert.Equal(o.CastErrorMode, CastErrorMode.ThrowExceptionIfList);
+            Assert.False(o.IsSingle);
+            Assert.Equal(10, o.ElementAt(0));
+            Assert.Equal(12, o.ElementAt(1));
+            Assert.Equal(15, o.ElementAt(2));
         }
 
-        [TestMethod]
+        [Fact]
         public void TestImplicitCastToSingleInt()
         {
             ListOrSingleValue<int> o = 7;
             int value = o;
 
-            Assert.AreEqual(7, value);
+            Assert.Equal(7, value);
         }
 
-        [TestMethod()]
-        [ExpectedException(typeof(InvalidCastException))]
+        [Fact()]
         public void TestImplicitCastToSingleIntForListCase()
         {
             var o = new ListOrSingleValue<int>() { 1, 2, 3 };
-            int value = o;
+            Assert.Throws<InvalidCastException>(() => { int value = o; });
         }
 
-        [TestMethod]
+        [Fact]
         public void TestToStringMethodForSingleInt()
         {
             ListOrSingleValue<int> o = 8;
 
-            Assert.AreEqual(o.ToString(), "8");
+            Assert.Equal(o.ToString(), "8");
         }
 
-        [TestMethod]
+        [Fact]
         public void TestToStringMethodForListCase()
         {
             var o = new ListOrSingleValue<int>() { 1, 2, 3 };
 
-            Assert.AreEqual(o.ToString(), "1,2,3");
+            Assert.Equal(o.ToString(), "1,2,3");
         }
 
-        [TestMethod]
+        [Fact]
         public void TestToStringMethodForValuedType()
         {
             var o = new ListOrSingleValue<int>();
 
-            Assert.AreEqual(o.ToString(), default(int).ToString());
+            Assert.Equal(o.ToString(), default(int).ToString());
         }
 
-        [TestMethod]
-        [ExpectedException(typeof(NullReferenceException))]
+        [Fact]
         public void TestToStringMethodForDefaultReferenceType()
         {
             var o = new ListOrSingleValue<List<int>>();
 
-            o.ToString();
+            Assert.Throws<NullReferenceException>(() => o.ToString());
         }
 
-        [TestMethod]
+        [Fact]
         public void TestCastExceptionModeUseFirstOrDefaultElementIfList()
         {
             var o = new ListOrSingleValue<int>(CastErrorMode.UseFirstOrDefaultElementIfList) { 1, 2, 3 };
             int intValue = o;
 
-            Assert.AreEqual(1, intValue);
+            Assert.Equal(1, intValue);
         }
     }
 }

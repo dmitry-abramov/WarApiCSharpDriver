@@ -1,15 +1,14 @@
-﻿using Microsoft.VisualStudio.TestTools.UnitTesting;
-using System;
+﻿using System;
 using WarApi.ConstantValues;
 using WarApi.Requests.Account;
 using WarApi.Responses.Account;
+using Xunit;
 
 namespace UnitTests.API
 {
-    [TestClass]
     public class AccountAPI : APITestsBase
     {
-        [TestMethod]
+        [Fact]
         public void PlayersListRequestTest()
         {
             var request = Client.CreateRequest<PlayersListRequest>();
@@ -19,14 +18,14 @@ namespace UnitTests.API
 
             var response = Client.GetResponseFor<PlayersListResponse>(request);
 
-            Assert.AreEqual("ok", response.Status);
-            Assert.IsNull(response.Error);
-            Assert.AreEqual(20, response.MetaData.Count);
-            Assert.IsNotNull(string.IsNullOrEmpty(response.Data[0].AccountId));
-            Assert.IsNotNull(string.IsNullOrEmpty(response.Data[0].Nickname));
+            Assert.Equal("ok", response.Status);
+            Assert.Null(response.Error);
+            Assert.Equal(20, response.MetaData.Count);
+            Assert.NotNull(string.IsNullOrEmpty(response.Data[0].AccountId));
+            Assert.NotNull(string.IsNullOrEmpty(response.Data[0].Nickname));
         }
 
-        [TestMethod]
+        [Fact]
         public void PlayersTanksRequestTest()
         {
             var request = Client.CreateRequest<PlayerTanksRequest>();
@@ -35,16 +34,16 @@ namespace UnitTests.API
 
             var response = Client.GetResponseFor<PlayerTanksResponse>(request);
 
-            Assert.AreEqual("ok", response.Status);
-            Assert.IsNull(response.Error);
-            Assert.IsTrue(response.MetaData.Count > 0);
-            Assert.IsNotNull(response.Data["2989679"][0].TankId);
-            Assert.IsNotNull(response.Data["2989679"][0].Statistic);
-            Assert.IsTrue(response.Data["2989679"][0].Statistic.Battles > 0);
-            Assert.IsTrue(response.Data["2989679"][0].Statistic.Wins > 0);
+            Assert.Equal("ok", response.Status);
+            Assert.Null(response.Error);
+            Assert.True(response.MetaData.Count > 0);
+            Assert.NotNull(response.Data["2989679"][0].TankId);
+            Assert.NotNull(response.Data["2989679"][0].Statistic);
+            Assert.True(response.Data["2989679"][0].Statistic.Battles > 0);
+            Assert.True(response.Data["2989679"][0].Statistic.Wins > 0);
         }
 
-        [TestMethod]
+        [Fact]
         public void PlayerAchievementsRequestTest()
         {
             var request = Client.CreateRequest<PlayerAchivementsRequest>();
@@ -52,14 +51,14 @@ namespace UnitTests.API
 
             var response = Client.GetResponseFor<PlayerAchivementsResponse>(request);
 
-            Assert.AreEqual("ok", response.Status);
-            Assert.IsNull(response.Error);
-            Assert.IsTrue(response.MetaData.Count > 0);
-            Assert.IsTrue(response.Data["2989679"]["achievements"].Keys.Count > 0);
-            Assert.IsTrue(response.Data["2989679"]["max_series"].Keys.Count > 0);
+            Assert.Equal("ok", response.Status);
+            Assert.Null(response.Error);
+            Assert.True(response.MetaData.Count > 0);
+            Assert.True(response.Data["2989679"]["achievements"].Keys.Count > 0);
+            Assert.True(response.Data["2989679"]["max_series"].Keys.Count > 0);
         }
 
-        [TestMethod]
+        [Fact]
         public void PlayerInfoRequestTest()
         {
             var request = Client.CreateRequest<PlayerInfoRequest>();
@@ -67,21 +66,21 @@ namespace UnitTests.API
 
             var response = Client.GetResponseFor<PlayerInfoResponse>(request);
 
-            Assert.AreEqual("ok", response.Status);
-            Assert.IsNull(response.Error);
-            Assert.IsTrue(response.MetaData.Count > 0);
-            Assert.AreEqual(response.Data["2989679"].AccountId, "2989679");
-            Assert.AreEqual(response.Data["2989679"].ClanId, null);
-            Assert.AreEqual(new DateTime(2011, 8, 15, 8, 42, 30), response.Data["2989679"].CreatedAt);
-            Assert.AreEqual(Language.Russian, response.Data["2989679"].ClientLanguage);
-            Assert.IsNotNull(response.Data["2989679"].Statistics);
-            Assert.IsNotNull(response.Data["2989679"].Statistics.All);
-            Assert.IsNotNull(response.Data["2989679"].Statistics.Clan);
-            Assert.IsNotNull(response.Data["2989679"].Statistics.Company);
-            Assert.IsNotNull(response.Data["2989679"].Statistics.Historical);
+            Assert.Equal("ok", response.Status);
+            Assert.Null(response.Error);
+            Assert.True(response.MetaData.Count > 0);
+            Assert.Equal(response.Data["2989679"].AccountId, "2989679");
+            Assert.Equal(response.Data["2989679"].ClanId, null);
+            Assert.Equal(new DateTime(2011, 8, 15, 8, 42, 30), response.Data["2989679"].CreatedAt);
+            Assert.Equal(Language.Russian, response.Data["2989679"].ClientLanguage);
+            Assert.NotNull(response.Data["2989679"].Statistics);
+            Assert.NotNull(response.Data["2989679"].Statistics.All);
+            Assert.NotNull(response.Data["2989679"].Statistics.Clan);
+            Assert.NotNull(response.Data["2989679"].Statistics.Company);
+            Assert.NotNull(response.Data["2989679"].Statistics.Historical);
         }
 
-        [TestMethod]
+        [Fact]
         public void PlayerInfoRequestForTwoPlayersTest()
         {
             var request = Client.CreateRequest<PlayerInfoRequest>();
@@ -90,20 +89,20 @@ namespace UnitTests.API
 
             var response = Client.GetResponseFor<PlayerInfoResponse>(request);
 
-            Assert.AreEqual("ok", response.Status);
-            Assert.IsNull(response.Error);
-            Assert.IsTrue(response.MetaData.Count > 0);
-            Assert.AreEqual(response.Data["2989679"].AccountId, "2989679");
-            Assert.AreEqual(response.Data["2989679"].ClanId, null);
-            Assert.AreEqual(response.Data["2989679"].CreatedAt, new DateTime(2011, 8, 15, 8, 42, 30));
-            Assert.IsNotNull(response.Data["2989679"].Statistics);
-            Assert.IsNotNull(response.Data["2989679"].Statistics.All);
-            Assert.IsNotNull(response.Data["2989679"].Statistics.Clan);
-            Assert.IsNotNull(response.Data["2989679"].Statistics.Company);
-            Assert.IsNotNull(response.Data["2989679"].Statistics.Historical);
+            Assert.Equal("ok", response.Status);
+            Assert.Null(response.Error);
+            Assert.True(response.MetaData.Count > 0);
+            Assert.Equal(response.Data["2989679"].AccountId, "2989679");
+            Assert.Equal(response.Data["2989679"].ClanId, null);
+            Assert.Equal(response.Data["2989679"].CreatedAt, new DateTime(2011, 8, 15, 8, 42, 30));
+            Assert.NotNull(response.Data["2989679"].Statistics);
+            Assert.NotNull(response.Data["2989679"].Statistics.All);
+            Assert.NotNull(response.Data["2989679"].Statistics.Clan);
+            Assert.NotNull(response.Data["2989679"].Statistics.Company);
+            Assert.NotNull(response.Data["2989679"].Statistics.Historical);
 
-            Assert.AreEqual("ok", response.Status);
-            Assert.IsNotNull(response.Data["2989680"], "2989680");
+            Assert.Equal("ok", response.Status);
+            Assert.NotNull(response.Data["2989680"]);
         }
     }
 }

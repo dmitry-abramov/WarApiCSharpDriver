@@ -1,12 +1,11 @@
 ﻿using System;
-using Microsoft.VisualStudio.TestTools.UnitTesting;
 
 using WarApi.Requests;
 using WarApi.Utilities.Attributes;
+using Xunit;
 
 namespace UnitTests
 {
-    [TestClass]
     public class RequestBaseTests
     {
         protected class TestRequestWithDateParameter : RequestBase
@@ -15,7 +14,7 @@ namespace UnitTests
             public DateTime Date { get; set; }
         }
 
-        [TestMethod]
+        [Fact]
         public void GetEmptyParameters()
         {
             var request = new RequestBase();
@@ -23,16 +22,15 @@ namespace UnitTests
             var parameters = request.Parameters;
         }
 
-        [TestMethod]
-        [ExpectedException(typeof(InvalidOperationException))]
+        [Fact]
         public void GetExceptionForRequiredParameters()
         {
             var request = new RequestBase();
 
-            request.GetParametersLikeUri();
+            Assert.Throws<InvalidOperationException>(() => request.GetParametersLikeUri());
         }
 
-        [TestMethod]
+        [Fact]
         public void GetParametersForUri()
         {
             var request = new RequestBase();
@@ -41,10 +39,10 @@ namespace UnitTests
 
             var uriParameters = request.GetParametersLikeUri();
 
-            Assert.AreEqual("access_token=access%20token&application_id=application%20id", uriParameters);
+            Assert.Equal("access_token=access%20token&application_id=application%20id", uriParameters);
         }
 
-        [TestMethod]
+        [Fact]
         public void GetParametersCreatedWithAddParameter()
         {
             var request = new RequestBase();
@@ -54,10 +52,10 @@ namespace UnitTests
 
             var uriParameters = request.GetParametersLikeUri();
 
-            Assert.AreEqual("parameter1=value1&access_token=access%20token&application_id=application%20id", uriParameters);
+            Assert.Equal("parameter1=value1&access_token=access%20token&application_id=application%20id", uriParameters);
         }
 
-        [TestMethod]
+        [Fact]
         public void GetParameterByKey()
         {
             var request = new RequestBase();
@@ -68,21 +66,20 @@ namespace UnitTests
             var accessToken = request.GetParameter("access_token");
             var applicationId = request.GetParameter("application_id");
 
-            Assert.IsNull(applicationId);
-            Assert.AreEqual("access token", accessToken);
-            Assert.AreEqual("value1", parameter1);
+            Assert.Null(applicationId);
+            Assert.Equal("access token", accessToken);
+            Assert.Equal("value1", parameter1);
         }
 
-        [TestMethod]
-        [ExpectedException(typeof(ArgumentException))]
+        [Fact]
         public void TryGetNotExistParameter()
         {
             var request = new RequestBase();
 
-            var parameter1 = request.GetParameter("parameter1");
+            Assert.Throws<ArgumentException>(() => request.GetParameter("parameter1"));
         }
 
-        [TestMethod]
+        [Fact]
         public void TestRequestWithDate()
         {
             var request = new TestRequestWithDateParameter();
@@ -92,7 +89,7 @@ namespace UnitTests
 
             var uriParameters = request.GetParametersLikeUri();
 
-            Assert.AreEqual("date=1313397750&application_id=application%20id", uriParameters);
+            Assert.Equal("date=1313397750&application_id=application%20id", uriParameters);
         }
     }
 }

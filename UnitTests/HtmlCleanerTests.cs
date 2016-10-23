@@ -1,50 +1,49 @@
-﻿using Microsoft.VisualStudio.TestTools.UnitTesting;
-using System;
+﻿using System;
 using WarApi.CodeGenerator;
+using Xunit;
 
 namespace UnitTests
 {
-    [TestClass]
     public class HtmlCleanerTests
     {
-        [TestMethod]
+        [Fact]
         public void Clean_SimpleTag_TagDeleted()
         {
             const string html = "<p>Text in html</p>";
 
             var cleanedText = HtmlCleaner.Clean(html);
 
-            Assert.AreEqual("Text in html", cleanedText);
+            Assert.Equal("Text in html", cleanedText);
         }
 
-        [TestMethod]
+        [Fact]
         public void Clean_InnerTag_TagDeleted()
         {
             const string html = "<div>Text before<p>Text in</p>Text after</div>";
 
             var cleanedText = HtmlCleaner.Clean(html);
 
-            Assert.AreEqual("Text before" + Environment.NewLine + "Text in" + Environment.NewLine + "Text after", cleanedText);
+            Assert.Equal("Text before" + Environment.NewLine + "Text in" + Environment.NewLine + "Text after", cleanedText);
         }
 
-        [TestMethod]
+        [Fact]
         public void Clean_UnorderedList_TextFormatted()
         {
             const string html = "<ul><li>Coffee</li><li>Tea</li><li>Milk</li></ul>";
 
             var cleanedText = HtmlCleaner.Clean(html);
 
-            Assert.AreEqual("Coffee" + Environment.NewLine + "Tea" + Environment.NewLine + "Milk", cleanedText);
+            Assert.Equal("Coffee" + Environment.NewLine + "Tea" + Environment.NewLine + "Milk", cleanedText);
         }
 
-        [TestMethod]
+        [Fact]
         public void Clean_TextWithDuplivatedSpaces_SpacesTrimmed()
         {
             const string html = "<div> Text with   many spaces  </div>";
 
             var cleanedText = HtmlCleaner.Clean(html);
 
-            Assert.AreEqual("Text with many spaces", cleanedText);
+            Assert.Equal("Text with many spaces", cleanedText);
         }
     }
 }

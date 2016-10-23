@@ -1,10 +1,9 @@
-﻿using Microsoft.VisualStudio.TestTools.UnitTesting;
-using System;
+﻿using System;
 using WarApi.Utilities.Serialization;
+using Xunit;
 
 namespace UnitTests
 {
-    [TestClass]
     public class DateTimeJsonConverterTests
     {
         private ISerializer serializer;
@@ -22,7 +21,7 @@ namespace UnitTests
             }
         }
 
-        [TestMethod]
+        [Fact]
         public void TestDeserialize()
         {
             var serializedValue = "1313397750";
@@ -30,10 +29,10 @@ namespace UnitTests
             var deserializedValue = Serializer.Deserialize<DateTime>(serializedValue);
 
             var expectedValue = new DateTime(2011, 8, 15, 8, 42, 30);
-            Assert.AreEqual(expectedValue, deserializedValue);
+            Assert.Equal(expectedValue, deserializedValue);
         }
 
-        [TestMethod]
+        [Fact]
         public void TestDeserializeAsObject()
         {
             var serializedValue = "1313397750";
@@ -41,10 +40,10 @@ namespace UnitTests
             var deserializedValue = Serializer.Deserialize(serializedValue);
 
             Int64 expectedValue = 1313397750;
-            Assert.AreEqual(expectedValue, deserializedValue);
+            Assert.Equal(expectedValue, deserializedValue);
         }
 
-        [TestMethod]
+        [Fact]
         public void TestSerialize()
         {
             var date = new DateTime(2011, 8, 15, 8, 42, 30); 
@@ -52,10 +51,10 @@ namespace UnitTests
 
             var serializedValue = Serializer.Serialize(date);
 
-            Assert.AreEqual(expectedValue, serializedValue);
+            Assert.Equal(expectedValue, serializedValue);
         }
 
-        [TestMethod]
+        [Fact]
         public void TestSerializeDateBeforeEpoch()
         {
             var date = new DateTime(1957, 10, 4, 0, 0, 0);
@@ -63,10 +62,10 @@ namespace UnitTests
 
             var serializedValue = Serializer.Serialize(date);
 
-            Assert.AreEqual(expectedValue, serializedValue);
+            Assert.Equal(expectedValue, serializedValue);
         }
 
-        [TestMethod]
+        [Fact]
         public void TestDeserializeDateBeforeEpoch()
         {
             var serializedValue = "-386380800";
@@ -74,7 +73,7 @@ namespace UnitTests
             var deserializedValue = Serializer.Deserialize<DateTime>(serializedValue);
 
             var expectedValue = new DateTime(1957, 10, 4, 0, 0, 0);
-            Assert.AreEqual(expectedValue, deserializedValue);
+            Assert.Equal(expectedValue, deserializedValue);
         }
     }
 }

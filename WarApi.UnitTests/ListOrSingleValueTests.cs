@@ -9,7 +9,7 @@ namespace WarApi.UnitTests
     public class ListOrSingleValueTests
     {
         [Fact]
-        public void TestObjectInitialization()
+        public void Initialization_List_Correct()
         {
             var o = new ListOrSingleValue<int>() { 1, 2, 3 };
 
@@ -22,7 +22,7 @@ namespace WarApi.UnitTests
         }
 
         [Fact]
-        public void TestIsSingleProperty()
+        public void IsSingle_ListWithSingleElement_True()
         {
             var o = new ListOrSingleValue<int>();
 
@@ -34,7 +34,7 @@ namespace WarApi.UnitTests
         }
 
         [Fact]
-        public void TestIsSinglePropertyForDeafaultValueType()
+        public void IsSingle_ValuedTypeParameterInt_True()
         {
             var o = new ListOrSingleValue<int>();
 
@@ -44,7 +44,7 @@ namespace WarApi.UnitTests
         }
 
         [Fact]
-        public void TestIsSinglePropertyForDeafaultReferenseType()
+        public void IsSingle_ReferencedTypeParameter_True()
         {
             var o = new ListOrSingleValue<List<int>>();
 
@@ -54,7 +54,7 @@ namespace WarApi.UnitTests
         }
 
         [Fact]
-        public void TestImplicitCastFromSingleInt()
+        public void Initialization_SingleValue_Correct()
         {
             ListOrSingleValue<int> o = 5;
 
@@ -65,7 +65,7 @@ namespace WarApi.UnitTests
         }
 
         [Fact]
-        public void TestImplicitCastToSingleDefaultInt()
+        public void ImplicitCastToSingle_EmptyListOrSingle_Default()
         {
             ListOrSingleValue<int> o = new ListOrSingleValue<int>();
 
@@ -75,9 +75,10 @@ namespace WarApi.UnitTests
         }
 
         [Fact]
-        public void TestImplicitCastFromListInt()
+        public void ImplicitCastFromList_ListOfInt_ListOrSingle()
         {
             var list = new List<int> { 10, 12, 15 };
+
             ListOrSingleValue<int> o = list;
 
             Assert.Equal(3, o.Count);
@@ -89,23 +90,25 @@ namespace WarApi.UnitTests
         }
 
         [Fact]
-        public void TestImplicitCastToSingleInt()
+        public void ImplicitCastToInt_SingleCase_Int()
         {
             ListOrSingleValue<int> o = 7;
+
             int value = o;
 
             Assert.Equal(7, value);
         }
 
         [Fact()]
-        public void TestImplicitCastToSingleIntForListCase()
+        public void ImplicitCastToInt_ListCase_InvalidCastException()
         {
             var o = new ListOrSingleValue<int>() { 1, 2, 3 };
+
             Assert.Throws<InvalidCastException>(() => { int value = o; });
         }
 
         [Fact]
-        public void TestToStringMethodForSingleInt()
+        public void ToString_SingleCase_SingleValueString()
         {
             ListOrSingleValue<int> o = 8;
 
@@ -113,7 +116,7 @@ namespace WarApi.UnitTests
         }
 
         [Fact]
-        public void TestToStringMethodForListCase()
+        public void ToString_ListCase_CommaSeparatedValues()
         {
             var o = new ListOrSingleValue<int>() { 1, 2, 3 };
 
@@ -121,7 +124,7 @@ namespace WarApi.UnitTests
         }
 
         [Fact]
-        public void TestToStringMethodForValuedType()
+        public void ToString_EmptyIntListCase_IntDefaultValue()
         {
             var o = new ListOrSingleValue<int>();
 
@@ -129,7 +132,7 @@ namespace WarApi.UnitTests
         }
 
         [Fact]
-        public void TestToStringMethodForDefaultReferenceType()
+        public void ToString_EmptyReferencedTypeListCase_BullReferenceException()
         {
             var o = new ListOrSingleValue<List<int>>();
 
@@ -137,9 +140,10 @@ namespace WarApi.UnitTests
         }
 
         [Fact]
-        public void TestCastExceptionModeUseFirstOrDefaultElementIfList()
+        public void ImplicitCastToSingle_UseFirstOrDefaultElementIfListMode_CastedAsFirstElement()
         {
             var o = new ListOrSingleValue<int>(CastErrorMode.UseFirstOrDefaultElementIfList) { 1, 2, 3 };
+
             int intValue = o;
 
             Assert.Equal(1, intValue);

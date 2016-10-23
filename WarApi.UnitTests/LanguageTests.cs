@@ -9,7 +9,7 @@ namespace WarApi.UnitTests
     public class LanguageTests
     {
         [Fact]
-        public void ToStringTest()
+        public void ToString_Language_TwoLetterAbbreviation()
         {
             var englishLanguage = Language.English;
             var russianLanguage = Language.Russian;
@@ -21,7 +21,7 @@ namespace WarApi.UnitTests
         }
 
         [Fact]
-        public void TestRequest()
+        public void RequestSerialization_LanguageParameter_SerializedAsTwoLetterAbbreviation()
         {
             var request = new RequestBase();
 
@@ -32,29 +32,27 @@ namespace WarApi.UnitTests
         }
 
         [Fact]
-        public void TestDeserializationFromJson()
+        public void Deserialization_AbbreviationString_Language()
         {
             var serializedString = "\"zh-cn\"";
-            var expected = Language.Chinese;
 
             var result = JsonConvert.DeserializeObject<Language>(serializedString, new LanguageJsonConverter());
 
-            Assert.Equal(expected, result);
+            Assert.Equal(Language.Chinese, result);
         }
 
         [Fact]
-        public void TestSerializationToJson()
+        public void SerializationToJson_Language_SerializedWithLocality()
         {
-            var expected = "\"zh-cn\"";
             var language = Language.Chinese;
 
             var result = JsonConvert.SerializeObject(language, new LanguageJsonConverter());
 
-            Assert.Equal(expected, result);
+            Assert.Equal("\"zh-cn\"", result);
         }
 
         [Fact]
-        public void TestEqual()
+        public void Equal_SameLanguages_Equal()
         {
             var abbreviation = "zh-cn";
             var language = Language.Chinese;
@@ -63,7 +61,7 @@ namespace WarApi.UnitTests
         }
 
         [Fact]
-        public void TestEqualToCaseInsensetive()
+        public void Equal_LanguageWithDifferentCases_Equal()
         {
             var abbreviation = "De";
             var language = Language.German;

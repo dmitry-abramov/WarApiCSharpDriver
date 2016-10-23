@@ -61,7 +61,7 @@ namespace WarApi.CodeGenerator
 
         private string GetDescription(JObject jObject)
         {
-            return jObject.SelectToken("data.description").ToString();
+            return HtmlCleaner.Clean(jObject.SelectToken("data.description").ToString());
         }
     }
 }

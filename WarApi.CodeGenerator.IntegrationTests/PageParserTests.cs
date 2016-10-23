@@ -25,6 +25,7 @@ namespace WarApi.CodeGenerator.IntegrationTests
 
             Assert.AreEqual("account", method.Block);
             Assert.AreEqual("info", method.Name);
+            Assert.AreEqual("Method returns player details.", method.Description);
             Assert.AreEqual(6, method.RequestParameters.Count());
             Assert.AreEqual("language", method.RequestParameters.ToList()[1].Name);
             Assert.IsTrue(method.RequestParameters.ToList()[0].IsRequired);

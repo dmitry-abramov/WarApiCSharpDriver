@@ -1,5 +1,5 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
-<Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+<Project ToolsVersion="12.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
   <PropertyGroup>
     <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
     <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
@@ -8,7 +8,7 @@
     <AppDesignerFolder>Properties</AppDesignerFolder>
     <RootNamespace>UnitTests</RootNamespace>
     <AssemblyName>UnitTests</AssemblyName>
-    <TargetFrameworkVersion>v4.5</TargetFrameworkVersion>
+    <TargetFrameworkVersion>v4.5.2</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
     <ProjectTypeGuids>{3AC096D0-A1C2-E12C-1390-A8335801FDAB};{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}</ProjectTypeGuids>
     <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>
@@ -16,6 +16,7 @@
     <ReferencePath>$(ProgramFiles)\Common Files\microsoft shared\VSTT\$(VisualStudioVersion)\UITestExtensionPackages</ReferencePath>
     <IsCodedUITest>False</IsCodedUITest>
     <TestProjectType>UnitTest</TestProjectType>
+    <TargetFrameworkProfile />
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
     <DebugSymbols>true</DebugSymbols>
@@ -60,6 +61,7 @@
     <Compile Include="API\TanksAPI.cs" />
     <Compile Include="API\TestClient\TestWotApplication.cs" />
     <Compile Include="DateTimeJsonConverterTests.cs" />
+    <Compile Include="HtmlCleanerTests.cs" />
     <Compile Include="LanguageTests.cs" />
     <Compile Include="ListOrSingleValueTests.cs" />
     <Compile Include="Requests\Account\PlayerInfoTests.cs" />
@@ -72,6 +74,10 @@
     <ProjectReference Include="..\Utilities\WarApi.Utilities.csproj">
       <Project>{9a4ffb87-b8d2-467e-9fc7-cf86f34bc3f6}</Project>
       <Name>WarApi.Utilities</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\WarApi.CodeGenerator\WarApi.CodeGenerator.csproj">
+      <Project>{9b97bb30-f6bb-4e31-8b98-029fc20cd9c3}</Project>
+      <Name>WarApi.CodeGenerator</Name>
     </ProjectReference>
     <ProjectReference Include="..\WarApi.Common\WarApi.Common.csproj">
       <Project>{65637275-4002-420d-8870-d4bc0a9150a6}</Project>

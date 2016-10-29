@@ -15,15 +15,20 @@ namespace WarApi.UnitTests
         }
 
         [Fact]
-        public void GetEmptyParameters()
+        public void GetParameters_NoCustomParameters_RequiredParameters()
         {
             var request = new RequestBase();
 
             var parameters = request.Parameters;
+
+            Assert.Equal(3, parameters.Count);
+            Assert.True(parameters.ContainsKey("access_token"));
+            Assert.True(parameters.ContainsKey("application_id"));
+            Assert.True(parameters.ContainsKey("language"));
         }
 
         [Fact]
-        public void GetExceptionForRequiredParameters()
+        public void GetParametersLikeUri_RequiredParametersNotSetted_InvalidOperationException()
         {
             var request = new RequestBase();
 
@@ -31,7 +36,7 @@ namespace WarApi.UnitTests
         }
 
         [Fact]
-        public void GetPath()
+        public void GetPath_Request_CorrectPath()
         {
             var request = new RequestBase();
 
@@ -41,7 +46,7 @@ namespace WarApi.UnitTests
         }
 
         [Fact]
-        public void GetParametersForUri()
+        public void GetParametersLikeUri_RequiredParameters_ParametersUrlEncoded()
         {
             var request = new RequestBase();
             request.AccessToken = "access token";
@@ -53,7 +58,7 @@ namespace WarApi.UnitTests
         }
 
         [Fact]
-        public void GetParametersCreatedWithAddParameter()
+        public void GetParametersLikeUri_CustomParameter_ParametersUrlEncoded()
         {
             var request = new RequestBase();
             request.AccessToken = "access token";
@@ -66,7 +71,7 @@ namespace WarApi.UnitTests
         }
 
         [Fact]
-        public void GetParameterByKey()
+        public void GetParameter_RequiredAndCustomParameters_ParameterValuesReturned()
         {
             var request = new RequestBase();
             request.AccessToken = "access token";
@@ -82,7 +87,7 @@ namespace WarApi.UnitTests
         }
 
         [Fact]
-        public void TryGetNotExistParameter()
+        public void GetParameter_ParameterNotExists_ArgumentException()
         {
             var request = new RequestBase();
 
@@ -90,7 +95,7 @@ namespace WarApi.UnitTests
         }
 
         [Fact]
-        public void TestRequestWithDate()
+        public void GetParametersLikeUri_DateParameter_ConvertedToUnixTime()
         {
             var request = new TestRequestWithDateParameter();
             request.ApplicationId = "application id";

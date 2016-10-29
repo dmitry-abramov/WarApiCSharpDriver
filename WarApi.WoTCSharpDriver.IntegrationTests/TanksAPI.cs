@@ -7,7 +7,7 @@ namespace WarApi.WoTCSharpDriver.IntegrationTests
     public class TanksAPI : APITestsBase
     {
         [Fact]
-        public void TanksStatisticsRequetstTest()
+        public void TanksStatisticsRequetst_TankStatisticsResponse()
         {
             var request = Client.CreateRequest<TanksStatisticsRequest>();
             request.AccountId = "2989679";
@@ -21,7 +21,7 @@ namespace WarApi.WoTCSharpDriver.IntegrationTests
         }
 
         [Fact]
-        public void TanksAchievementsRequetstTest()
+        public void TanksAchievementsRequetst_TankAchievementsResponse()
         {
             var request = Client.CreateRequest<TanksAchievementsRequest>();
             request.AccountId = "2989679";

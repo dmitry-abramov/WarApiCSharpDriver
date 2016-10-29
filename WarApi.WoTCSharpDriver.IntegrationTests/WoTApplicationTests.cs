@@ -8,7 +8,7 @@ namespace WarApi.UnitTests
     public class WoTApplicationTests
     {
         [Fact]
-        public void TestGetResponseAsString()
+        public void GetResponseAsString_Request_JsonString()
         {
             var application = new WoTApplication("demo", "api.worldoftanks.ru", "wot");
 
@@ -23,7 +23,7 @@ namespace WarApi.UnitTests
         }
 
         [Fact]
-        public void TestGetResponse()
+        public void GetResponseFor_Request_ResponseObject()
         {
             var application = new WoTApplication("demo", "api.worldoftanks.ru", "wot");
 
@@ -43,7 +43,7 @@ namespace WarApi.UnitTests
         }
 
         [Fact]
-        public void TestRequestWithSpaces()
+        public void GetResponseFor_RequestWithSpace_SucessfullResponse()
         {
             var application = new WoTApplication("demo", "api.worldoftanks.ru", "wot");
 

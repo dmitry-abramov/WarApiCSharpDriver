@@ -11,7 +11,7 @@ namespace WarApi.WoTCSharpDriver.IntegrationTests
     public class RatingsAPI : APITestsBase
     {
         [Fact]
-        public void DatesWithRatingsRequestTest()
+        public void DatesWithRatingsRequest_DatesWithRatingsResponse()
         {
             var request = Client.CreateRequest<DatesWithRatingsRequest>();
             request.Type = RatingType.All;
@@ -24,7 +24,7 @@ namespace WarApi.WoTCSharpDriver.IntegrationTests
         }
 
         [Fact]
-        public void RatingTypesResponse()
+        public void RatingTypesRequest_RatingTypesResponse()
         {
             var request = Client.CreateRequest<RatingsTypesRequest>();
 
@@ -43,7 +43,8 @@ namespace WarApi.WoTCSharpDriver.IntegrationTests
         }
 
         [Fact]
-        public void TestSerializeAsDictionaryKey()
+        //todo: make test more clear and informative
+        public void Serialization_RatingTypeAsKey()
         {
             var serializer = new NewtonsoftSerializer();
 

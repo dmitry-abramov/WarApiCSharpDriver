@@ -9,7 +9,7 @@ namespace WarApi.WoTCSharpDriver.IntegrationTests
     public class AccountAPI : APITestsBase
     {
         [Fact]
-        public void PlayersListRequestTest()
+        public void PlayersListRequest_PlayersListResponse()
         {
             var request = Client.CreateRequest<PlayersListRequest>();
             request.Search = "gol";
@@ -26,7 +26,7 @@ namespace WarApi.WoTCSharpDriver.IntegrationTests
         }
 
         [Fact]
-        public void PlayersTanksRequestTest()
+        public void PlayersTanksRequest_PlayersTanksResponse()
         {
             var request = Client.CreateRequest<PlayerTanksRequest>();
             request.AccountId = "2989679";
@@ -44,7 +44,7 @@ namespace WarApi.WoTCSharpDriver.IntegrationTests
         }
 
         [Fact]
-        public void PlayerAchievementsRequestTest()
+        public void PlayerAchievementsRequest_PlayerAchievementsResponse()
         {
             var request = Client.CreateRequest<PlayerAchivementsRequest>();
             request.AccountId = "2989679";
@@ -59,7 +59,7 @@ namespace WarApi.WoTCSharpDriver.IntegrationTests
         }
 
         [Fact]
-        public void PlayerInfoRequestTest()
+        public void PlayerInfoRequest_PlayerInfoRequestResponse()
         {
             var request = Client.CreateRequest<PlayerInfoRequest>();
             request.AccountId = "2989679";
@@ -81,7 +81,7 @@ namespace WarApi.WoTCSharpDriver.IntegrationTests
         }
 
         [Fact]
-        public void PlayerInfoRequestForTwoPlayersTest()
+        public void PlayerInfoRequest_TwoPlayers_ResponsWithTwoPlayers()
         {
             var request = Client.CreateRequest<PlayerInfoRequest>();
             request.AccountId = "2989679";

@@ -31,6 +31,16 @@ namespace WarApi.UnitTests
         }
 
         [Fact]
+        public void GetPath()
+        {
+            var request = new RequestBase();
+
+            var path = request.GetPath();
+
+            Assert.Equal("MethodBlock/MethodName", path);
+        }
+
+        [Fact]
         public void GetParametersForUri()
         {
             var request = new RequestBase();

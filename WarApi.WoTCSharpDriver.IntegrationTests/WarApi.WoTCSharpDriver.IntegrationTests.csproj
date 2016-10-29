@@ -1,14 +1,14 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
-<Project ToolsVersion="12.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+<Project ToolsVersion="14.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
   <Import Project="..\packages\xunit.runner.visualstudio.2.1.0\build\net20\xunit.runner.visualstudio.props" Condition="Exists('..\packages\xunit.runner.visualstudio.2.1.0\build\net20\xunit.runner.visualstudio.props')" />
   <PropertyGroup>
     <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
     <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
-    <ProjectGuid>{DF16F4BB-6B77-41C3-A236-19CC0ED9D8BA}</ProjectGuid>
+    <ProjectGuid>{31250B8E-91F6-46E0-BEF4-5F9A61F6A580}</ProjectGuid>
     <OutputType>Library</OutputType>
     <AppDesignerFolder>Properties</AppDesignerFolder>
-    <RootNamespace>WarApi.UnitTests</RootNamespace>
-    <AssemblyName>WarApi.UnitTests</AssemblyName>
+    <RootNamespace>WarApi.WoTCSharpDriver.IntegrationTests</RootNamespace>
+    <AssemblyName>WarApi.WoTCSharpDriver.IntegrationTests</AssemblyName>
     <TargetFrameworkVersion>v4.5.2</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
     <ProjectTypeGuids>{3AC096D0-A1C2-E12C-1390-A8335801FDAB};{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}</ProjectTypeGuids>
@@ -17,7 +17,6 @@
     <ReferencePath>$(ProgramFiles)\Common Files\microsoft shared\VSTT\$(VisualStudioVersion)\UITestExtensionPackages</ReferencePath>
     <IsCodedUITest>False</IsCodedUITest>
     <TestProjectType>UnitTest</TestProjectType>
-    <TargetFrameworkProfile />
     <NuGetPackageImportStamp>
     </NuGetPackageImportStamp>
   </PropertyGroup>
@@ -40,8 +39,8 @@
   </PropertyGroup>
   <ItemGroup>
     <Reference Include="Newtonsoft.Json, Version=6.0.0.0, Culture=neutral, PublicKeyToken=30ad4fe6b2a6aeed, processorArchitecture=MSIL">
-      <SpecificVersion>False</SpecificVersion>
       <HintPath>..\packages\Newtonsoft.Json.6.0.3\lib\net45\Newtonsoft.Json.dll</HintPath>
+      <Private>True</Private>
     </Reference>
     <Reference Include="System" />
     <Reference Include="xunit.abstractions, Version=2.0.0.0, Culture=neutral, PublicKeyToken=8d05b1bb7a6fdb6c, processorArchitecture=MSIL">
@@ -67,17 +66,32 @@
         <Reference Include="Microsoft.VisualStudio.QualityTools.UnitTestFramework, Version=10.1.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL" />
       </ItemGroup>
     </When>
-    <Otherwise />
+    <Otherwise>
+      <ItemGroup>
+        <Reference Include="Microsoft.VisualStudio.QualityTools.UnitTestFramework" />
+      </ItemGroup>
+    </Otherwise>
   </Choose>
   <ItemGroup>
-    <Compile Include="DateTimeJsonConverterTests.cs" />
-    <Compile Include="HtmlCleanerTests.cs" />
-    <Compile Include="LanguageTests.cs" />
-    <Compile Include="ListOrSingleValueTests.cs" />
-    <Compile Include="RequestBaseTests.cs" />
+    <Compile Include="AccountAPI.cs" />
+    <Compile Include="APITestsBase.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="RatingsAPI.cs" />
+    <Compile Include="TanksAPI.cs" />
+    <Compile Include="TestWotApplication.cs" />
+    <Compile Include="WoTApplicationTests.cs" />
   </ItemGroup>
   <ItemGroup>
+    <None Include="packages.config" />
+    <None Include="xunit.runner.json">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\WarApi.Common\WarApi.Common.csproj">
+      <Project>{65637275-4002-420d-8870-d4bc0a9150a6}</Project>
+      <Name>WarApi.Common</Name>
+    </ProjectReference>
     <ProjectReference Include="..\WarApi.ConstantValues\WarApi.ConstantValues.csproj">
       <Project>{9110f698-004e-45f7-8211-fdc9b90a7e38}</Project>
       <Name>WarApi.ConstantValues</Name>
@@ -86,24 +100,10 @@
       <Project>{9a4ffb87-b8d2-467e-9fc7-cf86f34bc3f6}</Project>
       <Name>WarApi.Utilities</Name>
     </ProjectReference>
-    <ProjectReference Include="..\WarApi.CodeGenerator\WarApi.CodeGenerator.csproj">
-      <Project>{9b97bb30-f6bb-4e31-8b98-029fc20cd9c3}</Project>
-      <Name>WarApi.CodeGenerator</Name>
-    </ProjectReference>
-    <ProjectReference Include="..\WarApi.Common\WarApi.Common.csproj">
-      <Project>{65637275-4002-420d-8870-d4bc0a9150a6}</Project>
-      <Name>WarApi.Common</Name>
-    </ProjectReference>
     <ProjectReference Include="..\WarApi.WoTCSharpDriver\WarApi.WoTCSharpDriver.csproj">
       <Project>{50848325-2973-4ac3-82aa-b47215e0c466}</Project>
       <Name>WarApi.WoTCSharpDriver</Name>
     </ProjectReference>
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="packages.config" />
-    <None Include="xunit.runner.json">
-      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
-    </None>
   </ItemGroup>
   <Choose>
     <When Condition="'$(VisualStudioVersion)' == '10.0' And '$(IsCodedUITest)' == 'True'">

@@ -3,7 +3,7 @@ using System.Threading;
 using WarApi.Client;
 using WarApi.Utilities.Serialization;
 
-namespace WarApi.UnitTests.API
+namespace WarApi.WoTCSharpDriver.IntegrationTests
 {
     public class APITestsBase
     {

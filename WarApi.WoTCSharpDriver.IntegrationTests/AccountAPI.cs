@@ -4,7 +4,7 @@ using WarApi.Requests.Account;
 using WarApi.Responses.Account;
 using Xunit;
 
-namespace WarApi.UnitTests.API
+namespace WarApi.WoTCSharpDriver.IntegrationTests
 {
     public class AccountAPI : APITestsBase
     {

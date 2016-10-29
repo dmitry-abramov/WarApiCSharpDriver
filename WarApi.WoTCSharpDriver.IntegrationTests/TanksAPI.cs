@@ -2,7 +2,7 @@
 using WarApi.Responses.Tanks;
 using Xunit;
 
-namespace WarApi.UnitTests.API
+namespace WarApi.WoTCSharpDriver.IntegrationTests
 {
     public class TanksAPI : APITestsBase
     {

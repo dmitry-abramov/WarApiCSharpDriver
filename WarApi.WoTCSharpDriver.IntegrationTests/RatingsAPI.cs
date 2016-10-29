@@ -6,7 +6,7 @@ using WarApi.ConstantValues;
 using System.Collections.Generic;
 using Xunit;
 
-namespace WarApi.UnitTests.API
+namespace WarApi.WoTCSharpDriver.IntegrationTests
 {
     public class RatingsAPI : APITestsBase
     {

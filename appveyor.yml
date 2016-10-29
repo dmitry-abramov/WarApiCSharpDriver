@@ -9,6 +9,7 @@ test:
   assemblies:
   - WarApi.UnitTests.dll
   - WarApi.CodeGenerator.IntegrationTests
+  - WarApi.WoTCSharpDriver.IntegrationTests
 
 notifications:
 - provider: Email

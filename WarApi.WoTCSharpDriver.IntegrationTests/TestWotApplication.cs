@@ -4,7 +4,7 @@ using WarApi.Requests;
 using WarApi.Utilities.Serialization;
 using WarApi.Client;
 
-namespace WarApi.UnitTests
+namespace WarApi.WoTCSharpDriver.IntegrationTests
 {
     public class TestWotApplication : IWarApiApplication
     {

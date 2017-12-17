@@ -3,7 +3,7 @@ configuration: Release
 version: 0.0.1.{build}
 
 before_build:
-- nuget restore WarApiCSharpDriver.sln
+- cmd: nuget restore WarApiCSharpDriver.sln
 
 test:
   assemblies:

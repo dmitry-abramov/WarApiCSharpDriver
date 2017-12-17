@@ -10,7 +10,7 @@ namespace WarApi.WoTCSharpDriver.IntegrationTests
 {
     public class RatingsAPI : APITestsBase
     {
-        [Fact]
+        [Fact(Skip = "Deprecated API")]
         public void DatesWithRatingsRequest_DatesWithRatingsResponse()
         {
             var request = Client.CreateRequest<DatesWithRatingsRequest>();
@@ -23,7 +23,7 @@ namespace WarApi.WoTCSharpDriver.IntegrationTests
             Assert.NotEqual(DateTime.MinValue, response.Data[RatingType.All].Dates[0]);
         }
 
-        [Fact]
+        [Fact(Skip = "Deprecated API")]
         public void RatingTypesRequest_RatingTypesResponse()
         {
             var request = Client.CreateRequest<RatingsTypesRequest>();

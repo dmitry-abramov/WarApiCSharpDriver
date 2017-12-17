@@ -40,24 +40,7 @@ namespace WarApi.UnitTests
             Assert.Equal(response.Data[0].AccountId, "2989679");
             Assert.Null(response.Data[0].Id);
             Assert.Null(response.Error);
-        }
-
-        [Fact]
-        public void GetResponseFor_RequestWithSpace_SucessfullResponse()
-        {
-            var application = new WoTApplication("demo", "api.worldoftanks.ru", "wot");
-
-            var request = application.CreateRequest<PlayersListRequest>();
-            
-            request.Search = "gol lazio";
-
-            var response = application.GetResponseFor<PlayersListResponse>(request);
-
-            Assert.NotNull(response);
-            Assert.Equal(0, response.MetaData.Count);
-            Assert.Equal(response.Status, "ok");
-            Assert.Null(response.Error);
-        }
+        }        
     }
 }
 

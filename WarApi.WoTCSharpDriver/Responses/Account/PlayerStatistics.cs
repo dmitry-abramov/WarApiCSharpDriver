@@ -169,5 +169,14 @@ namespace WarApi.Responses.Account
 
         [JsonProperty("xp")]
         public int Xp { get; set; }
+
+        [JsonProperty("battles_on_stunning_vehicles")]
+        public int BattlesOnStannigVehicles { get; set; }
+
+        [JsonProperty("stun_assisted_damage")]
+        public int StunAssistedDamage { get; set; }
+
+        [JsonProperty("stun_number")]
+        public int StunNumber { get; set; }
     }
 }

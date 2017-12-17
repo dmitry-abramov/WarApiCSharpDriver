@@ -115,6 +115,15 @@ namespace WarApi.Responses.Tanks
 
         [JsonProperty("max_frags")]
         public int MaxFrags { get; set; }
+
+        [JsonProperty("battles_on_stunning_vehicles")]
+        public int BattlesOnStannigVehicles { get; set; }
+
+        [JsonProperty("stun_assisted_damage")]
+        public int StunAssistedDamage { get; set; }
+
+        [JsonProperty("stun_number")]
+        public int StunNumber { get; set; }
     }
 
     public class TankStatisticDetailsExtended : TankStatisticDetails
@@ -150,7 +159,7 @@ namespace WarApi.Responses.Tanks
         public double AvgDamageAssistedRadio { get; set; }
 
         [JsonProperty("avg_damage_blocked")]
-        public double AvgDamageAssistedBlocked { get; set; }
+        public double AvgDamageAssistedBlocked { get; set; }        
     }
 
     public class TanksStatisticsResponse : ResponseBase<IDictionary<string, IList<TanksStatisticsData>>>

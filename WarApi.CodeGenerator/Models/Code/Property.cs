@@ -5,6 +5,11 @@ namespace WarApi.CodeGenerator.Models.Code
 {
     internal class Property
     {
+        public Property()
+        {
+            Attributes = new List<PropertyAttribute>();
+        }
+
         public string Name { get; set; }
 
         public Type Type { get; set; }

@@ -32,6 +32,7 @@
             this.UrlTextBox = new System.Windows.Forms.TextBox();
             this.ParseButton = new System.Windows.Forms.Button();
             this.ParsedMethodRichTextBox = new System.Windows.Forms.RichTextBox();
+            this.GeneratedCodeRichTextBox = new System.Windows.Forms.RichTextBox();
             this.SuspendLayout();
             // 
             // UrlLabel
@@ -73,11 +74,23 @@
             this.ParsedMethodRichTextBox.TabIndex = 4;
             this.ParsedMethodRichTextBox.Text = "Parsed method...";
             // 
+            // GeneratedCodeRichTextBox
+            // 
+            this.GeneratedCodeRichTextBox.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left)));
+            this.GeneratedCodeRichTextBox.Location = new System.Drawing.Point(519, 32);
+            this.GeneratedCodeRichTextBox.Name = "GeneratedCodeRichTextBox";
+            this.GeneratedCodeRichTextBox.ReadOnly = true;
+            this.GeneratedCodeRichTextBox.Size = new System.Drawing.Size(477, 518);
+            this.GeneratedCodeRichTextBox.TabIndex = 5;
+            this.GeneratedCodeRichTextBox.Text = "Generated code...";
+            // 
             // MainForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1008, 562);
+            this.Controls.Add(this.GeneratedCodeRichTextBox);
             this.Controls.Add(this.ParsedMethodRichTextBox);
             this.Controls.Add(this.ParseButton);
             this.Controls.Add(this.UrlTextBox);
@@ -96,6 +109,7 @@
         private System.Windows.Forms.TextBox UrlTextBox;
         private System.Windows.Forms.Button ParseButton;
         private System.Windows.Forms.RichTextBox ParsedMethodRichTextBox;
+        private System.Windows.Forms.RichTextBox GeneratedCodeRichTextBox;
     }
 }
 

@@ -43,6 +43,7 @@
     <Reference Include="System.Net.Http" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="CodeGenerator.cs" />
     <Compile Include="Contracts\ICodeGenerator.cs" />
     <Compile Include="Contracts\IPageDownloader.cs" />
     <Compile Include="HtmlCleaner.cs" />

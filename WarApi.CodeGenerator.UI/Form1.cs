@@ -14,12 +14,14 @@ namespace WarApi.CodeGenerator.UI
     public partial class MainForm : Form
     {
         private readonly IPageParser pageParser;
+        private readonly ICodeGenerator codeGenerator;
 
         public MainForm()
         {
             InitializeComponent();
 
             pageParser = new PageParser(new PageDownloader());
+            codeGenerator = new CodeGenerator();
         }
 
         private void ParseButtonClick(object sender, EventArgs e)
@@ -54,6 +56,9 @@ namespace WarApi.CodeGenerator.UI
             }
 
             ParsedMethodRichTextBox.Text = methodAsString.ToString();
+
+            var generatedCode = codeGenerator.Generate(method);
+            GeneratedCodeRichTextBox.Text = generatedCode;
         }
     }
 }

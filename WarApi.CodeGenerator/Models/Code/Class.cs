@@ -2,8 +2,13 @@
 
 namespace WarApi.CodeGenerator.Models.Code
 {
-    class Class
+    internal class Class
     {
+        public Class()
+        {
+            Properties = new List<Property>();
+        }
+
         public string Name { get; set; }
 
         public string Namespace { get; set; }

@@ -41,12 +41,27 @@ namespace WarApi.CodeGenerator
 
         private IEnumerable<RequestParameter> GetRequestParameters(JObject jObject)
         {
-            return JsonConvert.DeserializeObject<IEnumerable<RequestParameter>>(jObject.SelectToken("data.parameters").ToString());
+            var token = jObject.SelectToken("data.parameters").ToString();
+            var parameters = JsonConvert
+                .DeserializeObject<IEnumerable<RequestParameter>>(token);
+            foreach (var parameter in parameters)
+            {
+                parameter.Description = HtmlCleaner.Clean(parameter.Description);
+            }
+            return parameters;
         }
 
         private IEnumerable<ResponseParameter> GetResponseParameters(JObject jObject)
         {
-            return JsonConvert.DeserializeObject<IEnumerable<ResponseParameter>>(jObject.SelectToken("data.fields").ToString()).Where(p => p.Type != "empty_line");
+            var token = jObject.SelectToken("data.fields").ToString();
+            var parameters = JsonConvert
+                .DeserializeObject<IEnumerable<ResponseParameter>>(token)
+                .Where(p => p.Type != "empty_line");
+            foreach (var parameter in parameters)
+            {
+                parameter.Description = HtmlCleaner.Clean(parameter.Description);
+            }
+            return parameters;
         }
 
         private string GetName(JObject jObject)

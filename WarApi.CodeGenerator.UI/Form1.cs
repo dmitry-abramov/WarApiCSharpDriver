@@ -57,8 +57,9 @@ namespace WarApi.CodeGenerator.UI
 
             ParsedMethodRichTextBox.Text = methodAsString.ToString();
 
-            var generatedCode = codeGenerator.Generate(method);
-            GeneratedCodeRichTextBox.Text = generatedCode;
+            var generationResult = codeGenerator.Generate(method);
+            GeneratedRequestCodeRichTextBox.Text = generationResult.RequestClass;
+            GeneratedResponseCodeRichTextBox.Text = generationResult.ResponseClass;
         }
     }
 }

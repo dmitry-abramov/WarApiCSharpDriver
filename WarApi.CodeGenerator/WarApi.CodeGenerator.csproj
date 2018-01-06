@@ -53,6 +53,7 @@
     <Compile Include="Models\Code\Class.cs" />
     <Compile Include="Models\Code\Property.cs" />
     <Compile Include="Models\Code\PropertyAttribute.cs" />
+    <Compile Include="Models\GenerationResult.cs" />
     <Compile Include="PageDownloader.cs" />
     <Compile Include="PageParser.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />

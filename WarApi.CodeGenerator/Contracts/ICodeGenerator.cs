@@ -1,9 +1,10 @@
-﻿using WarApi.CodeGenerator.Models.Api;
+﻿using WarApi.CodeGenerator.Models;
+using WarApi.CodeGenerator.Models.Api;
 
 namespace WarApi.CodeGenerator.Contracts
 {
     public interface ICodeGenerator
     {
-        string Generate(Method apiMethod);
+        GenerationResult Generate(Method apiMethod);
     }
 }
